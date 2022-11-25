@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 
 import MenuHerder from '@/components/MenuHeader.vue';
 </script>

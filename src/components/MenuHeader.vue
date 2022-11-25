@@ -44,12 +44,15 @@
 
   <aside class="sidebar">
     <router-link to="/">主页</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="imgboard/">美琴照片墙</router-link>
     <router-link to="/aboutraligun"> 关于美琴 </router-link>
+    <router-link to="imgboard">美琴照片墙</router-link>
 
+    <router-link to="eatmikoto">新概念音游</router-link>
     <router-link to="/discuss">留言板</router-link>
+
     <router-link to="/isml">世萌比赛</router-link>
+    <router-link to="/about">关于</router-link>
+
     <router-link to="/links">友情链接</router-link>
   </aside>
 </template>
