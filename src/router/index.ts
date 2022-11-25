@@ -1,5 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import ImageBoardView from '@/views/ImageBoardView.vue';
+import AboutView from '@/views/AboutView.vue';
+import AboutRaligunView from '@/views/AboutRaligunView.vue';
+import DiscussView from '@/views/DiscussView.vue';
+import LinksView from '@/views/LinksView.vue';
+import IsmlView from '@/views/IsmlView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,12 +16,34 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/imgboard',
+      name: 'imgboard',
+      component: ImageBoardView,
+    },
+    {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      name: 'AboutView',
+      component: AboutView,
+    },
+    {
+      path: '/aboutraligun',
+      name: 'aboutraligun',
+      component: AboutRaligunView,
+    },
+    {
+      path: '/isml',
+      name: 'isml',
+      component: IsmlView,
+    },
+    {
+      path: '/discuss',
+      name: 'discuss',
+      component: DiscussView,
+    },
+    {
+      path: '/links',
+      name: 'links',
+      component: LinksView,
     },
   ],
 });

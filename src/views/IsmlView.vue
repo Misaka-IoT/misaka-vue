@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>这里是关于页面</h1>
+    <h1>世萌比赛</h1>
   </div>
 </template>

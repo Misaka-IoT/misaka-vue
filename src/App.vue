@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+
+import MenuHerder from '@/components/MenuHeader.vue';
 </script>
 
 <template>
-  <header>
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </nav>
-  </header>
+  <div>
+    <MenuHerder></MenuHerder>
+  </div>
 
   <main>
     <router-view />
