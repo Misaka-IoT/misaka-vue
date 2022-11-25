@@ -46,7 +46,7 @@
         <del-text>（遇到当麻会脸红）</del-text>
       </p>
       <img
-        src="./assets/FCEC7B04-38C6-48CB-862A-6FD9BC1F75DF.png"
+        src="../assets/FCEC7B04-38C6-48CB-862A-6FD9BC1F75DF.png"
         alt="炮姐吃蛋糕"
         style="width: 180px; height: 180px; float: right"
       />
