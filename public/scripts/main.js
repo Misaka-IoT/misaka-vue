@@ -1,4 +1,3 @@
-type="module"
 const initScroll = () => {
   const root = document.querySelector('.marquee');
   if (!root) return;
