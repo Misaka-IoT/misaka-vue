@@ -84,5 +84,11 @@
         >获取更多信息！QQ群：872099522
       </p>
     </main>
+
+    <Footer></Footer>
   </div>
 </template>
+
+<script setup lang="ts">
+import Footer from '@/components/Footer.vue';
+</script>
