@@ -2,7 +2,7 @@
   "recommendations": [
     "Vue.volar",
     "Vue.vscode-typescript-vue-plugin",
-    "esbenp.prettier-vscode",
+    "esbenp.prettier-vscode"
   ],
-  "unwantedRecommendations": ["hookyqr.beautify"],
+  "unwantedRecommendations": ["hookyqr.beautify"]
 }

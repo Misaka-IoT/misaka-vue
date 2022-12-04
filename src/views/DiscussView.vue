@@ -1,5 +1,23 @@
 <template>
-  <div>
-    <h1>这里是留言板</h1>
-  </div>
+  <div class="artalk-comments"></div>
 </template>
+
+<script lang="ts">
+import 'artalk/dist/Artalk.css';
+
+import { defineComponent } from 'vue';
+import Artalk from 'artalk';
+
+export default defineComponent({
+  mounted: () => {
+    const artalk = new Artalk({
+      el: '.artalk-comments',
+      pageKey: `233`,
+      pageTitle: 'misaka-mikoto.jp-comment-server',
+      server: 'https://chat.mashiro.pub:23366',
+      site: 'lolimashiro-comment-sys',
+      // ...
+    });
+  },
+});
+</script>
