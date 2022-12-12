@@ -1,23 +1,12 @@
 <template>
   <div>
-    <!-- <link rel="stylesheet" href="../../styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-  -->
-
-    <!-- <header class="header">
-      <a href="../../" class="icon-btn material-symbols-outlined">arrow_back</a>
-      <h1>关于超电磁炮</h1>
-    </header> -->
     <button class="fab back-to-top material-symbols-outlined">straight</button>
     <div class="container">
       <h2>欢迎来到超电磁炮小百科！</h2>
       <hr />
       <h3>御坂美琴是谁？</h3>
       <b>
-        生日：5月2日，身高：161厘米，体重：<del-text>45000克</del-text>45千克，宿舍：常盘台中学校学生宿舍208号房间
+        生日：5月2日，身高：161厘米，体重：<DelText>45000克</DelText>45千克，宿舍：常盘台中学校学生宿舍208号房间
       </b>
       <p>
         御坂美琴（Misaka
@@ -55,7 +44,7 @@
         </li>
         <li>
           佐天泪子（Saten
-          Ruiko）：<del-text>无敌的Level-6！拥有未解的能力“上升气流”与“黄金球棒”</del-text>，与初春饰利关系极好，同样通过白井黑子与御坂美琴熟识。
+          Ruiko）：<DelText>无敌的Level-6！拥有未解的能力“上升气流”与“黄金球棒”</DelText>，与初春饰利关系极好，同样通过白井黑子与御坂美琴熟识。
         </li>
         <li>
           食蜂操祈（Shokuhou

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
 
-import MenuHerder from '@/components/MenuHeader.vue';
+import AppFrame from '@/components/AppFrame.vue';
+import DelText from '@/components/DelText.vue';
 </script>
 
 <template>
   <div>
-    <MenuHerder></MenuHerder>
+    <AppFrame></AppFrame>
   </div>
 
   <main>
