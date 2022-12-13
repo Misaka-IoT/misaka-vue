@@ -31,8 +31,12 @@
           >
             misaka-fans.github.io
             <ul class="md-source__facts">
-              <li class="md-source__fact md-source__fact--stars">42</li>
-              <li class="md-source__fact md-source__fact--forks">11</li>
+              <li class="md-source__fact md-source__fact--stars">
+                {{ stargazers_count }}
+              </li>
+              <li class="md-source__fact md-source__fact--forks">
+                {{ forks_count }}
+              </li>
             </ul>
           </div>
         </a>
@@ -58,7 +62,26 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios';
 export default {
   name: 'app-frame',
+  data() {
+    return {
+      stargazers_count: 0,
+      forks_count: 0,
+    };
+  },
+  created() {
+    let that = this;
+    //使用axios获取star和fork数量
+    axios
+      .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')
+      .then((res) => {
+        console.log(res.data.stargazers_count);
+        console.log(res.data.forks_count);
+        that.stargazers_count = res.data.stargazers_count;
+        that.forks_count = res.data.forks_count;
+      });
+  },
 };
 </script>
