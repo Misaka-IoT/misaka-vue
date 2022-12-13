@@ -82,14 +82,10 @@
         女子宿舍开放日表演小提琴独奏）、数学很好（帮助当麻完成暑假数学作业）、会煮饭（能把电击使能力当作电磁炉使用）
       </p>
     </div>
-
-    <Footer></Footer>
   </div>
 </template>
 
-<script setup lang="ts">
-import Footer from '@/components/Footer.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 img {

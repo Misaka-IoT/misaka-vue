@@ -376,9 +376,27 @@ hr {
   z-index: 10;
 }
 
+
+
 .sidebar-opened .sidebar {
   transform: translateX(0);
 }
+
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-opened .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar-opened {
+    padding-left: 0px;
+  }
+  
+}
+
 
 .sidebar a {
   position: relative;

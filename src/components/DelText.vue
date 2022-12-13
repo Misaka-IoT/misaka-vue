@@ -7,7 +7,7 @@
 <script lang="ts">
 export default {
   name: 'del-text',
-}
+};
 </script>
 
 <style lang="scss">

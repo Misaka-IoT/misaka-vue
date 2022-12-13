@@ -13,31 +13,39 @@
       </p>
       <hr />
       <h3>三、贡献者</h3>
-      <a href="https://github.com/misaka-fans/misaka-fans.github.io/graphs/contributors" target="_blank"
-        style="padding-left: 10px">详情</a>
+      <a
+        href="https://github.com/misaka-fans/misaka-fans.github.io/graphs/contributors"
+        target="_blank"
+        style="padding-left: 10px"
+        >详情</a
+      >
       <div class="contributors">
         <ContributorCard
           username="misaka-fans"
           name="Misaka Fans"
-          email="shbwb@misaka-mikoto.jp">
+          email="shbwb@misaka-mikoto.jp"
+        >
           主要贡献：绝大多数内容，留言板，PWA，照片收集、整理
         </ContributorCard>
         <ContributorCard
           username="huge-pancake"
           name="HugePancake"
-          email="huge.pancake.zxr@gmail.com">
+          email="huge.pancake.zxr@gmail.com"
+        >
           主要贡献：样式，package相关，规范化，代码复用
         </ContributorCard>
         <ContributorCard
           username="yutou1151"
           name="曾鼋棨"
-          email="yutou1151@misaka-mikoto.jp">
+          email="yutou1151@misaka-mikoto.jp"
+        >
           主要贡献：字体，格式化，代码复用，服务器&域名&cdn提供
         </ContributorCard>
         <ContributorCard
           username="Ma3h1r0"
           name="Mashiro"
-          email="lov.mashiro.e@gmail.com">
+          email="lov.mashiro.e@gmail.com"
+        >
           主要贡献：搭建&管理评论系统，人类验证
         </ContributorCard>
       </div>
@@ -50,14 +58,11 @@
         <a href="ssl" target="_blank">点击此以验证证书完整性</a>
       </p>
     </div>
-
-    <Footer></Footer>
   </div>
 </template>
 
 <script setup lang="ts">
 import ContributorCard from '@/components/ContributorCard.vue';
-import Footer from '@/components/Footer.vue';
 </script>
 
 <style scoped>
