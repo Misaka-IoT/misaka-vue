@@ -3,6 +3,7 @@
     <button class="sidebar-toggler icon-btn material-symbols-outlined">
       menu
     </button>
+    <onmusic></onmusic>
     <h1>爱我超电磁炮</h1>
     <div style="width: 40%">
       <div class="md-header__source">
@@ -63,6 +64,7 @@
 
 <script lang="ts">
 import axios from 'axios';
+import onmusic from '@/components/onmusic.vue'
 export default {
   name: 'app-frame',
   data() {
@@ -83,5 +85,9 @@ export default {
         that.forks_count = res.data.forks_count;
       });
   },
+  components:
+  {
+    onmusic
+  }
 };
 </script>
