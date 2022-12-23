@@ -18,12 +18,10 @@ export default class RandomPlayer extends HTMLElement {
   }
   render() {
     if (!this.shadowRoot) return;
-    if(this.getCookie("onmusic")=="null")
-    {
-      this.shadowRoot.innerHTML = ``
-    }
-    else
-    this.shadowRoot.innerHTML = `
+    if (this.getCookie('onmusic') == 'null') {
+      this.shadowRoot.innerHTML = ``;
+    } else
+      this.shadowRoot.innerHTML = `
       <style>${this.renderStyle()}</style>
       <iframe
         frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86"
@@ -40,18 +38,18 @@ export default class RandomPlayer extends HTMLElement {
       }
     `;
   }
-  SetCookie(name,value)
-  {
-      document.cookie = name + "="+ value;
+  SetCookie(name, value) {
+    document.cookie = name + '=' + value;
   }
-  getCookie(name)
-  {
-      var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
-      if(arr != null){
-          return arr[2];
-      }else{
-          return "null";
-      }
+  getCookie(name) {
+    var arr = document.cookie.match(
+      new RegExp('(^| )' + name + '=([^;]*)(;|$)')
+    );
+    if (arr != null) {
+      return arr[2];
+    } else {
+      return 'null';
+    }
   }
 }
 

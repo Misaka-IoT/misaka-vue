@@ -64,7 +64,7 @@
 
 <script lang="ts">
 import axios from 'axios';
-import onmusic from '@/components/onmusic.vue'
+import onmusic from '@/components/onmusic.vue';
 export default {
   name: 'app-frame',
   data() {
@@ -85,9 +85,8 @@ export default {
         that.forks_count = res.data.forks_count;
       });
   },
-  components:
-  {
-    onmusic
-  }
+  components: {
+    onmusic,
+  },
 };
 </script>
