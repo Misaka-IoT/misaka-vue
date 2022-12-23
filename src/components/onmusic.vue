@@ -33,9 +33,15 @@
                 var rp=document.getElementById("rps");
                 if(rp!=null && rp.parentNode!=null)
                 rp.parentNode.removeChild(rp);
+                
             }
             else if(button !=null)
             {
+                var rp=document.getElementById("rps");
+                if(rp!=null && rp.parentNode!=null)
+                {
+                    rp.parentNode.removeChild(rp)
+                }
                 this.SetCookie("onmusic","true");
                 button.innerText="volume_up"
                 var RP=document.createElement("random-player")
