@@ -8,7 +8,7 @@ import LinksView from '@/views/LinksView.vue';
 import IsmlView from '@/views/IsmlView.vue';
 import EatMikotoView from '@/views/EatMikotoView.vue';
 import ResourceView from '@/views/ResourceView.vue';
-
+import InterpersonalRelationship from '@/views/InterpersonalRelationship.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -56,6 +56,11 @@ const router = createRouter({
       path: '/eatmikoto',
       name: 'eatmikoto',
       component: EatMikotoView,
+    },
+    {
+      path:'/InterpersonalRelationship',
+      name: 'InterpersonalRelationship',
+      component: InterpersonalRelationship,
     },
   ],
 });
