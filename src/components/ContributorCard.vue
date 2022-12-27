@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .contributor-card {
   margin-bottom: 8px;
   display: inline-block;

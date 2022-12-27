@@ -24,3 +24,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.container {
+  height: 75vh;
+}
+</style>

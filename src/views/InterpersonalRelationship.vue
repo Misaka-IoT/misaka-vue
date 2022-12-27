@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="InterpersonalRelationshipBox">
     <div id="InterpersonalRelationship" style="height: 500px"></div>
     <p align="center">使用vis-network(MIT)制作</p>
     <p align="center">Made in vis-network (MIT)</p>
@@ -48,3 +48,9 @@ export default {
   computed: {},
 };
 </script>
+
+<style scoped>
+.InterpersonalRelationshipBox {
+  height: 75vh;
+}
+</style>

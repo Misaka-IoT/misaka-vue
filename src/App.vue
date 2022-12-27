@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import Footer from './components/Footer.vue';
+import FooterComponentVue from './components/FooterComponent.vue';
 import AppFrame from '@/components/AppFrame.vue';
 import DelText from '@/components/DelText.vue';
 </script>
@@ -14,7 +14,8 @@ import DelText from '@/components/DelText.vue';
     <router-view />
   </main>
 
-  <Footer></Footer>
+  <!-- <Footer></Footer> -->
+  <FooterComponentVue></FooterComponentVue>
 </template>
 
 <style scoped lang="scss"></style>

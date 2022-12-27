@@ -21,3 +21,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.atk-main-editor {
+  width: 83.5%;
+}
+</style>
