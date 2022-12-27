@@ -33,21 +33,24 @@ export default {
         { id: 5, label: "佐天泪子" },
         { id: 6, label: "御坂美铃" },
       ]);
-      const edges = new DataSet([
-        { from: 0, to: 1 },
-        { from: 0, to: 2 },
-        { from: 0, to: 4 },
-        { from: 0, to: 5 },
-        { from: 0, to: 3 },
-        { from: 0, to: 6 },
-        { from: 0, to: 7 },
-      ]);
+      const edges = new DataSet(
+        [
+          {from:0,to:1,id:1},
+          {from:0,to:2,id:2},
+          {from:0,to:3,id:3},
+          {from:0,to:4,id:4},
+          {from:0,to:5,id:5},
+          {from:0,to:6,id:6},
+          {from:0,to:7,id:7},
+        ]
+      );
       const data = {
         nodes: nodes,
         edges: edges
       };
       const options = {};
-      const network = new Network(container, data, options);       
+      if(container!=null)
+      var network = new Network(container, data, options);       
   },
   computed:
   {
