@@ -51,7 +51,7 @@
     <router-link to="/aboutraligun"> 关于美琴 </router-link>
     <router-link to="imgboard">美琴照片墙</router-link>
 
-    <router-link to="eatmikoto">新概念音游</router-link>
+    <router-link to="" @click="eatmikotoLoading()">新概念音游</router-link>
     <router-link to="/discuss">留言板</router-link>
 
     <router-link to="/isml">世萌比赛</router-link>
@@ -73,6 +73,12 @@ export default {
       stargazers_count: 0,
       forks_count: 0,
     };
+  },
+
+  methods: {
+    eatmikotoLoading: function () {
+      location.href = 'eat-mikoto/index.html';
+    },
   },
   created() {
     let that = this;

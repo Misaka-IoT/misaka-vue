@@ -18,3 +18,11 @@ import DelText from '@/components/DelText.vue';
 </template>
 
 <style scoped lang="scss"></style>
+
+<script lang="ts">
+export default {
+  data() {
+    return {};
+  },
+};
+</script>

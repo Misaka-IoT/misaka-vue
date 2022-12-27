@@ -6,7 +6,6 @@ import AboutRaligunView from '@/views/AboutRaligunView.vue';
 import DiscussView from '@/views/DiscussView.vue';
 import LinksView from '@/views/LinksView.vue';
 import IsmlView from '@/views/IsmlView.vue';
-import EatMikotoView from '@/views/EatMikotoView.vue';
 import ResourceView from '@/views/ResourceView.vue';
 import InterpersonalRelationship from '@/views/InterpersonalRelationship.vue';
 const router = createRouter({
@@ -52,13 +51,9 @@ const router = createRouter({
       name: 'resource',
       component: ResourceView,
     },
+
     {
-      path: '/eatmikoto',
-      name: 'eatmikoto',
-      component: EatMikotoView,
-    },
-    {
-      path:'/InterpersonalRelationship',
+      path: '/InterpersonalRelationship',
       name: 'InterpersonalRelationship',
       component: InterpersonalRelationship,
     },
