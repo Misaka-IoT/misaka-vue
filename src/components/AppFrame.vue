@@ -58,6 +58,7 @@
     <router-link to="/about">关于</router-link>
     <router-link to="/resource">动漫资源</router-link>
 
+    <router-link to="/InterpersonalRelationship">人际关系</router-link>
     <router-link to="/links">友情链接</router-link>
   </aside>
 </template>
