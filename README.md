@@ -1,52 +1,48 @@
-# misaka-vue
+<a href="https://github.com/misaka-fans/misaka-fans.github.io" target="_blank"><img src="https://img.shields.io/github/stars/misaka-fans/misaka-fans.github.io" /></a>
 
-This template should help get you started developing with Vue 3 in Vite.
+# Misaka Mikoto
 
-## Recommended IDE Setup
+你指尖跃动的电光，是我此生不变的信仰！
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![爱我炮姐](https://github.com/shbwb/misaka/blob/main/pic/0EE7D24A-F64D-4818-AEE8-E5C83A5696B3.jpeg)
 
-## Type Support for `.vue` Imports in TS
+网站 URL：
+1、https://misaka-fans.github.io
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+2、https://misaka-mikoto.jp
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+3、[Beta] https://ng.misaka-mikoto.jp
+# 关于这个项目
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 这个项目是做什么的？
 
-## Customize configuration
+**0、让更多人了解御坂美琴**
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+**1、琴厨聚集地**
 
-## Project Setup
+如果你拥有一个 GitHub 账号，不妨点一下右上角的 star，支持一下这个项目，<del>让它活得更久，</del>让更多人发现它吧～
 
-```sh
-pnpm install
+在这个 GitHub 仓库中，你可以发起任何有关魔禁系列作品，或是有关网页开发的 issue，欢迎前来讨论～
+
+**2、照片收集**
+
+在满足上一项条件后，你可以通过[fork](https://github.com/misaka-fans-photos/misaka-fans-photos.github.io/fork)，并提交 Pull Request 的方式，提交自己创作的功能。
+
+## 贡献者
+
+说明：对于对此项目有贡献的用户，TA 的 GitHub 账户名，将会展现在[About](https://misaka-mikoto.jp/pages/about)页面。
+
+## 开发
+
+图片 CDN
+
+```
+https://misaka-fans-photos.github.io/
+
+https://img.misaka-mikoto.jp/
 ```
 
-### Compile and Hot-Reload for Development
+插件：Pio 看板娘
 
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+镜像网站：https://misaka-fans.netlify.app
+(Netlify)
