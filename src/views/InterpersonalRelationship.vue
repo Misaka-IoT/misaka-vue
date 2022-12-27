@@ -24,7 +24,8 @@ export default {
   {
     const container = document.getElementById("InterpersonalRelationship");
     const nodes = new DataSet([
-        { id: 0, label: "上条当麻" },
+        { id: 0, label: "御坂美琴"},
+        { id: 7, label: "上条当麻" },
         { id: 1, label: "御坂" },
         { id: 2, label: "白井黑子" },
         { id: 3, label: "食蜂操祈" },
@@ -39,6 +40,7 @@ export default {
         { from: 0, to: 5 },
         { from: 0, to: 3 },
         { from: 0, to: 6 },
+        { from: 0, to: 7 },
       ]);
       const data = {
         nodes: nodes,
