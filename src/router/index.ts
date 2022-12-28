@@ -8,6 +8,7 @@ import LinksView from '@/views/LinksView.vue';
 import IsmlView from '@/views/IsmlView.vue';
 import ResourceView from '@/views/ResourceView.vue';
 import InterpersonalRelationship from '@/views/InterpersonalRelationship.vue';
+import Character from '@/views/CharactersView.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -56,6 +57,11 @@ const router = createRouter({
       path: '/InterpersonalRelationship',
       name: 'InterpersonalRelationship',
       component: InterpersonalRelationship,
+    },
+    {
+      path: '/Character',
+      name: 'Character',
+      component: Character,
     },
   ],
 });

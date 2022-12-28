@@ -60,6 +60,7 @@
 
     <router-link to="/InterpersonalRelationship">人际关系</router-link>
     <router-link to="/links">友情链接</router-link>
+    <router-link to="/Character">人物介绍</router-link>
   </aside>
 </template>
 
