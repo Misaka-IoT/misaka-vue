@@ -10,6 +10,7 @@
 
 :root {
   --theme-color: #c49582;
+  --theme-color-rgb: 196, 149, 130;
   --theme-color-variant: #c37a5d;
   --on-theme-color: #ffffff;
   --surface: #fff;
@@ -151,19 +152,11 @@ body {
   overflow-x: hidden;
 }
 
-body:not(.no-top-padding) {
-  padding-top: 64px;
-}
-
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.sidebar-opened {
-  padding-left: 300px;
 }
 
 ul,
@@ -182,12 +175,7 @@ a,
   appearance: none;
 }
 
-:not(.sidebar) > a:not(.icon-btn) {
-  color: var(--theme-color);
-  text-decoration: none;
-}
-
-:not(.sidebar) > a:not(.icon-btn):hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -265,73 +253,52 @@ hr {
   padding: 2px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  background-color: var(--theme-color);
-  color: var(--on-theme-color);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  z-index: 8;
-}
-
-.header h1 {
-  margin: 0;
-  padding-inline-start: 8px;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  vertical-align: middle;
-}
-
 .icon-btn {
   position: relative;
-  display: inline-flex !important;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   margin-inline-start: 8px;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   color: var(--on-theme-color);
   background-color: var(--theme-color);
   border-radius: 9999px;
   border: none;
   user-select: none;
   cursor: pointer;
-  overflow: hidden;
+}
+.icon-btn.standard {
+  background-color: transparent;
+  color: var(--theme-color);
+}
+.icon-btn.no-color {
+  color: inherit;
 }
 
 .icon-btn::before,
-.fab::before,
-.sidebar a::before {
+.fab::before {
   content: '';
   position: absolute;
   inset: 0;
   background-color: currentColor;
+  border-radius: inherit;
   opacity: 0;
 }
 
 .icon-btn:hover::before,
-.fab:hover::before,
-.sidebar a:hover::before {
+.fab:hover::before {
   opacity: 0.08;
 }
 
 .icon-btn:focus-visible::before,
-.fab:focus-visible::before,
-.sidebar a:focus-visible:before {
+.fab:focus-visible::before {
   opacity: 0.12;
 }
 
 .icon-btn:active::before,
-.fab:active::before,
-.sidebar a:active:before {
+.fab:active::before {
   opacity: 0.16;
 }
 
@@ -358,59 +325,6 @@ hr {
   right: 16px;
 }
 
-.sidebar {
-  position: fixed;
-  top: 64px;
-  left: 0;
-  padding: 16px 8px;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background-color: #ffffff;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  transition: 240ms transform cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateX(-100%);
-  z-index: 10;
-}
-
-
-
-.sidebar-opened .sidebar {
-  transform: translateX(0);
-}
-
-
-@media screen and (max-width: 900px) {
-  .sidebar {
-    transform: translateX(0);
-  }
-
-  .sidebar-opened .sidebar {
-    transform: translateX(-100%);
-  }
-  .sidebar-opened {
-    padding-left: 0px;
-  }
-  
-}
-
-
-.sidebar a {
-  position: relative;
-  padding: 0 12px;
-  width: 100%;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  color: #171717;
-  text-decoration: none;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
 .banner {
   min-height: 64px;
   display: flex;
@@ -435,20 +349,6 @@ hr {
   margin: auto;
 }
 
-footer embed {
-  width: 100%;
-}
-
-@media (hover: none) {
-  *::before {
-    opacity: 0 !important;
-  }
-
-  a {
-    text-decoration: none;
-  }
-}
-
 .md-header__source {
   display: none;
 }
@@ -463,7 +363,7 @@ footer embed {
   }
 
   .md-header__source {
-    display: block;
+    display: inline-flex;
   }
 }
 
@@ -490,11 +390,11 @@ footer embed {
 
 .md-header__source {
   display: none;
-  color: #fff !important;
+  color: var(--on-theme-color);
 }
 
 .md-header__source a {
-  color: #fff !important;
+  color: var(--on-theme-color);
 }
 
 @media screen and (min-width: 60em) {
@@ -527,7 +427,6 @@ footer embed {
   display: block;
   font-size: 0.65rem;
   line-height: 1.2;
-  outline-color: var(--md-accent-fg-color);
   transition: opacity 0.25s;
   white-space: nowrap;
 }
