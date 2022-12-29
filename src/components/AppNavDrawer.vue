@@ -94,6 +94,7 @@ export default {
 
 .app-nav-drawer {
   background: var(--md-sys-color-surface);
+  border-inline-end: 1px solid var(--md-sys-color-outline);
   flex-shrink: 0;
   height: 100%;
   overflow-y: auto;
@@ -102,7 +103,6 @@ export default {
   width: 300px;
   will-change: transform;
   z-index: 1000;
-  border-inline-end: 1px solid var(--md-sys-color-outline);
 }
 
 .app-nav-drawer__contents {
