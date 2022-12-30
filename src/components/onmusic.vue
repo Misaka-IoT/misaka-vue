@@ -1,6 +1,6 @@
 <template>
   <button
-    class="sidebar-toggler icon-btn material-symbols-outlined"
+    class="icon-btn standard no-color material-symbols-outlined"
     @click="onmusic"
     id="onmusicsbutton"
   >
