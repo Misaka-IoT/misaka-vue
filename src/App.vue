@@ -11,7 +11,8 @@ import DelText from '@/components/DelText.vue'
     <template #drawer>
       <RouterLink to="/">主页</RouterLink>
       <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
-      <RouterLink to="imgboard">美琴照片墙</RouterLink>
+      <RouterLink to="/imgboard">美琴照片墙</RouterLink>
+      <RouterLink to="/awards">世萌战绩</RouterLink>
 
       <RouterLink to="" @click="loadEatMikoto">新概念音游</RouterLink>
       <RouterLink to="/discuss">留言板</RouterLink>
