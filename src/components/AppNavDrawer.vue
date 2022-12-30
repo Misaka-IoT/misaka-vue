@@ -47,7 +47,7 @@ export default {
         this.opened = false;
         this.statusChanged?.(this.opened);
         // this.updateDrawerFocusTrap();
-      }, 240);
+      }, 200);
     },
     handleKeydown({ key }: { key: string }) {
       switch (key) {
@@ -87,9 +87,8 @@ export default {
   opacity: 0;
   pointer-events: none;
   position: fixed;
-  transition: opacity 240ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity;
-  z-index: 999;
+  z-index: 1100;
 }
 
 .app-nav-drawer {
@@ -99,10 +98,9 @@ export default {
   height: 100%;
   overflow-y: auto;
   padding: 16px;
-  transition: transform .24s cubic-bezier(.4, 0, .2, 1);
   width: 300px;
   will-change: transform;
-  z-index: 1000;
+  z-index: 1200;
 }
 
 .app-nav-drawer__contents {
@@ -114,7 +112,6 @@ export default {
     position: fixed;
     display: none;
     background: var(--md-sys-elevation-surface-2);
-    // backdrop-filter: blur(20px);
     transform: translateX(-100%);
     border-inline-end: 0;
     border-end-end-radius: 16px;
@@ -133,6 +130,11 @@ export default {
   .app-nav-drawer--opened .app-nav-drawer {
     display: block;
     transform: translateX(0);
+    transition: transform 500ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .app-nav-drawer--opened .app-nav-drawer__overlap {
+    transition: opacity 500ms cubic-bezier(0.2, 0, 0, 1);
   }
 
   .app-nav-drawer--opening .app-nav-drawer {
@@ -146,6 +148,7 @@ export default {
 
   .app-nav-drawer--closing .app-nav-drawer {
     transform: translateX(-100%);
+    transition: transform 200ms cubic-bezier(0.2, 0, 0, 1);
   }
 
   [dir='rtl'] .app-nav-drawer--closing .app-nav-drawer {
@@ -154,6 +157,7 @@ export default {
 
   .app-nav-drawer--closing .app-nav-drawer__overlap {
     opacity: 0;
+    transition: 200ms cubic-bezier(0.2, 0, 0, 1);
   }
 }
 </style>
