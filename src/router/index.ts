@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import ImageBoardView from '@/views/ImageBoardView.vue';
 import AboutView from '@/views/AboutView.vue';
 import AboutRaligunView from '@/views/AboutRaligunView.vue';
+import AwardsView from '@/views/AwardsView.vue';
 import DiscussView from '@/views/DiscussView.vue';
 import LinksView from '@/views/LinksView.vue';
 import IsmlView from '@/views/IsmlView.vue';
@@ -42,6 +43,11 @@ const router = createRouter({
       path: '/aboutraligun',
       name: 'aboutraligun',
       component: AboutRaligunView,
+    },
+    {
+      path: '/awards',
+      name: 'awards',
+      component: AwardsView,
     },
     {
       path: '/isml',
