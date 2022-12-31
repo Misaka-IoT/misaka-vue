@@ -4,15 +4,18 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 
-var ccss=getCookie(css);
+var ccss=getCookie("css");
 var css;
 switch(ccss)//css切换器
 {
   case "null":
-    css=import('@stylesmain.scss');
+    css=import('@/styles/main.scss');
     break;
   case "main":
-    css=import('@stylesmain.scss');
+    css=import('@/styles/main.scss');
+    break;
+  case "black":
+    css=import('@/styles/black.scss');
     break;
 }
 
