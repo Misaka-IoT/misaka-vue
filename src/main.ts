@@ -4,11 +4,11 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 
-var ccss=getCookie("css");
+var ccss=localStorage.getItem("css");
 var css;
 switch(ccss)//css切换器
 {
-  case "null":
+  case null:
     css=import('@/styles/main.scss');
     break;
   case "main":
@@ -31,16 +31,3 @@ app.use(router);
 
 app.mount('#app');
 
-function SetCookie(name: String, value: string) {//设置Cookie
-  document.cookie = name + '=' + value;
-}
-function getCookie(name: string) {//读取Cookie
-  var arr = document.cookie.match(
-    new RegExp('(^| )' + name + '=([^;]*)(;|$)')
-  );
-  if (arr != null) {
-    return arr[2];
-  } else {
-    return 'null';
-  }
-}
