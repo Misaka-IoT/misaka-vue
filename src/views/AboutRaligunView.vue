@@ -85,7 +85,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DelText from '@/components/DelText.vue';
+</script>
 
 <style scoped>
 img {

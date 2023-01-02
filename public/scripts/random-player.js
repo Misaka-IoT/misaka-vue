@@ -18,7 +18,7 @@ export default class RandomPlayer extends HTMLElement {
   }
   render() {
     if (!this.shadowRoot) return;
-    if (this.getCookie('onmusic') == 'null') {
+    if (localStorage.getItem('onmusic') == 'null' || localStorage.getItem('onmusic') == null) {
       this.shadowRoot.innerHTML = ``;
     } else
       this.shadowRoot.innerHTML = `
@@ -37,19 +37,6 @@ export default class RandomPlayer extends HTMLElement {
         display: block;
       }
     `;
-  }
-  SetCookie(name, value) {
-    document.cookie = name + '=' + value;
-  }
-  getCookie(name) {
-    var arr = document.cookie.match(
-      new RegExp('(^| )' + name + '=([^;]*)(;|$)')
-    );
-    if (arr != null) {
-      return arr[2];
-    } else {
-      return 'null';
-    }
   }
 }
 
