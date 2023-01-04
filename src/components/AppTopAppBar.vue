@@ -13,7 +13,11 @@
         <slot name="actionBtns"></slot>
       </section>
     </header>
-    <div class="app-top-app-bar__contents" ref="contents" @scroll="handleScroll">
+    <div
+      class="app-top-app-bar__contents"
+      ref="contents"
+      @scroll="handleScroll"
+    >
       <slot></slot>
     </div>
   </div>
@@ -25,9 +29,9 @@ export default {
     classes(): string {
       return [
         'app-top-app-bar__container',
-        this.scrolled ? 'app-top-app-bar--scrolled' : ''
+        this.scrolled ? 'app-top-app-bar--scrolled' : '',
       ].join(' ');
-    }
+    },
   },
   data() {
     return {
@@ -36,10 +40,11 @@ export default {
   },
   methods: {
     handleScroll(e: Event) {
-      this.scrolled = (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false;
-    }
+      this.scrolled =
+        (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false;
+    },
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

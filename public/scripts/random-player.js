@@ -18,7 +18,10 @@ export default class RandomPlayer extends HTMLElement {
   }
   render() {
     if (!this.shadowRoot) return;
-    if (localStorage.getItem('onmusic') == 'null' || localStorage.getItem('onmusic') == null) {
+    if (
+      localStorage.getItem('onmusic') == 'null' ||
+      localStorage.getItem('onmusic') == null
+    ) {
       this.shadowRoot.innerHTML = ``;
     } else
       this.shadowRoot.innerHTML = `

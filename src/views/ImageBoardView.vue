@@ -55,42 +55,44 @@ export default {
   },
 };
 </script>
-<style scoped>
-#app {
-  padding: 0%;
+<style scoped lang="scss">
+img {
+  border: 5px solid silver;
+  box-shadow: 12px 12px 13px 1px gray;
 }
+
 @media (min-width: 1200px) {
-  img {
-    margin: 1vw;
-    width: calc(31%);
-    border-radius: 30px;
-  }
   #imgboard {
     height: 230vw;
     display: flex;
     flex-flow: column wrap;
     padding: 0%;
+    img {
+      margin: 1vw;
+      width: calc(30.8%);
+      border-radius: 30px;
+    }
   }
 }
 @media (max-width: 1500px) {
-  img {
-    margin: 2vw;
-    width: calc(45%);
-    border-radius: 20px;
-  }
   #imgboard {
     height: 4800px;
+    img {
+      margin: 2vw;
+      width: calc(45%);
+      border-radius: 20px;
+    }
   }
 }
 
 @media (max-width: 1200px) {
-  img {
-    margin: 3vw;
-    width: calc(94%);
-    border-radius: 20px;
-  }
   #imgboard {
     height: 9250px;
+    img {
+      margin: 3vw;
+      width: calc(94%);
+      border-radius: 20px;
+    }
   }
 }
 </style>

@@ -4,18 +4,19 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 
-var ccss=localStorage.getItem("css");
-var css;
-switch(ccss)//css切换器
-{
+const ccss = localStorage.getItem('css');
+let css;
+switch (
+  ccss //css切换器
+) {
   case null:
-    css=import('@/styles/main.scss');
+    css = import('@/styles/main.scss');
     break;
-  case "main":
-    css=import('@/styles/main.scss');
+  case 'main':
+    css = import('@/styles/main.scss');
     break;
-  case "black":
-    css=import('@/styles/black.scss');
+  case 'black':
+    css = import('@/styles/black.scss');
     break;
 }
 
@@ -30,4 +31,3 @@ app.use(createPinia());
 app.use(router);
 
 app.mount('#app');
-

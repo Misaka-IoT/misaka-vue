@@ -1,7 +1,12 @@
 <template>
   <div :class="classes">
     <span class="app-nav-drawer__overlap" @click="closeDrawer"></span>
-    <aside class="app-nav-drawer" tabindex="-1" ref="drawer" @keydown="handleKeydown">
+    <aside
+      class="app-nav-drawer"
+      tabindex="-1"
+      ref="drawer"
+      @keydown="handleKeydown"
+    >
       <slot name="drawer"></slot>
     </aside>
     <div class="app-nav-drawer__contents" ref="contents">
@@ -18,9 +23,9 @@ export default {
         'app-nav-drawer__container',
         this.opened ? 'app-nav-drawer--opened' : '',
         this.opening ? 'app-nav-drawer--opening' : '',
-        this.closing ? 'app-nav-drawer--closing' : ''
+        this.closing ? 'app-nav-drawer--closing' : '',
       ].join(' ');
-    }
+    },
   },
   data() {
     return {
@@ -59,7 +64,7 @@ export default {
         default:
           break;
       }
-    }
+    },
   },
   props: {
     open: Boolean,
@@ -69,9 +74,9 @@ export default {
     open: function (newVal, oldVal) {
       if (newVal === oldVal) return;
       newVal ? this.openDrawer() : this.closeDrawer();
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

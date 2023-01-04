@@ -17,7 +17,7 @@ export default {
   transition: 120ms background-color;
   transition-delay: 0s;
   cursor: default;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .del-text:hover {
