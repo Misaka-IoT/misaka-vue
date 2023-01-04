@@ -8,17 +8,17 @@ import DiscussView from '@/views/DiscussView.vue';
 import LinksView from '@/views/LinksView.vue';
 import IsmlView from '@/views/IsmlView.vue';
 import ResourceView from '@/views/ResourceView.vue';
-import InterpersonalRelationship from '@/views/InterpersonalRelationship.vue';
+const InterpersonalRelationship = () => import('@/views/InterpersonalRelationship.vue');
 import Character from '@/views/CharactersView.vue';
 //<InterpersonalRelationship跳转>
-  import l0 from "@/views/InterpersonalRelationship/0.vue"
-  import l1 from "@/views/InterpersonalRelationship/1.vue"
-  import l2 from "@/views/InterpersonalRelationship/2.vue"
-  import l3 from "@/views/InterpersonalRelationship/3.vue"
-  import l4 from "@/views/InterpersonalRelationship/4.vue"
-  import l5 from "@/views/InterpersonalRelationship/5.vue"
-  import l6 from "@/views/InterpersonalRelationship/6.vue"
-  import l7 from "@/views/InterpersonalRelationship/7.vue"
+  const l0 = () => import( "@/views/InterpersonalRelationship/0.vue");
+  const l1 = () => import( "@/views/InterpersonalRelationship/1.vue");
+  const l2 = () => import( "@/views/InterpersonalRelationship/2.vue");
+  const l3 = () => import( "@/views/InterpersonalRelationship/3.vue");
+  const l4 = () => import( "@/views/InterpersonalRelationship/4.vue");
+  const l5 = () => import( "@/views/InterpersonalRelationship/5.vue");
+  const l6 = () => import( "@/views/InterpersonalRelationship/6.vue");
+  const l7 = () => import( "@/views/InterpersonalRelationship/7.vue");
 //</InterpersonalRelationship跳转>
 
 const router = createRouter({

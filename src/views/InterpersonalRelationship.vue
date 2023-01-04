@@ -24,12 +24,6 @@ import i7 from "@/assets/InterpersonalRelationshipImage/7.png";
 //</图片>
 
 export default {
-  data() {
-    return;
-    {
-      
-    }
-  },
   mounted() {
     const container = document.getElementById('InterpersonalRelationship');
     //节点数据
@@ -65,11 +59,13 @@ export default {
       var network = new Network(container, data, options);
       //双击的事件
       network.on('doubleClick',(properties)=>{
-        let routeData = this.$router.resolve({
-          path:link[properties.nodes[0]]//properties.nodes为双击的节点p
-        })
-        window.open(routeData.href);
-
+        if(properties.nodes.length>0)
+        {
+          let routeData = this.$router.resolve({
+            path:link[properties.nodes[0]]//properties.nodes为双击的节点p
+          })
+          window.open(routeData.href);
+        }
       });
     }
     
