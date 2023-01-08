@@ -11,6 +11,7 @@ import ResourceView from '@/views/ResourceView.vue';
 const InterpersonalRelationship = () =>
   import('@/views/InterpersonalRelationship.vue');
 import Character from '@/views/CharactersView.vue';
+import NotFound from '@/views/404.vue';
 //<InterpersonalRelationship跳转>
 const l0 = () => import('@/views/InterpersonalRelationship/0.vue');
 const l1 = () => import('@/views/InterpersonalRelationship/1.vue');
@@ -123,6 +124,11 @@ const router = createRouter({
       component: l7,
     },
     //</InterpersonalRelationship跳转>
+    {
+      path:'/:pathMatch(.*)',
+      name:'404',
+      component:NotFound,
+    },
   ],
 });
 

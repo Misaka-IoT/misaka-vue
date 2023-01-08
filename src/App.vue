@@ -9,6 +9,7 @@ import DelText from '@/components/DelText.vue';
 <template>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
+      <SidebarLink>
       <RouterLink to="/">主页</RouterLink>
       <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
       <RouterLink to="/imgboard">美琴照片墙</RouterLink>
@@ -24,8 +25,8 @@ import DelText from '@/components/DelText.vue';
       <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
       <RouterLink to="/links">友情链接</RouterLink>
       <RouterLink to="/Character">人物介绍</RouterLink>
+      </SidebarLink>
     </template>
-
     <AppTopAppBar>
       <template #navBtns>
         <button
@@ -89,7 +90,7 @@ import DelText from '@/components/DelText.vue';
 <script lang="ts">
 import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
-
+import SidebarLink from '@/components/SidebarLink.vue'
 export default {
   computed: {
     navIcon(): string {
