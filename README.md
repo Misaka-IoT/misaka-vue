@@ -7,11 +7,13 @@
 ![爱我炮姐](https://github.com/shbwb/misaka/blob/main/pic/0EE7D24A-F64D-4818-AEE8-E5C83A5696B3.jpeg)
 
 网站 URL：
-1、https://misaka-fans.github.io
+
+1、https://www.misaka-mikoto.jp
 
 2、https://misaka-mikoto.jp
 
-3、[Beta] https://ng.misaka-mikoto.jp
+3、[old] https://static.misaka-mikoto.jp
+
 # 关于这个项目
 
 ## 这个项目是做什么的？
@@ -37,8 +39,6 @@
 图片 CDN
 
 ```
-https://misaka-fans-photos.github.io/
-
 https://img.misaka-mikoto.jp/
 ```
 
