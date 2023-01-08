@@ -36,7 +36,7 @@
         </ContributorCard>
         <ContributorCard
           username="yutou1151"
-          name="曾鼋棨"
+          name="高坂 筑穂"
           email="yutou1151@misaka-mikoto.jp"
         >
           主要贡献：字体，格式化，代码复用，服务器&域名&cdn提供
