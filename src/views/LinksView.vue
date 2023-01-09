@@ -19,6 +19,15 @@
             ><div>Mashiro的博客</div>
             <div>Happy Coding , Happy Life</div></a
           >
+
+          <br />
+          <a
+            title="misaka-fans"
+            target="_blank"
+            href="https://static.misaka-mikoto.jp"
+            ><div>静态网站</div>
+            <div>本网站的上一个版本，使用静态页面构建</div></a
+          ><br />
         </li>
       </ul>
     </div>

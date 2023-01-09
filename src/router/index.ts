@@ -125,9 +125,9 @@ const router = createRouter({
     },
     //</InterpersonalRelationship跳转>
     {
-      path:'/:pathMatch(.*)',
-      name:'404',
-      component:NotFound,
+      path: '/:pathMatch(.*)',
+      name: '404',
+      component: NotFound,
     },
   ],
 });

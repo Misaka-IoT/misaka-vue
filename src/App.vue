@@ -10,19 +10,18 @@ import DelText from '@/components/DelText.vue';
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
       <SidebarLink>
-      <RouterLink to="/">主页</RouterLink>
-      <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
-      <RouterLink to="/Character">相关人物介绍</RouterLink>
-      <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
-      <RouterLink to="/imgboard">美琴照片墙</RouterLink>
-      <RouterLink to="/awards">世萌战绩</RouterLink>
-      <RouterLink to="/isml">世萌投票</RouterLink>
-      <RouterLink to="" @click="loadEatMikoto">新概念音游</RouterLink>
-      <RouterLink to="/discuss">留言板</RouterLink>
-      <RouterLink to="/resource">动漫资源</RouterLink>
-      <RouterLink to="/about">关于</RouterLink>
-      <RouterLink to="/links">友情链接</RouterLink>
-      
+        <RouterLink to="/">主页</RouterLink>
+        <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
+        <RouterLink to="/Character">相关人物介绍</RouterLink>
+        <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
+        <RouterLink to="/imgboard">美琴照片墙</RouterLink>
+        <RouterLink to="/awards">世萌战绩</RouterLink>
+        <RouterLink to="/isml">世萌投票</RouterLink>
+        <RouterLink to="" @click="loadEatMikoto">新概念音游</RouterLink>
+        <RouterLink to="/discuss">留言板</RouterLink>
+        <RouterLink to="/resource">动漫资源</RouterLink>
+        <RouterLink to="/about">关于</RouterLink>
+        <RouterLink to="/links">友情链接</RouterLink>
       </SidebarLink>
     </template>
     <AppTopAppBar>
@@ -76,6 +75,11 @@ import DelText from '@/components/DelText.vue';
             </div>
           </a>
         </div>
+
+        <select name="" id="" class="select-site" @change="shangeSite">
+          <option value="1" :selected="selectedId == 1">中国站</option>
+          <option value="2" :selected="selectedId == 2">海外站</option>
+        </select>
       </template>
 
       <RouterView></RouterView>
@@ -88,7 +92,7 @@ import DelText from '@/components/DelText.vue';
 <script lang="ts">
 import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
-import SidebarLink from '@/components/SidebarLink.vue'
+import SidebarLink from '@/components/SidebarLink.vue';
 export default {
   computed: {
     navIcon(): string {
@@ -96,6 +100,22 @@ export default {
     },
   },
   created() {
+    // 根据url获取当前处于哪个站点
+    console.log(window.location.href);
+    if (
+      location.href == 'https://misaka-mikoto.jp' ||
+      location.href == 'https://www.misaka-mikoto.jp'
+    ) {
+      this.selectedId = 2; // 如果url 是jp ，选中第二项，默认显示海外站，反之中国站
+    } else if (
+      location.href == 'https://misaka-mikoto.cn' ||
+      location.href == 'https://www.misaka-mikoto.cn'
+    ) {
+      this.selectedId = 1;
+    } else {
+      // 都不是则为其他站点，默认显示中国站
+    }
+
     // 使用axios获取star和fork数量
     axios
       .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')
@@ -109,6 +129,7 @@ export default {
       drawerOpened: false,
       stargazersCount: 0,
       forksCount: 0,
+      selectedId: 1,
     };
   },
   methods: {
@@ -124,6 +145,21 @@ export default {
      */
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
+    },
+
+    shangeSite(): void {
+      console.log('changesiste');
+      switch (this.selectedId) {
+        case 1:
+          location.href = 'https://misaka-mikoto.cn';
+          break;
+        case 2:
+          location.href = 'https://misaka-mikoto.jp';
+
+          break;
+        default:
+          break;
+      }
     },
   },
 };
@@ -173,6 +209,34 @@ export default {
 @media (max-width: 1200px) {
   .drawer-opener {
     display: inline-flex !important;
+  }
+}
+
+.select-site {
+  display: block;
+  width: 140px;
+  height: 34px;
+  padding: 4px 10px;
+  font-size: 17px;
+  line-height: 17px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  position: absolute;
+  right: 40px;
+  color: white;
+  outline: none;
+  appearance: none;
+  background: url() no-repeat scroll right center transparent;
+
+  option {
+    background: white;
+    color: black;
   }
 }
 </style>
