@@ -239,4 +239,11 @@ export default {
     color: black;
   }
 }
+
+@media (max-width: 900px) {
+  .select-site {
+    position: absolute;
+    right: 10px;
+  }
+}
 </style>
