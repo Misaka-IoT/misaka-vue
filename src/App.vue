@@ -12,19 +12,17 @@ import DelText from '@/components/DelText.vue';
       <SidebarLink>
       <RouterLink to="/">主页</RouterLink>
       <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
+      <RouterLink to="/Character">相关人物介绍</RouterLink>
+      <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
       <RouterLink to="/imgboard">美琴照片墙</RouterLink>
       <RouterLink to="/awards">世萌战绩</RouterLink>
-
+      <RouterLink to="/isml">世萌投票</RouterLink>
       <RouterLink to="" @click="loadEatMikoto">新概念音游</RouterLink>
       <RouterLink to="/discuss">留言板</RouterLink>
-
-      <RouterLink to="/isml">世萌比赛</RouterLink>
-      <RouterLink to="/about">关于</RouterLink>
       <RouterLink to="/resource">动漫资源</RouterLink>
-
-      <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
+      <RouterLink to="/about">关于</RouterLink>
       <RouterLink to="/links">友情链接</RouterLink>
-      <RouterLink to="/Character">人物介绍</RouterLink>
+      
       </SidebarLink>
     </template>
     <AppTopAppBar>
