@@ -7,9 +7,7 @@
           >本站总访问次数<span id="busuanzi_value_site_pv"></span>次</span
         >
       </p>
-      <a href="https://icp.gov.moe/?keyword=20220436" target="_blank"
-        >萌ICP备20220436号</a
-      >
+     <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2022000892号-3</a>
       <form
         action="https://sitesealinfo.pubcert.jprs.jp/SiteSealReference"
         name="SiteSealReference"
