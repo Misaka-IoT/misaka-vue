@@ -76,9 +76,11 @@ import DelText from '@/components/DelText.vue';
           </a>
         </div>
 
+
         <select name="" id="" class="select-site" @change="changeSite()">
           <option value="1" :selected="site == 'cn'">中国站</option>
           <option value="2" :selected="site == 'jp'">海外站</option>
+
         </select>
       </template>
 
@@ -103,6 +105,7 @@ export default {
     // 根据url获取当前处于哪个站点
     console.log(window.location.href);
     if (
+
       location.href == 'https://misaka-mikoto.jp/' ||
       location.href == 'https://www.misaka-mikoto.jp/'
     ) {
@@ -112,6 +115,7 @@ export default {
       location.href == 'https://www.misaka-mikoto.cn/'
     ) {
       this.site = 'cn';
+
     } else {
       // 都不是则为其他站点，默认显示中国站
     }
@@ -129,7 +133,9 @@ export default {
       drawerOpened: false,
       stargazersCount: 0,
       forksCount: 0,
+
       site: 'cn',
+
     };
   },
   methods: {
@@ -147,6 +153,7 @@ export default {
       location.href = 'eat-mikoto/index.html';
     },
 
+
     changeSite(): void {
       switch (this.site) {
         case 'cn':
@@ -155,6 +162,7 @@ export default {
         case 'jp':
           location.href = 'https://misaka-mikoto.cn';
           break;
+
         default:
           break;
       }
