@@ -107,17 +107,15 @@ export default {
     // 根据url获取当前处于哪个站点
     console.log(window.location.href);
     if (
-      location.href == 'https://misaka-mikoto.jp/' ||
-      location.href == 'https://www.misaka-mikoto.jp/'
-    ) {
+      location.href.indexOf('misaka-mikoto.jp') != -1)
+     {
       this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
     } else if (
-      location.href == 'https://misaka-mikoto.cn/' ||
-      location.href == 'https://www.misaka-mikoto.cn/'
-    ) {
+      location.href.indexOf('misaka-mikoto.cn') != -1)
+     {
       this.site = 'cn';
     } else {
-      // 都不是则为其他站点，默认显示中国站
+      // 都不是则为其他站点，默认显示海外站
     }
 
     // 使用axios获取star和fork数量
@@ -133,7 +131,7 @@ export default {
       drawerOpened: false,
       stargazersCount: 0,
       forksCount: 0,
-      site: 'cn',
+      site: 'jp',
     };
   },
   methods: {
