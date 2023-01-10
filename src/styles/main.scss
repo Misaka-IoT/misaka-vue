@@ -685,7 +685,6 @@ hr {
 
 .select-site {
   display: block;
-  width: 140px;
   height: 34px;
   padding: 4px 10px;
   font-size: 17px;
@@ -817,6 +816,6 @@ hr {
 @media (max-width: 900px) {
   .select-site {
     position: absolute;
-    right: 10px;
+    right: 15px;
   }
 }
