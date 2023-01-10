@@ -1,5 +1,5 @@
 <template>
-  <div class="InterpersonalRelationshipBox">
+  <div class="InterpersonalRelationshipBox" id="InterpersonalRelationshipBox">
     <div id="InterpersonalRelationship" style="height: 500px"></div>
     <p align="center">使用vis-network(MIT)制作</p>
     <p align="center">Made with vis-network (MIT)</p>
@@ -26,6 +26,7 @@ import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
 export default {
   mounted() {
     const container = document.getElementById('InterpersonalRelationship');
+    const box=document.getElementById('InterpersonalRelationshipBox');
     //节点数据
     const nodes = new DataSet([
       { id: 0, label: '御坂美琴', shape: 'image', image: i0 },
@@ -51,7 +52,15 @@ export default {
       nodes: nodes,
       edges: edges,
     };
-    const options = {};
+    var options={};
+    if(box!=null)
+    options = {
+      nodes:{
+        font:{
+          color:document.defaultView?.getComputedStyle(box,null).color
+        }
+      }
+    };
     //点击节点后跳转的数组
     var link = ['/l0', '/l1', '/l2', '/l3', '/l4', '/l5', '/l6', '/l7'];
     if (container != null) {
@@ -72,7 +81,5 @@ export default {
 </script>
 
 <style scoped>
-.InterpersonalRelationshipBox {
-  height: 75vh;
-}
+
 </style>

@@ -75,7 +75,10 @@ import DelText from '@/components/DelText.vue';
             </div>
           </a>
         </div>
-
+        <div>
+          <CssSwitcher></CssSwitcher>
+        </div>
+        
         <select name="" id="" class="select-site" @change="shangeSite">
           <option value="1" :selected="selectedId == 1">中国站</option>
           <option value="2" :selected="selectedId == 2">海外站</option>
@@ -93,6 +96,7 @@ import DelText from '@/components/DelText.vue';
 import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
 import SidebarLink from '@/components/SidebarLink.vue';
+import CssSwitcher from '@/components/CssSwitcher.vue';
 export default {
   computed: {
     navIcon(): string {
@@ -166,77 +170,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.app-nav-drawer a {
-  position: relative;
-  padding: 0 12px;
-  width: 100%;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  color: var(--md-sys-color-on-surface);
-  text-decoration: none !important;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
 
-.app-nav-drawer a::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: currentColor;
-  border-radius: inherit;
-  opacity: 0;
-}
-
-.app-nav-drawer a:hover::before {
-  opacity: 0.08;
-}
-
-.app-nav-drawer a:focus-visible:before {
-  opacity: 0.12;
-}
-
-.icon-btn:active::before,
-.fab:active::before,
-.app-nav-drawer a:active:before {
-  opacity: 0.16;
-}
-
-.drawer-opener {
-  display: none !important;
-}
-
-@media (max-width: 1200px) {
-  .drawer-opener {
-    display: inline-flex !important;
-  }
-}
-
-.select-site {
-  display: block;
-  width: 140px;
-  height: 34px;
-  padding: 4px 10px;
-  font-size: 17px;
-  line-height: 17px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s,
-    -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  position: absolute;
-  right: 40px;
-  color: white;
-  outline: none;
-  appearance: none;
-  background: url() no-repeat scroll right center transparent;
-
-  option {
-    background: white;
-    color: black;
-  }
-}
 </style>

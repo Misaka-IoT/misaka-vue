@@ -51,13 +51,4 @@ export default {
 </script>
 
 <style scoped>
-.footer {
-  font-family: 'Noto Sans SC', 'Noto Sans JP', sans-serif;
-  display: block;
-  padding: 0px 24px 20px 24px;
-  color: #5a5a5a;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 </style>

@@ -48,63 +48,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.app-top-app-bar__container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
 
-.app-top-app-bar {
-  color: var(--on-theme-color);
-  background-color: rgba(196, 149, 130, 0.7);
-  backdrop-filter: blur(1.5px);
-  box-sizing: border-box;
-  display: flex;
-  min-height: 64px;
-  position: relative;
-  width: 100%;
-  z-index: 800;
 
-  .app-top-app-bar__sections {
-    align-items: center;
-    display: flex;
-    padding: 12px 8px;
-
-    &.middle,
-    &.end {
-      flex: 1;
-    }
-
-    &.start {
-      gap: 8px;
-      justify-content: flex-start;
-    }
-
-    &.end {
-      gap: 8px;
-      justify-content: flex-end;
-    }
-  }
-
-  .app-top-app-bar__title {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.375rem;
-    font-weight: 400;
-    line-height: 1.75rem;
-    letter-spacing: 0rem;
-  }
-}
-
-// .app-top-app-bar--scrolled .app-top-app-bar {
-//   background: var(--md-sys-elevation-surface-2);
-// }
-.app-top-app-bar__contents {
-  flex: 1;
-  overflow: auto;
-  margin-top: -64px;
-  padding-top: 64px;
-  height: calc(100% + 64px);
-}
 </style>
