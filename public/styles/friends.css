@@ -36,20 +36,6 @@
   color: white;
 }
 
-.readers-list li a div {
-  padding: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #999;
-}
-
-.readers-list li a div:first-child {
-  border-bottom: 1px dashed #eee;
-  font-size: 1.3em;
-  color: #666;
-}
-
 .readers-list li a:hover {
   -webkit-transform: translateY(-6px);
   transform: translateY(-6px);
