@@ -814,3 +814,9 @@ hr {
   font-size: 1.3em;
   color: var(--textcolors);
 }
+@media (max-width: 900px) {
+  .select-site {
+    position: absolute;
+    right: 10px;
+  }
+}
