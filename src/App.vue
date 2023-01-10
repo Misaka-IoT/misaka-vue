@@ -79,9 +79,9 @@ import DelText from '@/components/DelText.vue';
           <CssSwitcher></CssSwitcher>
         </div>
         
-        <select name="" id="" class="select-site" @change="shangeSite">
-          <option value="1" :selected="selectedId == 1">中国站</option>
-          <option value="2" :selected="selectedId == 2">海外站</option>
+        <select name="" id="" class="select-site" @change="changeSite()">
+          <option value="1" :selected="site == 'cn'">中国站</option>
+          <option value="2" :selected="site == 'jp'">海外站</option>
         </select>
       </template>
 
@@ -107,15 +107,15 @@ export default {
     // 根据url获取当前处于哪个站点
     console.log(window.location.href);
     if (
-      location.href == 'https://misaka-mikoto.jp' ||
-      location.href == 'https://www.misaka-mikoto.jp'
+      location.href == 'https://misaka-mikoto.jp/' ||
+      location.href == 'https://www.misaka-mikoto.jp/'
     ) {
-      this.selectedId = 2; // 如果url 是jp ，选中第二项，默认显示海外站，反之中国站
+      this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
     } else if (
-      location.href == 'https://misaka-mikoto.cn' ||
-      location.href == 'https://www.misaka-mikoto.cn'
+      location.href == 'https://misaka-mikoto.cn/' ||
+      location.href == 'https://www.misaka-mikoto.cn/'
     ) {
-      this.selectedId = 1;
+      this.site = 'cn';
     } else {
       // 都不是则为其他站点，默认显示中国站
     }
@@ -133,7 +133,7 @@ export default {
       drawerOpened: false,
       stargazersCount: 0,
       forksCount: 0,
-      selectedId: 1,
+      site: 'cn',
     };
   },
   methods: {
@@ -151,15 +151,13 @@ export default {
       location.href = 'eat-mikoto/index.html';
     },
 
-    shangeSite(): void {
-      console.log('changesiste');
-      switch (this.selectedId) {
-        case 1:
-          location.href = 'https://misaka-mikoto.cn';
-          break;
-        case 2:
+    changeSite(): void {
+      switch (this.site) {
+        case 'cn':
           location.href = 'https://misaka-mikoto.jp';
-
+          break;
+        case 'jp':
+          location.href = 'https://misaka-mikoto.cn';
           break;
         default:
           break;
