@@ -181,63 +181,63 @@
 }
 
 #card-1 {
-  background-image: url('http://misaka-mikoto.com/image/2010isml_ruby-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2010-ruby-nl.JPG');
   background-size: cover;
 }
 
 #card-2 {
-  background: url('http://misaka-mikoto.com/image/2011isml_aquamarine-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2011-aquamarine-nl.JPG');
   background-size: cover;
 }
 
 #card-3 {
-  background: url('http://misaka-mikoto.com/image/2011isml_heavenly-tiara.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2011-heavenly-tiara.JPG');
   background-size: cover;
 }
 
 #card-4 {
-  background: url('http://misaka-mikoto.com/image/2012_ruby-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2012-ruby-nl.JPG');
   background-size: cover;
 }
 
 #card-5 {
-  background: url('http://misaka-mikoto.com/image/2012isml_diamono-circlet.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2012-diamono-circlet.JPG');
   background-size: cover;
 }
 
 #card-6 {
-  background: url('http://misaka-mikoto.com/image/2014isml_aquamarine-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2014-aquamarine-nl.JPG');
   background-size: cover;
 }
 
 #card-7 {
-  background: url('http://misaka-mikoto.com/image/2017isml_tournament-champion.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2017-tournament-champion.JPG');
   background-size: cover;
 }
 
 #card-8 {
-  background: url('http://misaka-mikoto.com/image/2018isml_tournament-champion.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2018-tournament-champion.JPG');
   background-size: cover;
 }
 
 #card-9 {
-  background: url('http://misaka-mikoto.com/image/2020isml_emerald-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2020-emerald-nl.JPG');
   background-size: cover;
 }
 
 #card-10 {
-  background: url('http://misaka-mikoto.com/image/2021isml_sapphire-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2021-sapphire-nl.JPG');
   background-size: cover;
 }
 
 #card-11 {
-  background: url('http://misaka-mikoto.com/image/2022isml_topaz-nl.jpg');
+  background: url('https://img.misaka-mikoto.jp/poster/2022-topaz-nl.JPG');
   background-size: cover;
 }
 
 #card-12 {
   background: rgba(174, 0, 255, 0.788);
-  /*background: url('http://misaka-mikoto.com/image/);*/
+  /*background: url('https://img.misaka-mikoto.jp/poster/2022-amethyst-nl.PNG);*/
   background-size: cover;
 }
 
