@@ -236,7 +236,7 @@
 }
 
 #card-12 {
-  background: url('https://img.misaka-mikoto.jp/poster/2022-amethyst-nl.PNG);
+  background: url('https://img.misaka-mikoto.jp/poster/2022-amethyst-nl.PNG');
   background-size: cover;
 }
 
