@@ -40,7 +40,7 @@
            <a
             title="夜灭の小窝"
             target="_blank"
-            href="https://blog.cnmobile.link"
+            href="https://yujie.pro"
             ><div>夜灭の小窝</div>
             <div>夜灭的小窝，谈天说地热爱二次元且会写bug</div></a
           ><br />
