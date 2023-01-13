@@ -36,6 +36,18 @@
             ><div>LiangBurs' Blog</div>
             <div>May all the beauty be blessed. —— 《Moon Halo》</div></a
           ><br />
+          
+           <a
+            title="夜灭の小窝"
+            target="_blank"
+            href="https://blog.cnmobile.link"
+            ><div>夜灭の小窝</div>
+            <div>夜灭的小窝，谈天说地热爱二次元且会写bug</div></a
+          ><br />
+          
+          
+          
+          
         </li>
       </ul>
     </div>
