@@ -28,6 +28,14 @@
             ><div>静态网站</div>
             <div>本网站的上一个版本，使用静态页面构建</div></a
           ><br />
+
+          <a
+            title="LiangBurs' Blog"
+            target="_blank"
+            href="https://blog.cnmobile.link"
+            ><div>LiangBurs' Blog</div>
+            <div>May all the beauty be blessed. —— 《Moon Halo》</div></a
+          ><br />
         </li>
       </ul>
     </div>
