@@ -28,6 +28,37 @@
             ><div>静态网站</div>
             <div>本网站的上一个版本，使用静态页面构建</div></a
           ><br />
+
+          <a
+            title="LiangBurs' Blog"
+            target="_blank"
+            href="https://blog.cnmobile.link"
+            ><div>LiangBurs' Blog</div>
+            <div>May all the beauty be blessed. —— 《Moon Halo》</div></a
+          ><br />
+
+          <a title="倾丞の小窝" target="_blank" href="https://blog.qcmoe.com"
+            ><div>倾丞の小窝</div>
+            <div>倾丞的小窝,记录生活,分享乐趣</div></a
+          ><br />
+
+          <a title="夜灭の小窝" target="_blank" href="https://yujie.pro"
+            ><div>夜灭の小窝</div>
+            <div>夜灭的小窝，谈天说地热爱二次元且会写bug</div></a
+          ><br />
+
+          <a
+            title="233355607的生草小站"
+            target="_blank"
+            href="https://www.233355607.xyz"
+            ><div>233355607的生草小站</div>
+            <div>草还是草</div></a
+          ><br />
+          
+          
+          
+          
+          
         </li>
       </ul>
     </div>

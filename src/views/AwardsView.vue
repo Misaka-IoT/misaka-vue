@@ -71,7 +71,7 @@
       <div id="card-12" class="award-card">
         <div class="content">
           <h2>2022</h2>
-          <h3>紫水晶项链（海报制作中）</h3>
+          <h3>紫水晶项链</h3>
         </div>
       </div>
     </div>
@@ -201,7 +201,7 @@
 }
 
 #card-5 {
-  background: url('https://img.misaka-mikoto.jp/poster/2012-diamono-circlet.JPG');
+  background: url('https://img.misaka-mikoto.jp/poster/2012-diamond-circlet.JPG');
   background-size: cover;
 }
 

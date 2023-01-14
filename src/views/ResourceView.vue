@@ -37,6 +37,17 @@
             <a href="https://www.aliyundrive.com/s/9PZWRyxYbUt">阿里云盘</a>
           </div>
         </div>
+        <!-- index-X某系列小说汉化版 -->
+        <div id="card-4" class="card">
+          <div class="content">
+            <h2>04</h2>
+            <h3>某系列小说</h3>
+            <p>网译汉化版</p>
+            <p><b>下载提取码：见下文页面</b></p>
+            <p>资源提供：来源于GitHub</p>
+            <a href="https://github.com/1204244136/index-X">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -147,8 +158,14 @@ body {
 }
 
 #card-3 {
-  /* 设置card2的背景 */
+  /* 设置card3的背景 */
   background: url(../assets/railgun_t.webp);
+  background-size: cover;
+}
+
+#card-4 {
+  /* 设置card4的背景 */
+  background: url(../assets/index-x.webp);
   background-size: cover;
 }
 
