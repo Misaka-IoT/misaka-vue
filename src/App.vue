@@ -78,7 +78,7 @@ import DelText from '@/components/DelText.vue';
         <div>
           <CssSwitcher></CssSwitcher>
         </div>
-        
+
         <select name="" id="" class="select-site" @change="changeSite()">
           <option value="1" :selected="site == 'cn'">中国站</option>
           <option value="2" :selected="site == 'jp'">海外站</option>
@@ -106,13 +106,9 @@ export default {
   created() {
     // 根据url获取当前处于哪个站点
     console.log(window.location.href);
-    if (
-      location.href.indexOf('misaka-mikoto.jp') != -1)
-     {
+    if (location.href.indexOf('misaka-mikoto.jp') != -1) {
       this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
-    } else if (
-      location.href.indexOf('misaka-mikoto.cn') != -1)
-     {
+    } else if (location.href.indexOf('misaka-mikoto.cn') != -1) {
       this.site = 'cn';
     } else {
       // 都不是则为其他站点，默认显示海外站
@@ -165,6 +161,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

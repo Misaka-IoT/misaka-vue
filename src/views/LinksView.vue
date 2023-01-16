@@ -72,11 +72,7 @@
         </li>
 
         <li class="animated" style="visibility: visible">
-          <a
-            title="萌又萌"
-            target="_blank"
-            href="https://moeu.moe"
-          >
+          <a title="萌又萌" target="_blank" href="https://moeu.moe">
             <div>萌又萌</div>
             <div>API Ready！</div>
           </a>

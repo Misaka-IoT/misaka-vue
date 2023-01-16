@@ -26,7 +26,7 @@ import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
 export default {
   mounted() {
     const container = document.getElementById('InterpersonalRelationship');
-    const box=document.getElementById('InterpersonalRelationshipBox');
+    const box = document.getElementById('InterpersonalRelationshipBox');
     //节点数据
     const nodes = new DataSet([
       { id: 0, label: '御坂美琴', shape: 'image', image: i0 },
@@ -52,15 +52,15 @@ export default {
       nodes: nodes,
       edges: edges,
     };
-    var options={};
-    if(box!=null)
-    options = {
-      nodes:{
-        font:{
-          color:document.defaultView?.getComputedStyle(box,null).color
-        }
-      }
-    };
+    var options = {};
+    if (box != null)
+      options = {
+        nodes: {
+          font: {
+            color: document.defaultView?.getComputedStyle(box, null).color,
+          },
+        },
+      };
     //点击节点后跳转的数组
     var link = ['/l0', '/l1', '/l2', '/l3', '/l4', '/l5', '/l6', '/l7'];
     if (container != null) {
@@ -80,6 +80,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

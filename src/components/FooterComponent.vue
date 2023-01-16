@@ -54,12 +54,12 @@ export default {
   data() {
     return {
       jprs_DV_png,
-      site:'jp'
+      site: 'jp',
     };
   },
   created() {
-    if(location.href.indexOf('misaka-mikoto.cn')!= -1){
-      this.site = 'cn'
+    if (location.href.indexOf('misaka-mikoto.cn') != -1) {
+      this.site = 'cn';
     }
   },
 };

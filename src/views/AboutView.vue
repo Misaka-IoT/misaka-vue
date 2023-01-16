@@ -55,6 +55,14 @@
         >
           主要贡献：css切换器，静音按钮，人际关系页面，部分内容的美化
         </ContributorCard>
+
+        <ContributorCard
+          username="longyu12345"
+          name="龙驭"
+          email="litong4576@gmail.com"
+        >
+          主要贡献：迁移到vue，样式修改，新页面建设
+        </ContributorCard>
       </div>
       <hr />
       <h3>四、TLS/SSL证书</h3>

@@ -34,9 +34,8 @@ export default {
       closing: false,
     };
   },
-  created()
-  {
-    import('@/styles/AppTopAppBar.scss')
+  created() {
+    import('@/styles/AppTopAppBar.scss');
     const ccss = localStorage.getItem('css');
     let css;
     switch (
@@ -52,7 +51,6 @@ export default {
         css = import('@/styles/main/black.scss');
         break;
     }
-
   },
   methods: {
     openDrawer() {
@@ -99,6 +97,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
