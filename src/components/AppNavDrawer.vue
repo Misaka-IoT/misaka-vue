@@ -34,6 +34,26 @@ export default {
       closing: false,
     };
   },
+  created()
+  {
+    import('@/styles/AppTopAppBar.scss')
+    const ccss = localStorage.getItem('css');
+    let css;
+    switch (
+      ccss //css切换器
+    ) {
+      case null:
+        css = import('@/styles/main/main.scss');
+        break;
+      case 'main':
+        css = import('@/styles/main/main.scss');
+        break;
+      case 'black':
+        css = import('@/styles/main/black.scss');
+        break;
+    }
+
+  },
   methods: {
     openDrawer() {
       this.opening = true;
