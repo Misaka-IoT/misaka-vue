@@ -48,6 +48,13 @@
         >
           主要贡献：搭建&管理评论系统，人类验证
         </ContributorCard>
+        <ContributorCard
+          username="z2bguoguo"
+          name="中二病guoguo"
+          email="z2bguoguo@z2bguoguos.ml"
+        >
+          主要贡献：css切换器，静音按钮，人际关系页面，部分内容的美化
+        </ContributorCard>
       </div>
       <hr />
       <h3>四、TLS/SSL证书</h3>
