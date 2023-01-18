@@ -50,6 +50,7 @@ export default {
       { from: 0, to: 7, id: 7 },
       { from: 4, to: 5, id: 8,color:'#FFC854'},
       { from: 7, to: 1, id: 9,arrows:'to',color:'#FFC854'},
+      { from: 7, to: 2, id: 10,arrows:'to',color:'#FFC854'},
     ]);
     const data = {
       nodes: nodes,
