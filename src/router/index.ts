@@ -21,6 +21,7 @@ const l4 = () => import('@/views/InterpersonalRelationship/Uiharu_kazari.vue');
 const l5 = () => import('@/views/InterpersonalRelationship/Saten_Ruiko.vue');
 const l6 = () => import('@/views/InterpersonalRelationship/Misaka_Misuzu.vue');
 const l7 = () => import('@/views/InterpersonalRelationship/Kamijou_Touma.vue');
+const l8 = () => import('@/views/InterpersonalRelationship/Frenda_Seivelun.vue');
 //</InterpersonalRelationship跳转>
 
 const router = createRouter({
@@ -122,6 +123,11 @@ const router = createRouter({
       path: '/l7',
       name: 'l7',
       component: l7,
+    },
+    {
+      path: '/l8',
+      name: 'l8',
+      component: l8,
     },
     //</InterpersonalRelationship跳转>
     {
