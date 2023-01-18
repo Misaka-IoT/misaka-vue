@@ -77,6 +77,13 @@
             <div>API Ready！</div>
           </a>
         </li>
+
+        <li class="莘家小站" style="visibility: visible">
+          <a title="萌又萌" target="_blank" href="https://blog.jiawei.xin">
+            <div>莘家小站</div>
+            <div>写一些不容易查到的东西</div>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -84,8 +91,6 @@
 
 <style lang="scss" scoped>
 .container {
-  height: 75vh;
-
   .readers-list {
     height: 75vh;
 
@@ -96,20 +101,40 @@
     li {
       max-width: 450px;
       margin-left: 20px;
+      a {
+        div {
+          padding: 12px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: var(--textcolor);
+        }
+        div:first-child {
+          border-bottom: 1px dashed #eee;
+          font-size: 1.3em;
+          color: var(--textcolors);
+        }
+      }
     }
   }
-}
-.readers-list li a div {
-  padding: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--textcolor);
 }
 
 .readers-list li a div:first-child {
   border-bottom: 1px dashed #eee;
   font-size: 1.3em;
   color: var(--textcolors);
+}
+
+@media (max-width: 900px) {
+  .container .readers-list {
+    height: auto;
+    margin: 0%;
+    flex-wrap: nowrap;
+    align-items: center;
+    li {
+      margin-left: 0%;
+      width: 85vw;
+    }
+  }
 }
 </style>
