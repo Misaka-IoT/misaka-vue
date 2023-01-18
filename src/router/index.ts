@@ -11,13 +11,13 @@ import ResourceView from '@/views/ResourceView.vue';
 const InterpersonalRelationship = () =>
   import('@/views/InterpersonalRelationship.vue');
 import Character from '@/views/CharactersView.vue';
-import NotFound from '@/views/404.vue';
+import NotFound from '@/views/404View.vue';
 //<InterpersonalRelationship跳转>
 const l0 = () => import('@/views/InterpersonalRelationship/MisakaMikoto.vue');
 const l1 = () => import('@/views/InterpersonalRelationship/MisakaSisters.vue');
 const l2 = () => import('@/views/InterpersonalRelationship/ShiraiKuroko.vue');
 const l3 = () => import('@/views/InterpersonalRelationship/ShokuhouMisaki.vue');
-const l4 = () => import('@/views/InterpersonalRelationship/Uiharukazari.vue');
+const l4 = () => import('@/views/InterpersonalRelationship/UiharuKazari.vue');
 const l5 = () => import('@/views/InterpersonalRelationship/SatenRuiko.vue');
 const l6 = () => import('@/views/InterpersonalRelationship/MisakaMisuzu.vue');
 const l7 = () => import('@/views/InterpersonalRelationship/KamijouTouma.vue');

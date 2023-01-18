@@ -5,6 +5,3 @@
     <a href="/">回到首页</a>
   </div>
 </template>
-<script lang="ts">
-export default {};
-</script>
