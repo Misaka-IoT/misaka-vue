@@ -13,14 +13,15 @@ import { DataSet } from 'vis-data/peer';
 import { Network } from 'vis-network/peer';
 import 'vis-network/styles/vis-network.css';
 //<图片>
-import i0 from '@/assets/InterpersonalRelationshipImage/0.png';
-import i1 from '@/assets/InterpersonalRelationshipImage/1.png';
-import i2 from '@/assets/InterpersonalRelationshipImage/2.png';
-import i3 from '@/assets/InterpersonalRelationshipImage/3.png';
-import i4 from '@/assets/InterpersonalRelationshipImage/4.png';
-import i5 from '@/assets/InterpersonalRelationshipImage/5.png';
-import i6 from '@/assets/InterpersonalRelationshipImage/6.png';
-import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
+import i0 from '@/assets/InterpersonalRelationshipImage/0.webp';
+import i1 from '@/assets/InterpersonalRelationshipImage/1.webp';
+import i2 from '@/assets/InterpersonalRelationshipImage/2.webp';
+import i3 from '@/assets/InterpersonalRelationshipImage/3.webp';
+import i4 from '@/assets/InterpersonalRelationshipImage/4.webp';
+import i5 from '@/assets/InterpersonalRelationshipImage/5.webp';
+import i6 from '@/assets/InterpersonalRelationshipImage/6.webp';
+import i7 from '@/assets/InterpersonalRelationshipImage/7.webp';
+import i8 from '@/assets/InterpersonalRelationshipImage/8.webp';
 //</图片>
 
 export default {
@@ -38,6 +39,7 @@ export default {
       { id: 5, label: '佐天泪子', shape: 'image', image: i5 },
       { id: 6, label: '御坂美铃', shape: 'image', image: i6 },
       { id: 7, label: '上条当麻', shape: 'image', image: i7 },
+      { id: 8, label: '芙兰达', shape: 'image', image: i8 },
     ]);
     //连线数据
     const edges = new DataSet([
@@ -48,6 +50,10 @@ export default {
       { from: 0, to: 5, id: 5 },
       { from: 0, to: 6, id: 6 },
       { from: 0, to: 7, id: 7 },
+      { from: 0, to: 8, id: 11 },
+      { from: 4, to: 5, id: 8,color:'#FFC854'},
+      { from: 7, to: 1, id: 9,arrows:'to',color:'#FFC854'},
+      { from: 7, to: 2, id: 10,arrows:'to',color:'#FFC854'},
     ]);
     const data = {
       nodes: nodes,
@@ -63,7 +69,7 @@ export default {
         },
       };
     //点击节点后跳转的数组
-    var link = ['/l0', '/l1', '/l2', '/l3', '/l4', '/l5', '/l6', '/l7'];
+    var link = ['/l0', '/l1', '/l2', '/l3', '/l4', '/l5', '/l6', '/l7','/l8'];
     if (container != null) {
       var network = new Network(container, data, options);
       //双击的事件
