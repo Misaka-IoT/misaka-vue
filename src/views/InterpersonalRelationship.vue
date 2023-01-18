@@ -13,15 +13,15 @@ import { DataSet } from 'vis-data/peer';
 import { Network } from 'vis-network/peer';
 import 'vis-network/styles/vis-network.css';
 //<图片>
-import i0 from '@/assets/InterpersonalRelationshipImage/0.png';
-import i1 from '@/assets/InterpersonalRelationshipImage/1.png';
-import i2 from '@/assets/InterpersonalRelationshipImage/2.png';
-import i3 from '@/assets/InterpersonalRelationshipImage/3.png';
-import i4 from '@/assets/InterpersonalRelationshipImage/4.png';
-import i5 from '@/assets/InterpersonalRelationshipImage/5.png';
-import i6 from '@/assets/InterpersonalRelationshipImage/6.png';
-import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
-import i8 from '@/assets/InterpersonalRelationshipImage/8.png';
+import i0 from '@/assets/InterpersonalRelationshipImage/0.webp';
+import i1 from '@/assets/InterpersonalRelationshipImage/1.webp';
+import i2 from '@/assets/InterpersonalRelationshipImage/2.webp';
+import i3 from '@/assets/InterpersonalRelationshipImage/3.webp';
+import i4 from '@/assets/InterpersonalRelationshipImage/4.webp';
+import i5 from '@/assets/InterpersonalRelationshipImage/5.webp';
+import i6 from '@/assets/InterpersonalRelationshipImage/6.webp';
+import i7 from '@/assets/InterpersonalRelationshipImage/7.webp';
+import i8 from '@/assets/InterpersonalRelationshipImage/8.webp';
 //</图片>
 
 export default {
