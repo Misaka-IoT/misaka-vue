@@ -25,7 +25,7 @@ import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
 
 export default {
   mounted() {
-    const but=document.getElementById('CssSwitcherButton');
+    const but = document.getElementById('CssSwitcherButton');
     const container = document.getElementById('InterpersonalRelationship');
     const box = document.getElementById('InterpersonalRelationshipBox');
     //节点数据
@@ -75,9 +75,8 @@ export default {
           window.open(routeData.href);
         }
       });
-      if(but!=null)
-      {
-        but.addEventListener('click', function(){
+      if (but != null) {
+        but.addEventListener('click', function () {
           location.reload();
         });
       }
