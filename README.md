@@ -1,38 +1,35 @@
-<a href="https://github.com/misaka-fans/misaka-fans.github.io" target="_blank"><img src="https://img.shields.io/github/stars/misaka-fans/misaka-fans.github.io" /></a>
-
 # Misaka Mikoto
 
-你指尖跃动的电光，是我此生不变的信仰！
+> 你指尖跃动的电光，是我此生不变的信仰！
+
+<a href="https://github.com/misaka-fans/misaka-fans.github.io" target="_blank"><img src="https://img.shields.io/github/stars/misaka-fans/misaka-fans.github.io" /></a>
 
 ![爱我炮姐](https://github.com/shbwb/misaka/blob/main/pic/0EE7D24A-F64D-4818-AEE8-E5C83A5696B3.jpeg)
 
-网站 URL：
+# URL
 
-1、https://www.misaka-mikoto.jp
+1. https://www.misaka-mikoto.jp
+2. https://misaka-mikoto.jp
+3. (旧版存档) https://static.misaka-mikoto.jp
 
-2、https://misaka-mikoto.jp
+## 关于
 
-3、[old] https://static.misaka-mikoto.jp
+### 这个项目是做什么的？
 
-# 关于这个项目
+0. 让更多人了解御坂美琴**
+1. 琴厨聚集地
+- 如果你拥有一个 GitHub 账号，不妨点一下右上角的 star，支持一下这个项目，<del>让它活得更久，</del>让更多人发现它吧～
+- 在这个 GitHub 仓库中，你可以发起任何有关魔禁系列作品，或是有关网页开发的 issue，欢迎前来讨论～
 
-## 这个项目是做什么的？
+2. 照片收集
 
-**0、让更多人了解御坂美琴**
+在满足上一项条件后，你可以通过 [Fork](https://github.com/misaka-fans-photos/misaka-fans-photos.github.io/fork)，并提交 Pull Request 的方式，提交自己创作的功能。
 
-**1、琴厨聚集地**
+## 贡献
 
-如果你拥有一个 GitHub 账号，不妨点一下右上角的 star，支持一下这个项目，<del>让它活得更久，</del>让更多人发现它吧～
+参照 **[贡献规范](./CONTRIBUTING_SPEC.md)**。
 
-在这个 GitHub 仓库中，你可以发起任何有关魔禁系列作品，或是有关网页开发的 issue，欢迎前来讨论～
-
-**2、照片收集**
-
-在满足上一项条件后，你可以通过[fork](https://github.com/misaka-fans-photos/misaka-fans-photos.github.io/fork)，并提交 Pull Request 的方式，提交自己创作的功能。
-
-## 贡献者
-
-说明：对于对此项目有贡献的用户，TA 的 GitHub 账户名，将会展现在[About](https://misaka-mikoto.jp/pages/about)页面。
+说明：贡献者将会展现在 [关于](https://misaka-mikoto.jp/about) 页面。
 
 ## 开发
 
