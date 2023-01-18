@@ -99,4 +99,17 @@
     }
   }
 }
+.readers-list li a div {
+  padding: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--textcolor);
+}
+
+.readers-list li a div:first-child {
+  border-bottom: 1px dashed #eee;
+  font-size: 1.3em;
+  color: var(--textcolors);
+}
 </style>

@@ -16,6 +16,7 @@
 </template>
 
 <script lang="ts">
+import '@/styles/AppTopAppBar.scss';
 export default {
   computed: {
     classes(): string {
@@ -33,24 +34,6 @@ export default {
       opening: false,
       closing: false,
     };
-  },
-  created() {
-    import('@/styles/AppTopAppBar.scss');
-    const ccss = localStorage.getItem('css');
-    let css;
-    switch (
-      ccss //css切换器
-    ) {
-      case null:
-        css = import('@/styles/main/main.scss');
-        break;
-      case 'main':
-        css = import('@/styles/main/main.scss');
-        break;
-      case 'black':
-        css = import('@/styles/main/black.scss');
-        break;
-    }
   },
   methods: {
     openDrawer() {
@@ -97,4 +80,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
