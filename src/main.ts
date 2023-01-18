@@ -3,20 +3,19 @@ import { createPinia } from 'pinia';
 
 import App from './App.vue';
 import router from './router';
-
+import '@/styles/main.scss';
 const ccss = localStorage.getItem('css');
-let css;
 switch (
   ccss //css切换器
 ) {
   case null:
-    css = import('@/styles/main.scss');
+    document.documentElement.setAttribute('data-theme', 'main');
     break;
   case 'main':
-    css = import('@/styles/main.scss');
+    document.documentElement.setAttribute('data-theme', 'main');
     break;
   case 'black':
-    css = import('@/styles/black.scss');
+    document.documentElement.setAttribute('data-theme', 'black');
     break;
 }
 

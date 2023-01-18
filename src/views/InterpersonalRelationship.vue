@@ -25,6 +25,7 @@ import i7 from '@/assets/InterpersonalRelationshipImage/7.png';
 
 export default {
   mounted() {
+    const but=document.getElementById('CssSwitcherButton');
     const container = document.getElementById('InterpersonalRelationship');
     const box = document.getElementById('InterpersonalRelationshipBox');
     //节点数据
@@ -74,10 +75,21 @@ export default {
           window.open(routeData.href);
         }
       });
+      if(but!=null)
+      {
+        but.addEventListener('click', function(){
+          location.reload();
+        });
+      }
     }
   },
   computed: {},
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.InterpersonalRelationshipBox {
+  height: 75vh;
+  color: var(--textcolor);
+}
+</style>

@@ -1,6 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.6.0/lxgwwenkai-regular.css');
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
-
+@import url('@/styles/AppTopAppBar.scss');
 a {
   text-decoration: none;
   color: #dbb299;
@@ -24,6 +24,32 @@ a {
   --viewcolor: #ffffff;
   --textcolor: #000000;
   --textcolors: #666666;
+  scroll-behavior: smooth;
+}
+html[data-theme="main"]:root{
+  --theme-color: #c49582;
+  --theme-color-rgb: 196, 149, 130;
+  --theme-color-variant: #c37a5d;
+  --on-theme-color: #ffffff;
+  --surface: #fff;
+  --surface-variant: #f5f5f4;
+  --outline: #434343;
+  --viewcolor: #ffffff;
+  --textcolor: #000000;
+  --textcolors: #666666;
+  scroll-behavior: smooth;
+}
+html[data-theme="black"]:root{
+  --theme-color: #c49582;
+  --theme-color-rgb: 96, 49, 30;
+  --theme-color-variant: #c37a5d;
+  --on-theme-color: #ffffff;
+  --surface: #fff;
+  --surface-variant: #f5f5f4;
+  --outline: #434343;
+  --viewcolor: #000000;
+  --textcolor: #ffffff;
+  --textcolors: #cecece;
   scroll-behavior: smooth;
 }
 .views {
@@ -575,23 +601,8 @@ hr {
 }
 //顶栏的css，重新搬回来了
 
-.InterpersonalRelationshipBox {
-  height: 75vh;
-  color: var(--textcolor);
-}
-.readers-list li a div {
-  padding: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--textcolor);
-}
 
-.readers-list li a div:first-child {
-  border-bottom: 1px dashed #eee;
-  font-size: 1.3em;
-  color: var(--textcolors);
-}
+
 @media (max-width: 900px) {
   .select-site {
     position: absolute;

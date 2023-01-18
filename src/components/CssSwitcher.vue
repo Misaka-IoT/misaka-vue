@@ -33,11 +33,13 @@ export default {
         localStorage.getItem('css') == null ||
         localStorage.getItem('css') == 'main'
       ) {
+        document.documentElement.setAttribute('data-theme', 'black');
         localStorage.setItem('css', 'black');
-        location.reload();
+        this.but = 'bedtime';
       } else {
+        document.documentElement.setAttribute('data-theme', 'main');
         localStorage.setItem('css', 'main');
-        location.reload();
+        this.but = 'sunny';
       }
     },
   },
