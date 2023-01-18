@@ -13,14 +13,14 @@ const InterpersonalRelationship = () =>
 import Character from '@/views/CharactersView.vue';
 import NotFound from '@/views/404.vue';
 //<InterpersonalRelationship跳转>
-const l0 = () => import('@/views/InterpersonalRelationship/0.vue');
-const l1 = () => import('@/views/InterpersonalRelationship/1.vue');
-const l2 = () => import('@/views/InterpersonalRelationship/2.vue');
-const l3 = () => import('@/views/InterpersonalRelationship/3.vue');
-const l4 = () => import('@/views/InterpersonalRelationship/4.vue');
-const l5 = () => import('@/views/InterpersonalRelationship/5.vue');
-const l6 = () => import('@/views/InterpersonalRelationship/6.vue');
-const l7 = () => import('@/views/InterpersonalRelationship/7.vue');
+const l0 = () => import('@/views/InterpersonalRelationship/Misaka_Mikoto.vue');
+const l1 = () => import('@/views/InterpersonalRelationship/Sisters.vue');
+const l2 = () => import('@/views/InterpersonalRelationship/Shirai_Kuroko.vue');
+const l3 = () => import('@/views/InterpersonalRelationship/Shokuhou_Misaki.vue');
+const l4 = () => import('@/views/InterpersonalRelationship/Uiharu_kazari.vue');
+const l5 = () => import('@/views/InterpersonalRelationship/Saten_Ruiko.vue');
+const l6 = () => import('@/views/InterpersonalRelationship/Misaka_Misuzu.vue');
+const l7 = () => import('@/views/InterpersonalRelationship/Kamijou_Touma.vue');
 //</InterpersonalRelationship跳转>
 
 const router = createRouter({
