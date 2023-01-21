@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer">
-      <p>&copy 2022 shbwb(misaka-fans)</p>
+      <p>&copy; 2022 shbwb(misaka-fans)</p>
       <p>
         <span id="busuanzi_container_site_uv"
           >本站总访问次数<span id="busuanzi_value_site_pv"></span>次</span

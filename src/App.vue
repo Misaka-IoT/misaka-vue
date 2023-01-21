@@ -3,7 +3,6 @@ import { RouterView } from 'vue-router';
 import AppNavDrawer from '@/components/AppNavDrawer.vue';
 import AppTopAppBar from '@/components/AppTopAppBar.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
-import DelText from '@/components/DelText.vue';
 </script>
 
 <template>
@@ -88,6 +87,8 @@ import DelText from '@/components/DelText.vue';
       <RouterView></RouterView>
 
       <FooterComponent></FooterComponent>
+
+      <BackToTopButton></BackToTopButton>
     </AppTopAppBar>
   </AppNavDrawer>
 </template>
@@ -97,6 +98,7 @@ import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
 import SidebarLink from '@/components/SidebarLink.vue';
 import CssSwitcher from '@/components/CssSwitcher.vue';
+import BackToTopButton from './components/BackToTopButton.vue';
 export default {
   computed: {
     navIcon(): string {
@@ -105,7 +107,6 @@ export default {
   },
   created() {
     // 根据url获取当前处于哪个站点
-    console.log(window.location.href);
     if (location.href.indexOf('misaka-mikoto.jp') != -1) {
       this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
     } else if (location.href.indexOf('misaka-mikoto.cn') != -1) {

@@ -41,7 +41,7 @@ export default {
         if (rp != null && rp.parentNode != null) rp.parentNode.removeChild(rp); //删除音乐模块
       } else if (button != null) {
         //当音乐模块被隐藏时
-        var rp = document.getElementById('rps'); //音乐模块
+        let rp = document.getElementById('rps'); //音乐模块
         if (rp != null && rp.parentNode != null) {
           //如果音乐模块没有彻底删除，适用于第一次点击按钮的时候
           rp.parentNode.removeChild(rp); //删除音乐模块

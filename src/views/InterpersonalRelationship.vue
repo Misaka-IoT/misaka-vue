@@ -7,8 +7,6 @@
   </div>
 </template>
 <script lang="ts">
-import { computed } from 'vue';
-
 import { DataSet } from 'vis-data/peer';
 import { Network } from 'vis-network/peer';
 import 'vis-network/styles/vis-network.css';
