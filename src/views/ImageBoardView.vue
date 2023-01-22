@@ -50,7 +50,7 @@ export default {
   },
   created: function () {
     this.list.forEach((element) => {
-      element.url = 'https://img.misaka-mikoto.jp/pic/' + element.url;
+      element.url = 'https://img.moeu.moe/pic/' + element.url;
     });
   },
 };
