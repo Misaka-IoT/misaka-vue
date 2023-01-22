@@ -9,25 +9,25 @@
       <ul>
         <li>
           <img
-            src="https://img.misaka-mikoto.jp/main/waterfall1.webp"
+            src="https://img.moeu.moe/main/waterfall1.webp"
             alt="滚动图片_1"
           />
         </li>
         <li>
           <img
-            src="https://img.misaka-mikoto.jp/main/waterfall2.webp"
+            src="https://img.moeu.moe/main/waterfall2.webp"
             alt="滚动图片_2"
           />
         </li>
         <li>
           <img
-            src="https://img.misaka-mikoto.jp/main/waterfall3.webp"
+            src="https://img.moeu.moe/main/waterfall3.webp"
             alt="滚动图片_3"
           />
         </li>
         <li>
           <img
-            src="https://img.misaka-mikoto.jp/main/waterfall4.webp"
+            src="https://img.moeu.moe/main/waterfall4.webp"
             alt="滚动图片_4"
           />
         </li>
