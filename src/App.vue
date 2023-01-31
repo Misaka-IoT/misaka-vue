@@ -84,7 +84,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
         </select>
       </template>
 
-      <RouterView></RouterView>
+      <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
 
       <FooterComponent></FooterComponent>
 
@@ -129,6 +129,7 @@ export default {
       stargazersCount: 0,
       forksCount: 0,
       site: 'jp',
+      cdnRootUrl:"https://img.moeu.moe/"
     };
   },
   methods: {

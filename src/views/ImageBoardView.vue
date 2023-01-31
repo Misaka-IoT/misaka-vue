@@ -11,6 +11,7 @@
 
 <script lang="ts">
 export default {
+  props:['cdnRootUrl'],
   data() {
     return {
       list: [
@@ -49,8 +50,9 @@ export default {
     };
   },
   created: function () {
+    let that = this
     this.list.forEach((element) => {
-      element.url = 'https://img.moeu.moe/pic/' + element.url;
+      element.url = that.cdnRootUrl +'pic/'+element.url;
     });
   },
 };
