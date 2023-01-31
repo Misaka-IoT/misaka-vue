@@ -59,8 +59,8 @@ export default {
 </script>
 <style scoped lang="scss">
 img {
-  border: 5px solid silver;
-  box-shadow: 12px 12px 13px 1px gray;
+  border: 1px solid goldenrod;
+  box-shadow: 8px 8px 15px 1px #aaa;
 }
 
 @media (min-width: 1200px) {

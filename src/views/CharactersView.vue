@@ -90,7 +90,6 @@ export default {
 
     .character-card {
       margin: 11px;
-
       img {
         height: 300px;
       }

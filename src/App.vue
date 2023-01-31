@@ -15,7 +15,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
         <RouterLink to="/imgboard">美琴照片墙</RouterLink>
         <RouterLink to="/awards">世萌战绩</RouterLink>
-        <RouterLink to="/isml">世萌投票</RouterLink>
+        <a href="https://www.internationalsaimoe.com/">世萌投票</a>
         <RouterLink to="" @click="loadEatMikoto">新概念音游</RouterLink>
         <RouterLink to="/discuss">留言板</RouterLink>
         <RouterLink to="/resource">动漫资源</RouterLink>
@@ -77,11 +77,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <div>
           <CssSwitcher></CssSwitcher>
         </div>
-
-        <select name="" id="" class="select-site" @change="changeSite()">
-          <option value="1" :selected="site == 'cn'">中国站</option>
-          <option value="2" :selected="site == 'jp'">海外站</option>
-        </select>
       </template>
 
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
@@ -111,8 +106,6 @@ export default {
       this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
     } else if (location.href.indexOf('misaka-mikoto.cn') != -1) {
       this.site = 'cn';
-    } else {
-      // 都不是则为其他站点，默认显示海外站
     }
 
     // 使用axios获取star和fork数量
@@ -145,19 +138,6 @@ export default {
      */
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
-    },
-
-    changeSite(): void {
-      switch (this.site) {
-        case 'cn':
-          location.href = 'https://misaka-mikoto.jp';
-          break;
-        case 'jp':
-          location.href = 'https://misaka-mikoto.cn';
-          break;
-        default:
-          break;
-      }
     },
   },
 };

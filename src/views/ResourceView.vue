@@ -157,6 +157,7 @@
   #card-1 {
     /* 设置card1的背景 */
     background-image: url(../assets/railgun.webp);
+    background-size: cover;
   }
 
   #card-2 {

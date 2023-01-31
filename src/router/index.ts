@@ -6,7 +6,6 @@ import AboutRaligunView from '@/views/AboutRaligunView.vue';
 import AwardsView from '@/views/AwardsView.vue';
 import DiscussView from '@/views/DiscussView.vue';
 import LinksView from '@/views/LinksView.vue';
-import IsmlView from '@/views/IsmlView.vue';
 import ResourceView from '@/views/ResourceView.vue';
 const InterpersonalRelationship = () =>
   import('@/views/InterpersonalRelationship.vue');
@@ -51,11 +50,6 @@ const router = createRouter({
       path: '/awards',
       name: 'awards',
       component: AwardsView,
-    },
-    {
-      path: '/isml',
-      name: 'isml',
-      component: IsmlView,
     },
     {
       path: '/discuss',
