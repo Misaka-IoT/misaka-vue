@@ -8,7 +8,7 @@
 
 ## Code Styles | 代码样式
 
-*你可以通过运行 `pnpm lint` 来处理这些问题，但我们仍建议你在编写时就按照标准。
+\*你可以通过运行 `pnpm lint` 来处理这些问题，但我们仍建议你在编写时就按照标准。
 
 0. 代码可读性（空格、换行）
 
@@ -21,12 +21,13 @@ const fetchToJSONAndPrint = (target: string): void => {
     .then((data) => console.log(data));
 };
 // 错误示范
-const add=(a:number,b:number):number=>{
-  return (a+b)*(a-b);
+const add = (a: number, b: number): number => {
+  return (a + b) * (a - b);
 };
-const fetchToJSONAndPrint=(target:string):void=>{
-  fetch(target).then((response)=>response.json())
-  .then((data)=>console.log(data));
+const fetchToJSONAndPrint = (target: string): void => {
+  fetch(target)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 };
 ```
 
@@ -35,7 +36,7 @@ const fetchToJSONAndPrint=(target:string):void=>{
 ```typescript
 // e.g.
 const fun = (param) => {
-  return (param + 1);
+  return param + 1;
 };
 ```
 

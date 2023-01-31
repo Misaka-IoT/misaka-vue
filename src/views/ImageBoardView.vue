@@ -11,7 +11,7 @@
 
 <script lang="ts">
 export default {
-  props:['cdnRootUrl'],
+  props: ['cdnRootUrl'],
   data() {
     return {
       list: [
@@ -50,9 +50,9 @@ export default {
     };
   },
   created: function () {
-    let that = this
+    let that = this;
     this.list.forEach((element) => {
-      element.url = that.cdnRootUrl +'pic/'+element.url;
+      element.url = that.cdnRootUrl + 'pic/' + element.url;
     });
   },
 };

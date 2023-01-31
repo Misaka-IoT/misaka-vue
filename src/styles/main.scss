@@ -26,7 +26,7 @@ a {
   --textcolors: #666666;
   scroll-behavior: smooth;
 }
-html[data-theme="main"]:root{
+html[data-theme='main']:root {
   --theme-color: #c49582;
   --theme-color-rgb: 196, 149, 130;
   --theme-color-variant: #c37a5d;
@@ -39,7 +39,7 @@ html[data-theme="main"]:root{
   --textcolors: #666666;
   scroll-behavior: smooth;
 }
-html[data-theme="black"]:root{
+html[data-theme='black']:root {
   --theme-color: #c49582;
   --theme-color-rgb: 96, 49, 30;
   --theme-color-variant: #c37a5d;
@@ -600,8 +600,6 @@ hr {
   filter: brightness(100);
 }
 //顶栏的css，重新搬回来了
-
-
 
 @media (max-width: 900px) {
   .select-site {
