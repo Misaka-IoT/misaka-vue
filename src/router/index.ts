@@ -7,6 +7,8 @@ import AwardsView from '@/views/AwardsView.vue';
 import DiscussView from '@/views/DiscussView.vue';
 import LinksView from '@/views/LinksView.vue';
 import ResourceView from '@/views/ResourceView.vue';
+import RelationshipView from '@/views/RelationshipView.vue'
+
 const InterpersonalRelationship = () =>
   import('@/views/InterpersonalRelationship.vue');
 import Character from '@/views/CharactersView.vue';
@@ -73,9 +75,8 @@ const router = createRouter({
       component: InterpersonalRelationship,
     },
     {
-      path: '/Character',
-      name: 'Character',
-      component: Character,
+      path: '/relationship',
+      component: RelationshipView,
     },
     //<InterpersonalRelationship跳转>
     {

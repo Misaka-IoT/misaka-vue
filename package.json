@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@egjs/hammerjs": "^2.0.0",
+    "@popperjs/core": "^2.11.6",
     "artalk": "^2.4.3",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",

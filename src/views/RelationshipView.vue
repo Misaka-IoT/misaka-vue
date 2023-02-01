@@ -16,7 +16,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingTwo">
           <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            上条当麻<img src="缺失图片" alt="上条当麻" height="40" width="34">
+            上条当麻<img src="" alt="上条当麻" height="40" width="34">
           </a>
         </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
