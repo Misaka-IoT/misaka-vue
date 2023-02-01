@@ -22,7 +22,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <RouterLink to="/resource">动漫资源</RouterLink>
         <RouterLink to="/about">关于</RouterLink>
         <RouterLink to="/links">友情链接</RouterLink>
-        <RouterLink to="/relationship">新测试页面</RouterLink>
+        <RouterLink to="/relationship">人物介绍</RouterLink>
 
       </SidebarLink>
     </template>
