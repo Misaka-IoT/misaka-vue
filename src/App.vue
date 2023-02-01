@@ -110,7 +110,6 @@ export default {
         break;
     }
 
-
     // 使用axios获取star和fork数量
     axios
       .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')

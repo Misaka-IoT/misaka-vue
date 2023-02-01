@@ -8,7 +8,7 @@
     "test:unit": "vitest --environment jsdom --root src/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "prettier": "npx prettier --write ."
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@egjs/hammerjs": "^2.0.0",
