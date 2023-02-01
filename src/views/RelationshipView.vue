@@ -50,11 +50,13 @@
         </div>
       </div>
     </div>
+    <div class="IR"><InterpersonalRelationship></InterpersonalRelationship></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import DelText from '@/components/DelText.vue';
+import InterpersonalRelationship from './InterpersonalRelationship.vue';
 </script>
 
 <style scoped>
@@ -62,10 +64,17 @@ import DelText from '@/components/DelText.vue';
   .accordion {
     width: 50%;
     float:right;
+    border:1px solid black;
+  }
+  .IR{
+    width: 50%;
+    float:left;
+    border:1px solid black;
   }
 }
 .container-fluid {
   padding:20px;
+  height: 80%;
 }
  a img {
   padding: 6px;
