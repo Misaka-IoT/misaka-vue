@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import AppNavDrawer from '@/components/AppNavDrawer.vue';
 import AppTopAppBar from '@/components/AppTopAppBar.vue';
 import FooterComponent from '@/components/FooterComponent.vue';

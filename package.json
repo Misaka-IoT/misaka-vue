@@ -14,6 +14,7 @@
     "@egjs/hammerjs": "^2.0.0",
     "artalk": "^2.4.3",
     "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
     "component-emitter": "^1.3.0",
     "keycharm": "^0.2.0 || ^0.3.0 || ^0.4.0",
     "pinia": "^2.0.23",
