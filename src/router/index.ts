@@ -1,18 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import ImageBoardView from '@/views/ImageBoardView.vue';
-import AboutView from '@/views/AboutView.vue';
-import AboutRaligunView from '@/views/AboutRaligunView.vue';
-import AwardsView from '@/views/AwardsView.vue';
-import DiscussView from '@/views/DiscussView.vue';
-import LinksView from '@/views/LinksView.vue';
-import ResourceView from '@/views/ResourceView.vue';
-import RelationshipView from '@/views/RelationshipView.vue'
-
-const InterpersonalRelationship = () =>
-  import('@/views/InterpersonalRelationship.vue');
-import Character from '@/views/CharactersView.vue';
-import NotFound from '@/views/404View.vue';
 //<InterpersonalRelationship跳转>
 const l0 = () => import('@/views/InterpersonalRelationship/MisakaMikoto.vue');
 const l1 = () => import('@/views/InterpersonalRelationship/MisakaSisters.vue');
@@ -31,52 +17,52 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/imgboard',
       name: 'imgboard',
-      component: ImageBoardView,
+      component: () => import('@/views/ImageBoardView.vue'),
     },
     {
       path: '/about',
       name: 'AboutView',
-      component: AboutView,
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/aboutraligun',
       name: 'aboutraligun',
-      component: AboutRaligunView,
+      component: () => import('@/views/AboutRaligunView.vue'),
     },
     {
       path: '/awards',
       name: 'awards',
-      component: AwardsView,
+      component: () => import('@/views/AwardsView.vue'),
     },
     {
       path: '/discuss',
       name: 'discuss',
-      component: DiscussView,
+      component: () => import('@/views/DiscussView.vue'),
     },
     {
       path: '/links',
       name: 'links',
-      component: LinksView,
+      component: () => import('@/views/LinksView.vue'),
     },
     {
       path: '/resource',
       name: 'resource',
-      component: ResourceView,
+      component: () => import('@/views/ResourceView.vue'),
     },
 
     {
       path: '/InterpersonalRelationship',
       name: 'InterpersonalRelationship',
-      component: InterpersonalRelationship,
+      component: () => import('@/views/InterpersonalRelationship.vue'),
     },
     {
       path: '/relationship',
-      component: RelationshipView,
+      component: () => import('@/views/RelationshipView.vue'),
     },
     //<InterpersonalRelationship跳转>
     {
@@ -128,7 +114,7 @@ const router = createRouter({
     {
       path: '/:pathMatch(.*)',
       name: '404',
-      component: NotFound,
+      component: () => import('@/views/404View.vue'),
     },
   ],
 });
