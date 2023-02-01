@@ -101,12 +101,15 @@ export default {
     },
   },
   created() {
-    // 根据url获取当前处于哪个站点
-    if (location.href.indexOf('misaka-mikoto.jp') != -1) {
-      this.site = 'jp'; // 如果url 是jp ，默认显示海外站，反之中国站
-    } else if (location.href.indexOf('misaka-mikoto.cn') != -1) {
-      this.site = 'cn';
+    switch (location.host) {
+      case 'misaka-mikoto.jp':
+        this.site = 'jp';
+        break;
+      case 'misaka-mikoto.cn':
+        this.site = 'cn';
+        break;
     }
+
 
     // 使用axios获取star和fork数量
     axios
