@@ -13,7 +13,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
       <SidebarLink>
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
-        <RouterLink to="/Character">相关人物介绍</RouterLink>
         <RouterLink to="/InterpersonalRelationship">人际关系</RouterLink>
         <RouterLink to="/imgboard">美琴照片墙</RouterLink>
         <RouterLink to="/awards">世萌战绩</RouterLink>
