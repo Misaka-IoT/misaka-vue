@@ -57,7 +57,7 @@
         </ContributorCard>
 
         <ContributorCard
-          username="longyu12345"
+          username="longyu2"
           name="龙驭"
           email="litong4576@gmail.com"
         >

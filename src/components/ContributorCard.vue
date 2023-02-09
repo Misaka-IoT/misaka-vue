@@ -72,7 +72,7 @@ export default {
   width: 100%;
   border: 1px solid #9a9a9a;
   border-radius: 16px;
-  height: 185px;
+  height: 215px;
 }
 
 .headline {

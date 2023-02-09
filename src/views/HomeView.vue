@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homeview-box">
     <section class="banner">
       <p style="font-size: 120%; font-family: 'Yuji Mai'">
         君の指先を舞ってる電光は、私の一生変わらない信仰であり、このレールガンだけが永遠！
@@ -33,7 +33,6 @@
         </li>
       </ul>
     </section>
-
     <main class="container">
       <div id="musc"><random-player id="rps"></random-player></div>
       <hr />
@@ -93,3 +92,16 @@
 <script setup lang="ts">
 import DelText from '@/components/DelText.vue';
 </script>
+
+<style lang="scss">
+.img-box {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  padding-right: 140px;
+  img {
+    width: 60%;
+  }
+}
+</style>
