@@ -12,7 +12,8 @@ import FooterComponent from '@/components/FooterComponent.vue';
     <template #drawer>
       <SidebarLink>
         <RouterLink to="/">主页</RouterLink>
-        <RouterLink to="/aboutraligun"> 关于美琴 </RouterLink>
+        <RouterLink to="/aboutraligun">关于美琴</RouterLink>
+        <RouterLink to="/relationship">人物介绍</RouterLink>
         <RouterLink to="/imgboard">美琴照片墙</RouterLink>
         <RouterLink to="/awards">世萌战绩</RouterLink>
         <a href="https://www.internationalsaimoe.com/">世萌投票</a>
@@ -21,7 +22,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <RouterLink to="/resource">动漫资源</RouterLink>
         <RouterLink to="/about">关于</RouterLink>
         <RouterLink to="/links">友情链接</RouterLink>
-        <RouterLink to="/relationship">人物介绍</RouterLink>
       </SidebarLink>
     </template>
     <AppTopAppBar>
