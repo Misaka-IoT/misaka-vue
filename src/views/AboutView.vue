@@ -63,6 +63,13 @@
         >
           主要贡献：迁移到vue，样式修改，新页面建设
         </ContributorCard>
+        <ContributorCard
+          username="sudoriaa"
+          name="苏多莉亚"
+          email="rc@ricecandy.cn"
+        >
+          主要贡献：网站页面优化、新页面开发、资源提供
+        </ContributorCard>
       </div>
       <hr />
       <h3>四、TLS/SSL证书</h3>
