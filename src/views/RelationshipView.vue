@@ -57,9 +57,11 @@ import RelationshipItem from '@/components/RelationshipItem.vue';
       width: 30vw;
     }
   }
-
   a img {
     padding: 6px;
   }
+}
+.accordion {
+  color: var(--theme-color);
 }
 </style>

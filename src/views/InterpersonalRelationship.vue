@@ -1,9 +1,6 @@
 <template>
   <div class="InterpersonalRelationshipBox" id="InterpersonalRelationshipBox">
     <div id="InterpersonalRelationship" style="height: 500px"></div>
-    <p align="center">使用vis-network(MIT)制作</p>
-    <p align="center">Made with vis-network (MIT)</p>
-    <p align="center">图片来源于网络，如侵权请联系删除</p>
   </div>
 </template>
 <script lang="ts">
@@ -93,6 +90,6 @@ export default {
 <style scoped>
 .InterpersonalRelationshipBox {
   height: 75vh;
-  color: var(--textcolor);
+  color: var(--theme-color);
 }
 </style>
