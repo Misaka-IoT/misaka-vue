@@ -101,7 +101,7 @@ let awardCards = [
       >）之一，截止2022年生涯总计<span hl><b>4</b></span
       >次（超越<RouterLink to="/wiki/夏娜" title="夏娜">夏娜</RouterLink>
       独占最多）打入世萌决赛；2次<span hl><b>冠军</b></span
-      >（2011神圣皇冠）；3次<span hl><b>亚军</b></span
+      >（2011、2022神圣皇冠）；3次<span hl><b>亚军</b></span
       >（连续两年亚军）（2010,2020,2021）；1次<span hl><b>殿军</b></span
       >（2013）；1次<span hl><b>常规赛全胜</b></span
       >（2014）；2连<span hl><b>萌皇</b></span
