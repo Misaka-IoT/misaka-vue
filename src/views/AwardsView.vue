@@ -66,7 +66,7 @@ let awardCards = [
   {
     title: '神圣皇冠（萌王）',
     time: '2022',
-    imgUrl: `${cdnRootUrl}poster/2022-heavenly-tiara.JPG`,
+    imgUrl: `${cdnRootUrl}poster/2022-heavenly-tiara.PNG`,
   },
 ];
 </script>
