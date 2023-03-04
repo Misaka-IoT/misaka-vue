@@ -71,7 +71,6 @@
   height: 48px;
   display: flex;
   align-items: center;
-  color: var(--md-sys-color-on-surface);
   text-decoration: none !important;
   border-radius: 12px;
   flex-shrink: 0;
@@ -144,7 +143,7 @@
 }
 
 .app-nav-drawer__overlap {
-  background-color: var(--md-sys-color-on-surface);
+  background-color: #000000;
   inset: 0;
   opacity: 0;
   pointer-events: none;
@@ -154,8 +153,8 @@
 }
 
 .app-nav-drawer {
-  background: var(--md-sys-color-surface);
-  border-inline-end: 1px solid var(--md-sys-color-outline);
+  background: var(--viewcolor);
+  border-inline-end: 1px solid var(--outline);
   flex-shrink: 0;
   height: 100%;
   overflow-y: auto;
@@ -163,7 +162,6 @@
   width: 300px;
   will-change: transform;
   z-index: 1200;
-  background-color: var(--viewcolor);
 }
 
 .app-nav-drawer__contents {
@@ -174,7 +172,7 @@
   .app-nav-drawer {
     position: fixed;
     display: none;
-    background: var(--md-sys-elevation-surface-2);
+    background: var(--surface);
     transform: translateX(-100%);
     border-inline-end: 0;
     border-end-end-radius: 16px;
@@ -194,7 +192,6 @@
     display: block;
     transform: translateX(0);
     transition: transform 500ms cubic-bezier(0.2, 0, 0, 1);
-    background-color: var(--viewcolor);
   }
 
   .app-nav-drawer--opened .app-nav-drawer__overlap {

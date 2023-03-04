@@ -15,9 +15,8 @@ a {
 
 body {
   margin: 0;
-  font-family: var(--md-sys-typescale-font-family-global);
-  background-color: var(--md-sys-color-background);
-  color: var(--md-sys-color-on-background);
+  background-color: var(--viewcolor);
+  color: var(--textcolor);
   scroll-behavior: smooth;
 }
 html,
@@ -35,11 +34,11 @@ body {
   --theme-color-rgb: 196, 149, 130;
   --theme-color-variant: #c37a5d;
   --on-theme-color: #ffffff;
-  --surface: #fff;
-  --surface-variant: #f5f5f4;
+  --surface: #eeeeee;
+  --surface-variant: #dddddd;
   --outline: #434343;
   --viewcolor: #ffffff;
-  --textcolor: #000000;
+  --textcolor: #171717;
   --textcolors: #666666;
 }
 [data-theme='dark'] {
@@ -47,16 +46,12 @@ body {
   --theme-color-rgb: 96, 49, 30;
   --theme-color-variant: #c37a5d;
   --on-theme-color: #ffffff;
-  --surface: #fff;
-  --surface-variant: #f5f5f4;
+  --surface: #272727;
+  --surface-variant: #333333;
   --outline: #434343;
-  --viewcolor: #000000;
+  --viewcolor: #171717;
   --textcolor: #ffffff;
   --textcolors: #cecece;
-}
-.views {
-  background-color: var(--viewcolor);
-  color: var(--textcolor);
 }
 .artalk,
 .atk-layer-wrap {
