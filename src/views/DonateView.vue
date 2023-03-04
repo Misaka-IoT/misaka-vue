@@ -6,7 +6,7 @@
     <p>1、我们的目的只是要赚回服务器的费用而已（钱包要被榨干力！），并非强制性付款</p><br>
     <p>2、付款了不会拥有诸如头衔，会员之类的权益，所以在捐助前请深思！！！</p><br>
     <h1>下面是目前可用的支付方式：</h1>
-    <img src="./assets/wxpay.JPG">
+    <img src="/src/assets/wxpay.JPG">
   </div>
   <div class="center">
     <RouterLink to="/">返回主页</RouterLink>
@@ -15,5 +15,17 @@
 <style>
   .center {
     text-align: center;
+  }
+  @media screen and (min-width: 1000px){
+    img {
+      width: 40%;
+      height: 40%;
+    }
+  }
+  @media screen and (max-width: 1000px){
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 </style>
