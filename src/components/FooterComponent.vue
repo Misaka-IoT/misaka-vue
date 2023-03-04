@@ -1,6 +1,7 @@
 <template>
   <footer>
     <div class="footer">
+      <RouterLink to="/donate"><b>捐助此项目</b></RouterLink>
       <p>&copy; 2022 shbwb(misaka-fans)</p>
       <p>
         <span id="busuanzi_container_site_uv"

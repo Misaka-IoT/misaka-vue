@@ -64,6 +64,10 @@ const router = createRouter({
       path: '/relationship',
       component: () => import('@/views/RelationshipView.vue'),
     },
+    {
+      path: '/donate',
+      component: () => import('@/views/DonateView.vue')
+    },
     //<InterpersonalRelationship跳转>
     {
       path: '/l0',
