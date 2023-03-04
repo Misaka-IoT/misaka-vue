@@ -15,8 +15,8 @@ a {
 
 body {
   margin: 0;
-  background-color: var(--viewcolor);
-  color: var(--textcolor);
+  background-color: var(--color-background);
+  color: var(--color-text);
   scroll-behavior: smooth;
 }
 html,
@@ -30,32 +30,32 @@ body {
 }
 
 [data-theme='light'] {
-  --theme-color: #c49582;
-  --theme-color-rgb: 196, 149, 130;
-  --theme-color-variant: #c37a5d;
-  --on-theme-color: #ffffff;
-  --surface: #eeeeee;
-  --surface-variant: #dddddd;
-  --outline: #434343;
-  --viewcolor: #ffffff;
-  --textcolor: #171717;
-  --textcolors: #666666;
+  --color-theme: #c49582;
+  --color-theme-rgb: 196, 149, 130;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #eeeeee;
+  --color-surface-variant: #dddddd;
+  --color-outline: #434343;
+  --color-background: #ffffff;
+  --color-text: #171717;
+  --color-text-variant: #666666;
 }
 [data-theme='dark'] {
-  --theme-color: #c49582;
-  --theme-color-rgb: 96, 49, 30;
-  --theme-color-variant: #c37a5d;
-  --on-theme-color: #ffffff;
-  --surface: #272727;
-  --surface-variant: #333333;
-  --outline: #434343;
-  --viewcolor: #171717;
-  --textcolor: #ffffff;
-  --textcolors: #cecece;
+  --color-theme: #c49582;
+  --color-theme-rgb: 96, 49, 30;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #272727;
+  --color-surface-variant: #333333;
+  --color-outline: #434343;
+  --color-background: #171717;
+  --color-text: #ffffff;
+  --color-text-variant: #cecece;
 }
 .artalk,
 .atk-layer-wrap {
-  --at-color-main: var(--theme-color) !important;
+  --at-color-main: var(--color-theme) !important;
 }
 .atk-main-editor {
   width: 100% !important;
@@ -75,18 +75,18 @@ body {
 .atk-main-editor > .atk-header input {
   height: 48px;
   padding: 0 12px !important;
-  background-color: var(--surface-variant) !important;
+  background-color: var(--color-surface-variant) !important;
   border-radius: 8px !important;
 }
 .atk-main-editor > .atk-header input:focus {
-  outline: 2px solid var(--theme-color) !important;
+  outline: 2px solid var(--color-theme) !important;
 }
 .atk-main-editor > .atk-header input:not(:last-child) {
   margin-right: unset !important;
 }
 .atk-main-editor > .atk-header input,
 .atk-main-editor > .atk-textarea-wrap > .atk-textarea {
-  caret-color: var(--theme-color) !important;
+  caret-color: var(--color-theme) !important;
 }
 /* textarea */
 .atk-main-editor > .atk-textarea-wrap > .atk-textarea {
@@ -99,7 +99,7 @@ body {
   position: relative;
   padding: 0 24px !important;
   height: 40px !important;
-  color: var(--on-theme-color) !important;
+  color: var(--color-on-theme) !important;
   font-size: 0.875rem !important;
   font-weight: 500;
   border-radius: 9999px !important;
@@ -130,8 +130,8 @@ body {
   align-items: center;
   padding: 0 12px !important;
   height: 32px !important;
-  color: var(--theme-color) !important;
-  background-color: var(--surface) !important;
+  color: var(--color-theme) !important;
+  background-color: var(--color-surface) !important;
   border: none !important;
   border-radius: 9999px !important;
   z-index: 4 !important;
@@ -290,8 +290,8 @@ hr {
   margin-inline-start: 8px;
   width: 40px;
   height: 40px;
-  color: var(--on-theme-color);
-  background-color: var(--theme-color);
+  color: var(--color-on-theme);
+  background-color: var(--color-theme);
   border-radius: 9999px;
   border: none;
   user-select: none;
@@ -299,7 +299,7 @@ hr {
 }
 .icon-btn.standard {
   background-color: transparent;
-  color: var(--theme-color);
+  color: var(--color-theme);
 }
 .icon-btn.no-color {
   color: inherit;
@@ -337,8 +337,8 @@ hr {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  background-color: var(--theme-color);
-  color: var(--on-theme-color) !important;
+  background-color: var(--color-theme);
+  color: var(--color-on-theme) !important;
   text-decoration: none !important;
   border-radius: 12px;
   border: none;
@@ -362,7 +362,7 @@ hr {
 }
 
 .banner p {
-  color: var(--theme-color);
+  color: var(--color-theme);
   font-size: 0.875rem;
   font-weight: 100;
   letter-spacing: 0.5em;
@@ -418,11 +418,11 @@ hr {
 
 .md-header__source {
   display: none;
-  color: var(--on-theme-color);
+  color: var(--color-on-theme);
 }
 
 .md-header__source a {
-  color: var(--on-theme-color);
+  color: var(--color-on-theme);
 }
 
 @media screen and (min-width: 60em) {

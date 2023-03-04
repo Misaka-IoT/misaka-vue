@@ -90,6 +90,6 @@ export default {
 <style scoped>
 .InterpersonalRelationshipBox {
   height: 75vh;
-  color: var(--theme-color);
+  color: var(--color-theme);
 }
 </style>

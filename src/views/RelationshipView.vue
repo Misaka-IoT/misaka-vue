@@ -62,6 +62,6 @@ import RelationshipItem from '@/components/RelationshipItem.vue';
   }
 }
 .accordion {
-  color: var(--theme-color);
+  color: var(--color-theme);
 }
 </style>

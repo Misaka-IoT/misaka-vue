@@ -1,6 +1,6 @@
 .app-top-app-bar {
-  color: var(--on-theme-color);
-  background-color: rgba(var(--theme-color-rgb), 0.7);
+  color: var(--color-on-theme);
+  background-color: rgba(var(--color-theme-rgb), 0.7);
   backdrop-filter: blur(1.5px);
   box-sizing: border-box;
   display: flex;
@@ -43,8 +43,8 @@
   font-family: 'Noto Sans SC', 'Noto Sans JP', sans-serif;
   display: block;
   padding: 0px 24px 20px 24px;
-  color: var(--textcolor);
-  background-color: var(--viewcolor);
+  color: var(--color-text);
+  background-color: var(--color-background);
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -54,8 +54,8 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: var(--viewcolor);
-  color: var(--textcolor);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 .app-top-app-bar__contents {
   flex: 1;
@@ -74,7 +74,7 @@
   text-decoration: none !important;
   border-radius: 12px;
   flex-shrink: 0;
-  color: var(--textcolor);
+  color: var(--color-text);
 }
 
 .app-nav-drawer a::before {
@@ -153,8 +153,8 @@
 }
 
 .app-nav-drawer {
-  background: var(--viewcolor);
-  border-inline-end: 1px solid var(--outline);
+  background: var(--color-background);
+  border-inline-end: 1px solid var(--color-outline);
   flex-shrink: 0;
   height: 100%;
   overflow-y: auto;
@@ -172,7 +172,7 @@
   .app-nav-drawer {
     position: fixed;
     display: none;
-    background: var(--surface);
+    background: var(--color-surface);
     transform: translateX(-100%);
     border-inline-end: 0;
     border-end-end-radius: 16px;

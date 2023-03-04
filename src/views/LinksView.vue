@@ -107,12 +107,12 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          color: var(--textcolor);
+          color: var(--color-text);
         }
         div:first-child {
           border-bottom: 1px dashed #eee;
           font-size: 1.3em;
-          color: var(--textcolors);
+          color: var(--color-text-variant);
         }
       }
     }
@@ -122,7 +122,7 @@
 .readers-list li a div:first-child {
   border-bottom: 1px dashed #eee;
   font-size: 1.3em;
-  color: var(--textcolors);
+  color: var(--color-text-variant);
 }
 
 @media (max-width: 900px) {

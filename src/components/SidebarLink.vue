@@ -1,5 +1,5 @@
 <template>
-  <div @click="cli($event)" id="SidebarLinkDiv">
+  <div @click="handleClick" id="SidebarLinkDiv">
     <slot></slot>
   </div>
 </template>
@@ -11,13 +11,12 @@ export default {
       element: document.getElementById('SidebarLinkDiv'),
     };
   },
-  created() {},
   methods: {
-    cli: function (e: Event) {
+    handleClick: function (e: Event) {
       if (this.element != null && this.element.id != 'd')
-        this.element.style.backgroundColor = 'rgba(256, 256, 256, 0)';
+        this.element.style.backgroundColor = '';
       this.element = e.target as HTMLTextAreaElement;
-      this.element.style.backgroundColor = 'rgba(196, 149, 130, 0.7)';
+      this.element.style.backgroundColor = 'var(--color-surface-variant)';
     },
   },
 };

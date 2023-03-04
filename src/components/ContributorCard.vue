@@ -92,7 +92,7 @@ export default {
 
   a {
     display: block;
-    color: var(--theme-color);
+    color: var(--color-theme);
     font-weight: 500;
     text-decoration: none;
   }
@@ -100,7 +100,7 @@ export default {
   svg {
     width: 1rem;
     height: 1rem;
-    fill: var(--theme-color);
+    fill: var(--color-theme);
     vertical-align: middle;
   }
 }
