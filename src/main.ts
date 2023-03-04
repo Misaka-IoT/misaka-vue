@@ -4,22 +4,17 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 import '@/styles/main.scss';
-const ccss = localStorage.getItem('css');
-switch (
-  ccss //css切换器
-) {
-  case null:
-    document.documentElement.setAttribute('data-theme', 'main');
-    break;
-  case 'main':
-    document.documentElement.setAttribute('data-theme', 'main');
-    break;
-  case 'black':
-    document.documentElement.setAttribute('data-theme', 'black');
-    break;
-}
 
-import './assets/main.scss';
+const getAndSetDefaultTheme = () => {
+  const value = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  localStorage.setItem('settings.theme', value);
+  return value;
+}
+const settings = {
+  theme:
+    localStorage.getItem('settings.theme') || getAndSetDefaultTheme(),
+};
+document.documentElement.setAttribute('data-theme', settings.theme);
 
 import VueLazyLoad from 'vue3-lazyload';
 const app = createApp(App);

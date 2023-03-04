@@ -76,7 +76,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
           </a>
         </div>
         <div>
-          <CssSwitcher></CssSwitcher>
+          <ThemeSwitcher></ThemeSwitcher>
         </div>
       </template>
 
@@ -93,7 +93,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
 import SidebarLink from '@/components/SidebarLink.vue';
-import CssSwitcher from '@/components/CssSwitcher.vue';
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import BackToTopButton from './components/BackToTopButton.vue';
 export default {
   computed: {

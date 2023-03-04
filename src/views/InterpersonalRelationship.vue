@@ -21,7 +21,7 @@ import i8 from '@/assets/InterpersonalRelationshipImage/8.webp';
 
 export default {
   mounted() {
-    const but = document.getElementById('CssSwitcherButton');
+    const but = document.getElementById('ThemeSwitcherButton');
     const container = document.getElementById('InterpersonalRelationship');
     const box = document.getElementById('InterpersonalRelationshipBox');
     //节点数据
