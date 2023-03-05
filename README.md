@@ -43,4 +43,4 @@ https://img.misaka-mikoto.jp/
 插件：Pio 看板娘
 
 镜像网站：https://misaka-fans.netlify.app
-(Netlify)
+(Netlify)(即将废弃)
