@@ -66,10 +66,6 @@
         href="https://github.com/misaka-fans/misaka-fans.github.io"
         target="_blank"
       >
-        <img
-          src="https://img.shields.io/github/stars/misaka-fans/misaka-fans.github.io"
-          alt="Github stars"
-        />
       </a>
       <p>
         如果你想参加开发这个网页，或有好的建议，欢迎联系<a

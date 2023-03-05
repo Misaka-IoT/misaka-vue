@@ -30,7 +30,7 @@
           <a
             title="misaka-fans"
             target="_blank"
-            href="https://misaka-fans.github.io/"
+            href="https://static.misaka-mikoto.jp/"
           >
             <div>静态网站</div>
             <div>本网站的上一个版本，使用静态页面构建(停止维护)</div>
