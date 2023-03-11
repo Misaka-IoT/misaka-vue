@@ -4,7 +4,9 @@
     <div class="container">
       <h3>一、网站基本性质</h3>
       <p>
-        这个网站为<i>公益网站</i>，不是必须的情况下，不接受资助&投资，不会发起<i>汇款</i>等活动。
+        这个网站为<i><b>公益网站</b></i
+        >，非必须情况下，不接受资助或投资，不会发起<i><b>汇款</b></i
+        >等活动。
       </p>
       <hr />
       <h3>二、个人数据管理</h3>
@@ -16,7 +18,6 @@
       <a
         href="https://github.com/Misaka-IoT/misaka-vue/graphs/contributors"
         target="_blank"
-        style="padding-left: 10px"
         >详情</a
       >
       <div class="contributors">
@@ -74,9 +75,12 @@
       <hr />
       <h3>四、本项目使用的开源项目</h3>
       <p>
-        <a href="https://visjs.github.io/vis-network/" target="_blank">Vis-network（MIT）：用于：人物介绍页面</a><br>
-        <a href="https://github.com/arcxingye/EatKano/" target="_blank">吃掉小鹿乃（MIT）：用于：新概念音游</a>
-
+        <a href="https://visjs.github.io/vis-network/" target="_blank"
+          >Vis-network（MIT）：用于：人物介绍页面</a
+        ><br />
+        <a href="https://github.com/arcxingye/EatKano/" target="_blank"
+          >吃掉小鹿乃（MIT）：用于：新概念音游</a
+        >
       </p>
       <hr />
       <h3>五、TLS/SSL证书</h3>
@@ -99,8 +103,5 @@ img {
   max-width: 100%;
   width: 400px;
   height: auto;
-}
-i {
-  color: #dbb299;
 }
 </style>
