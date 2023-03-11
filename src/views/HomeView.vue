@@ -80,23 +80,18 @@ let isPnone = ref(window.innerWidth > 600)
       <p>留言板：在这里留下你宝贵的意见</p>
       <hr />
       <h3>什么？想加入计划？</h3>
-      <a
-        href="https://github.com/misaka-fans/misaka-fans.github.io"
-        target="_blank"
-      >
-      </a>
       <p>
         如果你想参加开发这个网页，或有好的建议，欢迎联系<a
           href="mailto:shbwb@misaka-mikoto.jp"
           >shbwb@misaka-mikoto.jp</a
         >或在bilibili私信<a
-          href="https://space.bilibili.com/1421279902?spm_id_from=333.337.search-card.all.click"
+          href="https://space.bilibili.com/1421279902"
           target="_blank"
           >@shbwb</a
         >，也可以访问<a
-          href="https://github.com/misaka-fans/misaka-fans.github.io"
+          href="https://github.com/Misaka-IoT/misaka-vue"
           target="_blank"
-          >开源页面</a
+          >GitHub 仓库</a
         >获取更多信息！QQ群：872099522
       </p>
     </main>
