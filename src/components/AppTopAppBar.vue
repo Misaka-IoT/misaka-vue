@@ -13,7 +13,11 @@
         <slot name="actionBtns"></slot>
       </section>
     </header>
-    <div class="app-top-app-bar__contents" ref="contents" @scroll="handleScroll">
+    <div
+      class="app-top-app-bar__contents"
+      ref="contents"
+      @scroll="handleScroll"
+    >
       <slot></slot>
     </div>
   </div>
@@ -69,18 +73,19 @@ export default {
     display: flex;
     padding: 12px 8px;
 
-    &.middle,
-    &.end {
+    &.middle {
       flex: 1;
     }
 
     &.start {
       gap: 8px;
+      padding-inline-start: 16px;
       justify-content: flex-start;
     }
 
     &.end {
       gap: 8px;
+      padding-inline-end: 16px;
       justify-content: flex-end;
     }
   }

@@ -110,8 +110,10 @@ let isPnone = ref(window.innerWidth > 600);
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .marquee {
       width: 70vw;
+
       .carousel-img {
         display: flex;
         justify-content: center;
@@ -129,10 +131,12 @@ let isPnone = ref(window.innerWidth > 600);
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+
     .marquee {
       width: 100%;
       display: flex;
       justify-content: center;
+
       .carousel {
         width: 100vw;
         height: 55vw;
