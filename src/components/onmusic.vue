@@ -28,7 +28,7 @@ export default {
   methods: {
     onmusic: function () {
       var button = document.getElementById('onmusicsbutton'); //按钮
-      var muss = document.getElementById('musc'); //音乐模块的外部div
+      var muss = document.getElementById('music'); //音乐模块的外部div
       if (
         localStorage.getItem('onmusic') != 'null' &&
         button != null &&

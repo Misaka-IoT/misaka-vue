@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import AppNavDrawer from '@/components/AppNavDrawer.vue';
 import AppTopAppBar from '@/components/AppTopAppBar.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
+import AppFooter from '@/components/AppFooter.vue';
 </script>
 
 <template>
@@ -24,13 +24,10 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <RouterLink to="/links">友情链接</RouterLink>
       </SidebarLink>
     </template>
-    <AppTopAppBar>
+    <AppTopAppBar :backToTop="backToTop">
       <template #navBtns>
-        <button
-          class="icon-btn standard no-color material-symbols-outlined drawer-opener"
-          ref="drawerOpener"
-          @click="drawerOpened = true"
-        >
+        <button class="icon-btn standard no-color material-symbols-outlined drawer-opener" ref="drawerOpener"
+          @click="drawerOpened = true">
           {{ navIcon }}
         </button>
         <onmusic></onmusic>
@@ -40,29 +37,16 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <span>爱我超电磁炮</span>
 
         <div class="md-header__source">
-          <a
-            href="https://github.com/misaka-fans/misaka-fans.github.io"
-            title="前往仓库"
-            class="md-source"
-            data-md-component="source"
-          >
+          <a href="https://github.com/misaka-fans/misaka-fans.github.io" title="前往仓库" class="md-source"
+            data-md-component="source">
             <div class="md-source__icon md-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                width="24"
-                height="24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-                ></path>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24">
+                <path fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
               </svg>
             </div>
-            <div
-              class="md-source__repository md-source__repository--active"
-              style="width: 150%"
-            >
+            <div class="md-source__repository md-source__repository--active" style="width: 150%">
               misaka-fans.github.io
               <ul class="md-source__facts">
                 <li class="md-source__fact md-source__fact--stars">
@@ -82,9 +66,11 @@ import FooterComponent from '@/components/FooterComponent.vue';
 
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
 
-      <FooterComponent></FooterComponent>
+      <AppFooter></AppFooter>
 
-      <BackToTopButton></BackToTopButton>
+      <button class="fab back-to-top material-symbols-outlined" @click="backToTop = !backToTop">
+        straight
+      </button>
     </AppTopAppBar>
   </AppNavDrawer>
 </template>
@@ -94,7 +80,6 @@ import axios from 'axios';
 import onmusic from '@/components/onmusic.vue';
 import SidebarLink from '@/components/SidebarLink.vue';
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
-import BackToTopButton from './components/BackToTopButton.vue';
 export default {
   computed: {
     navIcon(): string {
@@ -122,6 +107,7 @@ export default {
   data() {
     return {
       drawerOpened: false,
+      backToTop: false,
       stargazersCount: 0,
       forksCount: 0,
       site: 'jp',

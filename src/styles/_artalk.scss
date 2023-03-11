@@ -1,0 +1,83 @@
+.artalk,
+.atk-layer-wrap {
+  --at-color-main: var(--color-theme) !important;
+}
+.atk-main-editor {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.atk-main-editor > .atk-header {
+  gap: 8px;
+  padding: 12px 12px 2px !important;
+}
+.atk-main-editor > .atk-bottom {
+  padding: 8px !important;
+}
+/* input */
+.atk-main-editor > .atk-header input {
+  height: 48px;
+  padding: 0 12px !important;
+  background-color: var(--color-surface-variant) !important;
+  border-radius: 8px !important;
+}
+.atk-main-editor > .atk-header input:focus {
+  outline: 2px solid var(--color-theme) !important;
+}
+.atk-main-editor > .atk-header input:not(:last-child) {
+  margin-right: unset !important;
+}
+.atk-main-editor > .atk-header input,
+.atk-main-editor > .atk-textarea-wrap > .atk-textarea {
+  caret-color: var(--color-theme) !important;
+}
+/* textarea */
+.atk-main-editor > .atk-textarea-wrap > .atk-textarea {
+  margin-top: 0 !important;
+  padding: 12px calc(12px + 12px) !important;
+  border-radius: 0 !important;
+}
+/* button */
+.atk-main-editor > .atk-bottom .atk-send-btn {
+  position: relative;
+  padding: 0 24px !important;
+  height: 40px !important;
+  color: var(--color-on-theme) !important;
+  font-size: 0.875rem !important;
+  font-weight: 500;
+  border-radius: 9999px !important;
+}
+.atk-main-editor > .atk-bottom .atk-send-btn:active {
+  opacity: 1 !important;
+}
+.atk-main-editor > .atk-bottom .atk-send-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: currentColor;
+  opacity: 0;
+}
+.atk-main-editor > .atk-bottom .atk-send-btn:hover::before {
+  opacity: 0.08;
+}
+.atk-main-editor > .atk-bottom .atk-send-btn:focus-visible::before {
+  opacity: 0.12;
+}
+.atk-main-editor > .atk-bottom .atk-send-btn:active::before {
+  opacity: 0.16;
+}
+.atk-comment .atk-height-limit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px !important;
+  height: 32px !important;
+  color: var(--color-theme) !important;
+  background-color: var(--color-surface) !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  z-index: 4 !important;
+}
