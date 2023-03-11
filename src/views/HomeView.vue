@@ -34,7 +34,7 @@
       </ul>
     </section>
     <main class="container">
-      <div id="music"><random-player id="rps"></random-player></div>
+      <div class="music-player"></div>
       <hr />
       <h3>Hi，朋友，你好！</h3>
       <p>

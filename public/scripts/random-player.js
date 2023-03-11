@@ -17,14 +17,7 @@ export default class RandomPlayer extends HTMLElement {
     this.render();
   }
   render() {
-    if (!this.shadowRoot) return;
-    if (
-      localStorage.getItem('onmusic') == 'null' ||
-      localStorage.getItem('onmusic') == null
-    ) {
-      this.shadowRoot.innerHTML = ``;
-    } else
-      this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>${this.renderStyle()}</style>
       <iframe
         frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86"

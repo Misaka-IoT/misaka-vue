@@ -1,8 +1,8 @@
 <template>
   <button
     class="icon-btn standard no-color material-symbols-outlined"
-    @click="ThemeSwitchers"
-    id="ThemeSwitcherButton"
+    @click="switchTheme"
+    ref="theme-switcher"
   >
     {{ icon }}
   </button>
@@ -20,7 +20,7 @@ export default {
       localStorage.getItem('settings.theme') == 'dark' ? 'sunny' : 'bedtime';
   },
   methods: {
-    ThemeSwitchers: function () {
+    switchTheme: function () {
       if (localStorage.getItem('settings.theme') == 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('settings.theme', 'dark');

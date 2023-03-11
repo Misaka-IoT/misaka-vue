@@ -2,9 +2,15 @@
 import { RouterView } from 'vue-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+
+// app-level components
 import AppNavDrawer from '@/components/AppNavDrawer.vue';
 import AppTopAppBar from '@/components/AppTopAppBar.vue';
 import AppFooter from '@/components/AppFooter.vue';
+// components
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
+import MusicSwitcher from '@/components/MusicSwitcher.vue';
+import SidebarLink from '@/components/SidebarLink.vue';
 </script>
 
 <template>
@@ -30,7 +36,7 @@ import AppFooter from '@/components/AppFooter.vue';
           @click="drawerOpened = true">
           {{ navIcon }}
         </button>
-        <onmusic></onmusic>
+        <MusicSwitcher></MusicSwitcher>
       </template>
 
       <template #title>
@@ -77,9 +83,6 @@ import AppFooter from '@/components/AppFooter.vue';
 
 <script lang="ts">
 import axios from 'axios';
-import onmusic from '@/components/onmusic.vue';
-import SidebarLink from '@/components/SidebarLink.vue';
-import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 export default {
   computed: {
     navIcon(): string {
