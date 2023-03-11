@@ -10,13 +10,13 @@ import AppFooter from '@/components/AppFooter.vue';
 // components
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import MusicSwitcher from '@/components/MusicSwitcher.vue';
-import SidebarLink from '@/components/SidebarLink.vue';
+import LinksWrapper from '@/components/LinksWrapper.vue';
 </script>
 
 <template>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <SidebarLink>
+      <LinksWrapper>
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutraligun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -28,7 +28,7 @@ import SidebarLink from '@/components/SidebarLink.vue';
         <RouterLink to="/resource">动漫资源</RouterLink>
         <RouterLink to="/about">关于</RouterLink>
         <RouterLink to="/links">友情链接</RouterLink>
-      </SidebarLink>
+      </LinksWrapper>
     </template>
     <AppTopAppBar :backToTop="backToTop">
       <template #navBtns>
