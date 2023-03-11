@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import ContributorCard from '@/components/ContributorCard.vue';
+import ContributorCard from '@/components/ContributorCard.vue'
 </script>
 
 <style scoped>

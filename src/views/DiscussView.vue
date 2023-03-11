@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts">
-import 'artalk/dist/Artalk.css';
+import 'artalk/dist/Artalk.css'
 
-import { defineComponent } from 'vue';
-import Artalk from 'artalk';
+import { defineComponent } from 'vue'
+import Artalk from 'artalk'
 
 export default defineComponent({
   mounted: () => {
@@ -17,9 +17,9 @@ export default defineComponent({
       server: 'https://chat.mashiro.pub:23366',
       site: 'lolimashiro-comment-sys',
       // ...
-    });
+    })
   },
-});
+})
 </script>
 
 <style>

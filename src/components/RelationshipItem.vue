@@ -34,5 +34,5 @@ export default {
     info: String,
     id: String,
   },
-};
+}
 </script>

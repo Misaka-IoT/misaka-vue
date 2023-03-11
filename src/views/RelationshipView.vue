@@ -41,8 +41,8 @@
 </template>
 
 <script setup lang="ts">
-import InterpersonalRelationship from './InterpersonalRelationship.vue';
-import RelationshipItem from '@/components/RelationshipItem.vue';
+import InterpersonalRelationship from './InterpersonalRelationship.vue'
+import RelationshipItem from '@/components/RelationshipItem.vue'
 </script>
 
 <style scoped lang="scss">

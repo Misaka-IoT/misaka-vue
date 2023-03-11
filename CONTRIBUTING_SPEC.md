@@ -14,21 +14,21 @@
 
 ```typescript
 // e.g.
-const add = (a: number, b: number): number => (a + b) * (a - b);
+const add = (a: number, b: number): number => (a + b) * (a - b)
 const fetchToJSONAndPrint = (target: string): void => {
   fetch(target)
     .then((response) => response.json())
-    .then((data) => console.log(data));
-};
+    .then((data) => console.log(data))
+}
 // 错误示范
 const add = (a: number, b: number): number => {
-  return (a + b) * (a - b);
-};
+  return (a + b) * (a - b)
+}
 const fetchToJSONAndPrint = (target: string): void => {
   fetch(target)
     .then((response) => response.json())
-    .then((data) => console.log(data));
-};
+    .then((data) => console.log(data))
+}
 ```
 
 1. 两空格缩进
@@ -36,13 +36,13 @@ const fetchToJSONAndPrint = (target: string): void => {
 ```typescript
 // e.g.
 const fun = (param) => {
-  return param + 1;
-};
+  return param + 1
+}
 ```
 
 2. 单引号
 
 ```typescript
 // e.g.
-const str = 'str content';
+const str = 'str content'
 ```

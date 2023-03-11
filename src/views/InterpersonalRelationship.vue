@@ -4,26 +4,26 @@
   </div>
 </template>
 <script lang="ts">
-import { DataSet } from 'vis-data/peer';
-import { Network } from 'vis-network/peer';
-import 'vis-network/styles/vis-network.css';
+import { DataSet } from 'vis-data/peer'
+import { Network } from 'vis-network/peer'
+import 'vis-network/styles/vis-network.css'
 //<图片>
-import i0 from '@/assets/InterpersonalRelationshipImage/0.webp';
-import i1 from '@/assets/InterpersonalRelationshipImage/1.webp';
-import i2 from '@/assets/InterpersonalRelationshipImage/2.webp';
-import i3 from '@/assets/InterpersonalRelationshipImage/3.webp';
-import i4 from '@/assets/InterpersonalRelationshipImage/4.webp';
-import i5 from '@/assets/InterpersonalRelationshipImage/5.webp';
-import i6 from '@/assets/InterpersonalRelationshipImage/6.webp';
-import i7 from '@/assets/InterpersonalRelationshipImage/7.webp';
-import i8 from '@/assets/InterpersonalRelationshipImage/8.webp';
+import i0 from '@/assets/InterpersonalRelationshipImage/0.webp'
+import i1 from '@/assets/InterpersonalRelationshipImage/1.webp'
+import i2 from '@/assets/InterpersonalRelationshipImage/2.webp'
+import i3 from '@/assets/InterpersonalRelationshipImage/3.webp'
+import i4 from '@/assets/InterpersonalRelationshipImage/4.webp'
+import i5 from '@/assets/InterpersonalRelationshipImage/5.webp'
+import i6 from '@/assets/InterpersonalRelationshipImage/6.webp'
+import i7 from '@/assets/InterpersonalRelationshipImage/7.webp'
+import i8 from '@/assets/InterpersonalRelationshipImage/8.webp'
 //</图片>
 
 export default {
   mounted() {
-    const but = document.getElementById('ThemeSwitcherButton');
-    const container = document.getElementById('InterpersonalRelationship');
-    const box = document.getElementById('InterpersonalRelationshipBox');
+    const but = document.getElementById('ThemeSwitcherButton')
+    const container = document.getElementById('InterpersonalRelationship')
+    const box = document.getElementById('InterpersonalRelationshipBox')
     //节点数据
     const nodes = new DataSet([
       { id: 0, label: '御坂美琴', shape: 'image', image: i0 },
@@ -35,7 +35,7 @@ export default {
       { id: 6, label: '御坂美铃', shape: 'image', image: i6 },
       { id: 7, label: '上条当麻', shape: 'image', image: i7 },
       { id: 8, label: '芙兰达', shape: 'image', image: i8 },
-    ]);
+    ])
     //连线数据
     const edges = new DataSet([
       { from: 0, to: 1, id: 1 },
@@ -49,12 +49,12 @@ export default {
       { from: 4, to: 5, id: 8, color: '#FFC854' },
       { from: 7, to: 1, id: 9, arrows: 'to', color: '#FFC854' },
       { from: 7, to: 2, id: 10, arrows: 'to', color: '#FFC854' },
-    ]);
+    ])
     const data = {
       nodes: nodes,
       edges: edges,
-    };
-    var options = {};
+    }
+    var options = {}
     if (box != null)
       options = {
         nodes: {
@@ -62,7 +62,7 @@ export default {
             color: document.defaultView?.getComputedStyle(box, null).color,
           },
         },
-      };
+      }
     //点击节点后跳转的数组
     var link = [
       'flush-heading-a-button0',
@@ -74,9 +74,9 @@ export default {
       '/l6',
       'flush-heading-a-button1',
       '/l8',
-    ];
+    ]
     if (container != null) {
-      var network = new Network(container, data, options);
+      var network = new Network(container, data, options)
       //双击的事件
       network.on('doubleClick', (properties) => {
         if (properties.nodes.length > 0) {
@@ -85,19 +85,19 @@ export default {
           // });
           // window.open(routeData.href);
           if (link[properties.nodes[0]].substring(0, 1) != '/') {
-            document.getElementById(link[properties.nodes[0]])?.click(); //点击人物介绍右边的按钮
+            document.getElementById(link[properties.nodes[0]])?.click() //点击人物介绍右边的按钮
           }
         }
-      });
+      })
       if (but != null) {
         but.addEventListener('click', function () {
-          location.reload(); //更改树状图的色调需要刷新
-        });
+          location.reload() //更改树状图的色调需要刷新
+        })
       }
     }
   },
   computed: {},
-};
+}
 </script>
 
 <style scoped>

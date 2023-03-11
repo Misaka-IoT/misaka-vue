@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import { RouterView } from 'vue-router'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 // app-level components
-import AppNavDrawer from '@/components/AppNavDrawer.vue';
-import AppTopAppBar from '@/components/AppTopAppBar.vue';
-import AppFooter from '@/components/AppFooter.vue';
+import AppNavDrawer from '@/components/AppNavDrawer.vue'
+import AppTopAppBar from '@/components/AppTopAppBar.vue'
+import AppFooter from '@/components/AppFooter.vue'
 // components
-import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
-import MusicSwitcher from '@/components/MusicSwitcher.vue';
-import LinksWrapper from '@/components/LinksWrapper.vue';
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
+import MusicSwitcher from '@/components/MusicSwitcher.vue'
+import LinksWrapper from '@/components/LinksWrapper.vue'
 </script>
 
 <template>
@@ -104,30 +104,30 @@ import LinksWrapper from '@/components/LinksWrapper.vue';
 </template>
 
 <script lang="ts">
-import axios from 'axios';
+import axios from 'axios'
 export default {
   computed: {
     navIcon(): string {
-      return this.drawerOpened ? 'menu_open' : 'menu';
+      return this.drawerOpened ? 'menu_open' : 'menu'
     },
   },
   created() {
     switch (location.host) {
       case 'misaka-mikoto.jp':
-        this.site = 'jp';
-        break;
+        this.site = 'jp'
+        break
       case 'misaka-mikoto.cn':
-        this.site = 'cn';
-        break;
+        this.site = 'cn'
+        break
     }
 
     // 使用axios获取star和fork数量
     axios
       .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')
       .then((res) => {
-        this.stargazersCount = res.data.stargazers_count;
-        this.forksCount = res.data.forks_count;
-      });
+        this.stargazersCount = res.data.stargazers_count
+        this.forksCount = res.data.forks_count
+      })
   },
   data() {
     return {
@@ -137,13 +137,13 @@ export default {
       forksCount: 0,
       site: 'jp',
       cdnRootUrl: 'https://img.moeu.moe/',
-    };
+    }
   },
   methods: {
     handleDrawerChange(value: boolean) {
-      this.drawerOpened = value;
+      this.drawerOpened = value
       if (!this.drawerOpened)
-        (this.$refs.drawerOpener as HTMLButtonElement).focus();
+        (this.$refs.drawerOpener as HTMLButtonElement).focus()
     },
     /**
      * @author: longyu12345
@@ -151,10 +151,10 @@ export default {
      * 觉得写得离谱就打他去 o(*￣▽￣*)ブ
      */
     loadEatMikoto(): void {
-      location.href = 'eat-mikoto/index.html';
+      location.href = 'eat-mikoto/index.html'
     },
   },
-};
+}
 </script>
 
 <style scoped lang="scss"></style>

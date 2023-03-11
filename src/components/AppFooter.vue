@@ -52,23 +52,23 @@
 </template>
 
 <script lang="ts">
-import jprs_DV_png from '@/assets/jprs_DV.png';
+import jprs_DV_png from '@/assets/jprs_DV.png'
 
 export default {
   data() {
     return {
       jprs_DV_png,
       site: 'unknown',
-    };
+    }
   },
   created() {
     if (location.href.indexOf('misaka-mikoto.cn') != -1) {
-      this.site = 'cn';
+      this.site = 'cn'
     } else if (location.href.indexOf('misaka-mikoto.jp') != -1) {
-      this.site = 'jp';
+      this.site = 'jp'
     }
   },
-};
+}
 </script>
 
 <style scoped lang="scss">

@@ -60,7 +60,7 @@ export default {
     username: String,
     name: String,
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

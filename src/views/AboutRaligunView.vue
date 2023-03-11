@@ -83,7 +83,7 @@
 </template>
 
 <script setup lang="ts">
-import DelText from '@/components/DelText.vue';
+import DelText from '@/components/DelText.vue'
 </script>
 
 <style scoped>
