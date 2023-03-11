@@ -1,7 +1,12 @@
 <template>
   <div :class="classes">
     <span class="app-nav-drawer__overlap" @click="closeDrawer"></span>
-    <aside class="app-nav-drawer" tabindex="-1" ref="drawer" @keydown="handleKeydown">
+    <aside
+      class="app-nav-drawer"
+      tabindex="-1"
+      ref="drawer"
+      @keydown="handleKeydown"
+    >
       <slot name="drawer"></slot>
     </aside>
     <div class="app-nav-drawer__contents" ref="contents">
@@ -103,6 +108,26 @@ export default {
 
 .app-nav-drawer a:focus-visible:before {
   opacity: 0.12;
+}
+
+// 外链图标
+.app-nav-drawer a[target='_blank']::after {
+  content: 'arrow_outward';
+  margin-left: auto;
+
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-btn:active::before,
