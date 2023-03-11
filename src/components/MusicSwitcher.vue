@@ -2,8 +2,7 @@
   <button
     class="icon-btn standard no-color material-symbols-outlined"
     @click="switchMusic"
-    ref="music-switcher"
-  >
+    ref="music-switcher">
     {{ icon }}
   </button>
 </template>

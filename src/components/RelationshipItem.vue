@@ -8,8 +8,7 @@
         :data-bs-target="'#flush-collapse' + id"
         aria-expanded="false"
         :aria-controls="'flush-collapse' + id"
-        :id="'flush-heading-a-button' + id"
-      >
+        :id="'flush-heading-a-button' + id">
         {{ name }}<img :src="img" :alt="name" height="40" width="34" />
       </a>
     </h2>
@@ -17,8 +16,7 @@
       :id="'flush-collapse' + id"
       class="accordion-collapse collapse"
       :aria-labelledby="'flush-heading' + id"
-      data-bs-parent="#accordionFlush"
-    >
+      data-bs-parent="#accordionFlush">
       <div class="accordion-body">
         <div v-html="info"></div>
       </div>

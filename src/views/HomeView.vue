@@ -22,15 +22,13 @@ let isPnone = ref(window.innerWidth > 600)
         class="carousel"
         :height="carouselHeight"
         arrow="never"
-        interval="3500"
-      >
+        interval="3500">
         <el-carousel-item v-for="item in 4" :key="item">
           <el-image
             fit="cover"
             :src="`https://img.moeu.moe/main/waterfall${item}.webp`"
             class="carousel-img"
-            alt=""
-          />
+            alt="" />
         </el-carousel-item>
       </el-carousel>
 
@@ -39,15 +37,13 @@ let isPnone = ref(window.innerWidth > 600)
         class="carousel"
         :height="carouselHeight"
         arrow="never"
-        interval="3000"
-      >
+        interval="3000">
         <el-carousel-item v-for="item in 4" :key="item">
           <el-image
             fit="cover"
             :src="`https://img.moeu.moe/main/waterfall${item}.webp`"
             class="carousel-img"
-            alt=""
-          />
+            alt="" />
         </el-carousel-item>
       </el-carousel>
     </section>
@@ -65,8 +61,7 @@ let isPnone = ref(window.innerWidth > 600)
       <img
         src="../assets/FCEC7B04-38C6-48CB-862A-6FD9BC1F75DF.png"
         alt="炮姐吃蛋糕"
-        style="width: 180px; height: 180px; float: right"
-      />
+        style="width: 180px; height: 180px; float: right" />
       <hr />
       <h3>你可以在这里找到：</h3>
       <p>超电磁炮小百科：新人可以初步了解御坂美琴的性格、人设等信息。</p>

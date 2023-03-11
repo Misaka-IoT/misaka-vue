@@ -19,8 +19,7 @@
         <a
           title="misaka-fans"
           target="_blank"
-          href="https://static.misaka-mikoto.jp/"
-        >
+          href="https://static.misaka-mikoto.jp/">
           <div>静态网站</div>
           <p>本网站的上一个版本，使用静态页面构建(停止维护)</p>
         </a>
@@ -29,8 +28,7 @@
         <a
           title="LiangBurs' Blog"
           target="_blank"
-          href="https://blog.cnmobile.link"
-        >
+          href="https://blog.cnmobile.link">
           <div>LiangBurs' Blog</div>
           <p>May all the beauty be blessed. —— 《Moon Halo》</p>
         </a>
@@ -53,8 +51,7 @@
         <a
           title="233355607的生草小站"
           target="_blank"
-          href="https://www.233355607.xyz"
-        >
+          href="https://www.233355607.xyz">
           <div>233355607的生草小站</div>
           <p>草还是草</p>
         </a>

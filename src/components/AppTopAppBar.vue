@@ -16,8 +16,7 @@
     <div
       class="app-top-app-bar__contents"
       ref="contents"
-      @scroll="handleScroll"
-    >
+      @scroll="handleScroll">
       <slot></slot>
     </div>
   </div>

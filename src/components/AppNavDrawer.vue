@@ -5,8 +5,7 @@
       class="app-nav-drawer"
       tabindex="-1"
       ref="drawer"
-      @keydown="handleKeydown"
-    >
+      @keydown="handleKeydown">
       <slot name="drawer"></slot>
     </aside>
     <div class="app-nav-drawer__contents" ref="contents">

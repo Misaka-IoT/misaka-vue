@@ -5,8 +5,7 @@
         class="character-card"
         v-for="(item, index) in imgList"
         @click="change_character(index)"
-        :key="index"
-      >
+        :key="index">
         <img :src="item" alt="" />
       </div>
     </div>

@@ -22,23 +22,20 @@
         action="https://sitesealinfo.pubcert.jprs.jp/SiteSealReference"
         name="SiteSealReference"
         method="post"
-        target="_blank"
-      >
+        target="_blank">
         <!--お客様の証明ページを別ウィンドウにて開きます。-->
         <input
           type="image"
           name="Sticker"
           :src="jprs_DV_png"
           alt="クリックして証明書の内容をご確認ください。"
-          oncontextmenu="return false;"
-        />
+          oncontextmenu="return false;" />
 
         <!--ダウンロードしたサイトシール画像のパス名を指定します。-->
         <input
           type="hidden"
           name="certificateCn"
-          value="www.misaka-mikoto.jp"
-        />
+          value="www.misaka-mikoto.jp" />
         <input type="hidden" name="certificateClass" value="DV" />
         <!--証明書のコモンネーム及び証明書種別（DVもしくはOV）を指定します。-->
       </form>

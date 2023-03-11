@@ -4,8 +4,7 @@
       v-for="(item, index) in list"
       :key="index"
       v-lazy="item.url"
-      :alt="item.name"
-    />
+      :alt="item.name" />
   </div>
 </template>
 

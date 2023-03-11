@@ -79,8 +79,7 @@ let awardCards = [
         v-for="(item, index) in awardCards"
         :key="index"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
-        class="award-card"
-      >
+        class="award-card">
         <div class="content">
           <h2>{{ item.time }}</h2>
           <h3>{{ item.title }}</h3>

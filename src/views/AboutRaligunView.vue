@@ -16,12 +16,10 @@
       </p>
       <img
         src="@/assets/7794AEC3-322A-4F95-B13B-06BE360B168F.webp"
-        alt="铁砂机器人"
-      />
+        alt="铁砂机器人" />
       <img
         src="@/assets/218A4784-DA93-43FA-83A7-C67A7E8ED340.webp"
-        alt="电磁炮"
-      />
+        alt="电磁炮" />
       <hr />
       <h3>人际关系</h3>
       <ul>
@@ -72,8 +70,7 @@
       <p>
         普通能力：会拉小提琴（在<a
           href="https://mzh.moegirl.org.cn/私立常盘台中学校"
-          target="_blank"
-        >
+          target="_blank">
           常盘台
         </a>
         女子宿舍开放日表演小提琴独奏）、数学很好（帮助当麻完成暑假数学作业）、会煮饭（能把电击使能力当作电磁炉使用）

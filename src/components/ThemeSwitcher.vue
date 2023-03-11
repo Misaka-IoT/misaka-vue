@@ -2,8 +2,7 @@
   <button
     class="icon-btn standard no-color material-symbols-outlined"
     @click="switchTheme"
-    ref="theme-switcher"
-  >
+    ref="theme-switcher">
     {{ icon }}
   </button>
 </template>
