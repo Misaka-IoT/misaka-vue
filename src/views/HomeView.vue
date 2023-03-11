@@ -105,8 +105,8 @@ let isPnone = ref(window.innerWidth > 600)
 </template>
 
 <style lang="scss">
-.marquee {
-  overflow-y: hidden;
+.el-carousel--horizontal {
+  overflow: hidden;
 }
 
 .el-carousel__mask {
