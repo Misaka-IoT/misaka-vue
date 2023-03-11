@@ -1,0 +1,65 @@
+.icon-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-inline-start: 8px;
+  width: 40px;
+  height: 40px;
+  color: var(--color-on-theme);
+  background-color: var(--color-theme);
+  border-radius: 9999px;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+.icon-btn.standard {
+  background-color: transparent;
+  color: var(--color-theme);
+}
+.icon-btn.no-color {
+  color: inherit;
+}
+
+.icon-btn::before,
+.fab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.icon-btn:hover::before,
+.fab:hover::before {
+  opacity: 0.08;
+}
+
+.icon-btn:focus-visible::before,
+.fab:focus-visible::before {
+  opacity: 0.12;
+}
+
+.icon-btn:active::before,
+.fab:active::before {
+  opacity: 0.16;
+}
+
+.fab {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-theme);
+  color: var(--color-on-theme) !important;
+  text-decoration: none !important;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}

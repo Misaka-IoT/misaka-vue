@@ -52,7 +52,7 @@ let isPnone = ref(window.innerWidth > 600);
       </el-carousel>
     </section>
     <main class="container">
-      <div id="musc"><random-player id="rps"></random-player></div>
+      <div class="music-player"></div>
       <hr />
       <h3>Hi，朋友，你好！</h3>
       <p>

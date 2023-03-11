@@ -4,7 +4,9 @@
     <div class="container">
       <h3>一、网站基本性质</h3>
       <p>
-        这个网站为<i>公益网站</i>，不是必须的情况下，不接受资助&投资，不会发起<i>汇款</i>等活动。
+        这个网站为<i><b>公益网站</b></i
+        >，非必须情况下，不接受资助或投资，不会发起<i><b>汇款</b></i
+        >等活动。
       </p>
       <hr />
       <h3>二、个人数据管理</h3>
@@ -16,7 +18,6 @@
       <a
         href="https://github.com/Misaka-IoT/misaka-vue/graphs/contributors"
         target="_blank"
-        style="padding-left: 10px"
         >详情</a
       >
       <div class="contributors">
@@ -102,8 +103,5 @@ img {
   max-width: 100%;
   width: 400px;
   height: auto;
-}
-i {
-  color: #dbb299;
 }
 </style>
