@@ -55,7 +55,7 @@ const router = createRouter({
     },
     {
       path: '/donate',
-      component: () => import('@/views/DonateView.vue')
+      component: () => import('@/views/DonateView.vue'),
     },
     {
       path: '/:pathMatch(.*)',

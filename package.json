@@ -8,7 +8,7 @@
     "test:unit": "vitest --environment jsdom --root src/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "prettier": "prettier --write ."
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@egjs/hammerjs": "^2.0.0",
@@ -17,6 +17,7 @@
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "component-emitter": "^1.3.0",
+    "element-plus": "^2.2.35",
     "keycharm": "^0.2.0 || ^0.3.0 || ^0.4.0",
     "pinia": "^2.0.23",
     "timsort": "^0.3.0",

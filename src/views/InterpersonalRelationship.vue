@@ -64,25 +64,34 @@ export default {
         },
       };
     //点击节点后跳转的数组
-    var link = ['flush-heading-a-button0', '/l1', 'flush-heading-a-button2', '/l3', 'flush-heading-a-button3', 'flush-heading-a-button4', '/l6', 'flush-heading-a-button1', '/l8'];
+    var link = [
+      'flush-heading-a-button0',
+      '/l1',
+      'flush-heading-a-button2',
+      '/l3',
+      'flush-heading-a-button3',
+      'flush-heading-a-button4',
+      '/l6',
+      'flush-heading-a-button1',
+      '/l8',
+    ];
     if (container != null) {
       var network = new Network(container, data, options);
       //双击的事件
       network.on('doubleClick', (properties) => {
-        if (properties.nodes.length > 0 ) {
+        if (properties.nodes.length > 0) {
           // let routeData = this.$router.resolve({
           //   path: link[properties.nodes[0]], //properties.nodes为双击的节点p
           // });
           // window.open(routeData.href);
-          if(link[properties.nodes[0]].substring(0,1)!="/")
-          {
-            document.getElementById(link[properties.nodes[0]])?.click();//点击人物介绍右边的按钮
+          if (link[properties.nodes[0]].substring(0, 1) != '/') {
+            document.getElementById(link[properties.nodes[0]])?.click(); //点击人物介绍右边的按钮
           }
         }
       });
       if (but != null) {
         but.addEventListener('click', function () {
-          location.reload();//更改树状图的色调需要刷新
+          location.reload(); //更改树状图的色调需要刷新
         });
       }
     }

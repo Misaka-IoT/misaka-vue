@@ -74,9 +74,12 @@
       <hr />
       <h3>四、本项目使用的开源项目</h3>
       <p>
-        <a href="https://visjs.github.io/vis-network/" target="_blank">Vis-network（MIT）：用于：人物介绍页面</a><br>
-        <a href="https://github.com/arcxingye/EatKano/" target="_blank">吃掉小鹿乃（MIT）：用于：新概念音游</a>
-
+        <a href="https://visjs.github.io/vis-network/" target="_blank"
+          >Vis-network（MIT）：用于：人物介绍页面</a
+        ><br />
+        <a href="https://github.com/arcxingye/EatKano/" target="_blank"
+          >吃掉小鹿乃（MIT）：用于：新概念音游</a
+        >
       </p>
       <hr />
       <h3>五、TLS/SSL证书</h3>

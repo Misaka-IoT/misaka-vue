@@ -16,7 +16,9 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <RouterLink to="/relationship">人物介绍</RouterLink>
         <RouterLink to="/imgboard">美琴照片墙</RouterLink>
         <RouterLink to="/awards">世萌战绩</RouterLink>
-        <a href="https://www.internationalsaimoe.com/" target="_blank">世萌投票</a>
+        <a href="https://www.internationalsaimoe.com/" target="_blank"
+          >世萌投票</a
+        >
         <a href="/eat-mikoto/index.html" target="_blank">新概念音游</a>
         <RouterLink to="/discuss">留言板</RouterLink>
         <RouterLink to="/resource">动漫资源</RouterLink>

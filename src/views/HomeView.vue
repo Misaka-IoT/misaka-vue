@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import DelText from '@/components/DelText.vue';
+import { ref } from 'vue';
+let carouselHeight = ref('60vw'); // 定义一变量控制轮播高度,在页面宽度不同时返回不同高度
+if (window.innerWidth > 600) {
+  carouselHeight.value = '400px';
+}
+
+let isPnone = ref(window.innerWidth > 600);
+</script>
 <template>
   <div class="homeview-box">
     <section class="banner">
@@ -6,32 +16,40 @@
       </p>
     </section>
     <section class="marquee">
-      <ul>
-        <li>
-          <img
-            src="https://img.moeu.moe/main/waterfall1.webp"
-            alt="滚动图片_1"
+      <el-carousel
+        v-if="isPnone"
+        type="card"
+        class="carousel"
+        :height="carouselHeight"
+        arrow="never"
+        interval="3500"
+      >
+        <el-carousel-item v-for="item in 4" :key="item">
+          <el-image
+            fit="cover"
+            :src="`https://img.moeu.moe/main/waterfall${item}.webp`"
+            class="carousel-img"
+            alt=""
           />
-        </li>
-        <li>
-          <img
-            src="https://img.moeu.moe/main/waterfall2.webp"
-            alt="滚动图片_2"
+        </el-carousel-item>
+      </el-carousel>
+
+      <el-carousel
+        v-else
+        class="carousel"
+        :height="carouselHeight"
+        arrow="never"
+        interval="3000"
+      >
+        <el-carousel-item v-for="item in 4" :key="item">
+          <el-image
+            fit="cover"
+            :src="`https://img.moeu.moe/main/waterfall${item}.webp`"
+            class="carousel-img"
+            alt=""
           />
-        </li>
-        <li>
-          <img
-            src="https://img.moeu.moe/main/waterfall3.webp"
-            alt="滚动图片_3"
-          />
-        </li>
-        <li>
-          <img
-            src="https://img.moeu.moe/main/waterfall4.webp"
-            alt="滚动图片_4"
-          />
-        </li>
-      </ul>
+        </el-carousel-item>
+      </el-carousel>
     </section>
     <main class="container">
       <div id="musc"><random-player id="rps"></random-player></div>
@@ -83,21 +101,43 @@
       </p>
     </main>
   </div>
+  <el-backtop :right="100" :bottom="300" />
 </template>
 
-<script setup lang="ts">
-import DelText from '@/components/DelText.vue';
-</script>
-
 <style lang="scss">
-.img-box {
-  width: 100%;
-  min-height: 300px;
-  display: flex;
-  justify-content: center;
-  padding-right: 140px;
-  img {
-    width: 60%;
+@media screen and (min-width: 600px) {
+  .homeview-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .marquee {
+      width: 70vw;
+      .carousel-img {
+        display: flex;
+        justify-content: center;
+        height: 380px;
+        border: 4px solid #c49582;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeview-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .marquee {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .carousel {
+        width: 100vw;
+        height: 55vw;
+      }
+    }
   }
 }
 </style>
