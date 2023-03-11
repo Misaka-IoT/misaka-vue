@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    handleScroll(e: Event) {
+    handleScroll() {
       this.scrolled =
         (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false
     },

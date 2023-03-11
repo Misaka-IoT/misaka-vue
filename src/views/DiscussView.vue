@@ -4,13 +4,11 @@
 
 <script lang="ts">
 import 'artalk/dist/Artalk.css'
-
-import { defineComponent } from 'vue'
 import Artalk from 'artalk'
 
-export default defineComponent({
-  mounted: () => {
-    const artalk = new Artalk({
+export default {
+  mounted: function () {
+    new Artalk({
       el: '.artalk-comments',
       pageKey: `233`,
       pageTitle: 'misaka-mikoto.jp-comment-server',
@@ -19,7 +17,7 @@ export default defineComponent({
       // ...
     })
   },
-})
+}
 </script>
 
 <style>
