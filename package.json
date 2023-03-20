@@ -2,13 +2,13 @@
   "name": "misaka-vue",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 8080",
+    "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
-    "test:unit": "vitest --environment jsdom --root src/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "format": "prettier --write ."
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@egjs/hammerjs": "^2.0.0",

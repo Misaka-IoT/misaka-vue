@@ -5,8 +5,7 @@
         class="character-card"
         v-for="(item, index) in imgList"
         @click="change_character(index)"
-        :key="index"
-      >
+        :key="index">
         <img :src="item" alt="" />
       </div>
     </div>
@@ -19,16 +18,16 @@
 </template>
 
 <script lang="ts">
-import a from '@/assets/characters/御坂美琴2.png';
-import b from '@/assets/characters/佐天淚子2.png';
-import c from '@/assets/characters/初春飾利3.png';
-import d from '@/assets/characters/白井黑子3.png';
-import e from '@/assets/characters/食蜂操祈2.png';
-import back_img1 from '@/assets/characters/1.png';
-import back_img2 from '@/assets/characters/2.png';
-import back_img3 from '@/assets/characters/3.png';
-import back_img4 from '@/assets/characters/4.png';
-import back_img5 from '@/assets/characters/5.png';
+import a from '@/assets/characters/御坂美琴2.png'
+import b from '@/assets/characters/佐天淚子2.png'
+import c from '@/assets/characters/初春飾利3.png'
+import d from '@/assets/characters/白井黑子3.png'
+import e from '@/assets/characters/食蜂操祈2.png'
+import back_img1 from '@/assets/characters/1.png'
+import back_img2 from '@/assets/characters/2.png'
+import back_img3 from '@/assets/characters/3.png'
+import back_img4 from '@/assets/characters/4.png'
+import back_img5 from '@/assets/characters/5.png'
 
 export default {
   data() {
@@ -61,19 +60,19 @@ export default {
       content_styles: {
         backgroundImage: `url(${back_img1})`,
       },
-    };
+    }
   },
 
   methods: {
     change_character: function (id: number) {
-      this.content_styles.backgroundImage = `url(${this.back_img_list[id]})`;
-      this.content_text = this.contents[id].text;
+      this.content_styles.backgroundImage = `url(${this.back_img_list[id]})`
+      this.content_text = this.contents[id].text
     },
   },
   created() {
-    this.content_text = this.contents[0].text;
+    this.content_text = this.contents[0].text
   },
-};
+}
 </script>
 
 <style scoped lang="scss">

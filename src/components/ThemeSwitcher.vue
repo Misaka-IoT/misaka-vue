@@ -2,8 +2,7 @@
   <button
     class="icon-btn standard no-color material-symbols-outlined"
     @click="switchTheme"
-    ref="theme-switcher"
-  >
+    ref="theme-switcher">
     {{ icon }}
   </button>
 </template>
@@ -13,24 +12,24 @@ export default {
   data() {
     return {
       icon: '',
-    };
+    }
   },
   created() {
     this.icon =
-      localStorage.getItem('settings.theme') == 'dark' ? 'sunny' : 'bedtime';
+      localStorage.getItem('settings.theme') == 'dark' ? 'sunny' : 'bedtime'
   },
   methods: {
     switchTheme: function () {
       if (localStorage.getItem('settings.theme') == 'light') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('settings.theme', 'dark');
-        this.icon = 'sunny';
+        document.documentElement.setAttribute('data-theme', 'dark')
+        localStorage.setItem('settings.theme', 'dark')
+        this.icon = 'sunny'
       } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('settings.theme', 'light');
-        this.icon = 'bedtime';
+        document.documentElement.setAttribute('data-theme', 'light')
+        localStorage.setItem('settings.theme', 'light')
+        this.icon = 'bedtime'
       }
     },
   },
-};
+}
 </script>

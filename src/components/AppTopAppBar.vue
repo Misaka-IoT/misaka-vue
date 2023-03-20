@@ -13,7 +13,10 @@
         <slot name="actionBtns"></slot>
       </section>
     </header>
-    <div class="app-top-app-bar__contents" ref="contents" @scroll="handleScroll">
+    <div
+      class="app-top-app-bar__contents"
+      ref="contents"
+      @scroll="handleScroll">
       <slot></slot>
     </div>
   </div>
@@ -26,18 +29,18 @@ export default {
       return [
         'app-top-app-bar__container',
         this.scrolled ? 'app-top-app-bar--scrolled' : '',
-      ].join(' ');
+      ].join(' ')
     },
   },
   data() {
     return {
       scrolled: false,
-    };
+    }
   },
   methods: {
-    handleScroll(e: Event) {
+    handleScroll() {
       this.scrolled =
-        (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false;
+        (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false
     },
   },
   props: {
@@ -45,11 +48,11 @@ export default {
   },
   watch: {
     backToTop: function (newVal, oldVal) {
-      if (newVal === oldVal) return;
-      (this.$refs.contents as HTMLDivElement).scroll(0, 0);
+      if (newVal === oldVal) return
+      ;(this.$refs.contents as HTMLDivElement).scroll(0, 0)
     },
   },
-};
+}
 </script>
 
 <style scoped lang="scss">
@@ -69,18 +72,19 @@ export default {
     display: flex;
     padding: 12px 8px;
 
-    &.middle,
-    &.end {
+    &.middle {
       flex: 1;
     }
 
     &.start {
       gap: 8px;
+      padding-inline-start: 16px;
       justify-content: flex-start;
     }
 
     &.end {
       gap: 8px;
+      padding-inline-end: 16px;
       justify-content: flex-end;
     }
   }

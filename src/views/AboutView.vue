@@ -24,51 +24,43 @@
         <ContributorCard
           username="misaka-fans"
           name="Misaka Fans"
-          email="shbwb@misaka-mikoto.jp"
-        >
+          email="shbwb@misaka-mikoto.jp">
           主要贡献：绝大多数内容，留言板，PWA，照片收集、整理，吉祥物，细节内容审查修改
         </ContributorCard>
         <ContributorCard
           username="huge-pancake"
           name="HugePancake"
-          email="huge.pancake.zxr@gmail.com"
-        >
+          email="huge.pancake.zxr@gmail.com">
           主要贡献：样式，package相关，规范化，代码复用，开启vue项目
         </ContributorCard>
         <ContributorCard
           username="yutou1151"
           name="高坂 筑穂"
-          email="yutou1151@misaka-mikoto.jp"
-        >
+          email="yutou1151@misaka-mikoto.jp">
           主要贡献：字体，格式化，代码复用，服务器&域名&cdn提供，站长的code-server提供（doge
         </ContributorCard>
         <ContributorCard
           username="Ma3h1r0"
           name="Mashiro"
-          email="lov.mashiro.e@gmail.com"
-        >
+          email="lov.mashiro.e@gmail.com">
           主要贡献：搭建&管理评论系统，人类验证
         </ContributorCard>
         <ContributorCard
           username="z2bguoguo"
           name="中二病guoguo"
-          email="z2bguoguo@z2bguoguos.ml"
-        >
+          email="z2bguoguo@z2bguoguos.ml">
           主要贡献：css切换器，静音按钮，人际关系页面，部分内容的美化，参与vue版改造
         </ContributorCard>
-
         <ContributorCard
           username="longyu2"
           name="龙驭"
-          email="litong4576@gmail.com"
-        >
+          email="litong4576@gmail.com">
           主要贡献：迁移到vue，样式修改，新页面建设，参与vue版改造
         </ContributorCard>
         <ContributorCard
           username="sudoriaa"
           name="苏多莉亚"
-          email="rc@ricecandy.cn"
-        >
+          email="rc@ricecandy.cn">
           主要贡献：网站页面优化、新页面开发、资源提供
         </ContributorCard>
       </div>
@@ -95,7 +87,7 @@
 </template>
 
 <script setup lang="ts">
-import ContributorCard from '@/components/ContributorCard.vue';
+import ContributorCard from '@/components/ContributorCard.vue'
 </script>
 
 <style scoped>

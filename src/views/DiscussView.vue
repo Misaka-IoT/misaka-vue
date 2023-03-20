@@ -3,23 +3,21 @@
 </template>
 
 <script lang="ts">
-import 'artalk/dist/Artalk.css';
+import 'artalk/dist/Artalk.css'
+import Artalk from 'artalk'
 
-import { defineComponent } from 'vue';
-import Artalk from 'artalk';
-
-export default defineComponent({
-  mounted: () => {
-    const artalk = new Artalk({
+export default {
+  mounted: function () {
+    new Artalk({
       el: '.artalk-comments',
       pageKey: `233`,
       pageTitle: 'misaka-mikoto.jp-comment-server',
       server: 'https://chat.mashiro.pub:23366',
       site: 'lolimashiro-comment-sys',
       // ...
-    });
+    })
   },
-});
+}
 </script>
 
 <style>

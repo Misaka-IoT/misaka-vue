@@ -4,8 +4,7 @@
       v-for="(item, index) in list"
       :key="index"
       v-lazy="item.url"
-      :alt="item.name"
-    />
+      :alt="item.name" />
   </div>
 </template>
 
@@ -47,15 +46,15 @@ export default {
         { url: 'worring.webp', name: 'Why are you worring?' },
         { url: 'get-up.webp', name: 'Good morning, Misaka!' },
       ],
-    };
+    }
   },
   created: function () {
-    let that = this;
+    let that = this
     this.list.forEach((element) => {
-      element.url = that.cdnRootUrl + 'pic/' + element.url;
-    });
+      element.url = that.cdnRootUrl + 'pic/' + element.url
+    })
   },
-};
+}
 </script>
 <style scoped lang="scss">
 img {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const props = defineProps(['cdnRootUrl']);
+const props = defineProps(['cdnRootUrl'])
 // eslint-disable-next-line vue/no-setup-props-destructure
-let cdnRootUrl = props.cdnRootUrl;
+let cdnRootUrl = props.cdnRootUrl
 let awardCards = [
   {
     title: '红宝石项链',
@@ -68,7 +68,7 @@ let awardCards = [
     time: '2022',
     imgUrl: `${cdnRootUrl}poster/2022-heavenly-tiara.PNG`,
   },
-];
+]
 </script>
 <template>
   <div class="container">
@@ -79,8 +79,7 @@ let awardCards = [
         v-for="(item, index) in awardCards"
         :key="index"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
-        class="award-card"
-      >
+        class="award-card">
         <div class="content">
           <h2>{{ item.time }}</h2>
           <h3>{{ item.title }}</h3>
