@@ -57,6 +57,7 @@
   font-family: 'Poppins', sans-serif;
 }
 .container {
+  margin: auto;
   width: 100%;
   height: auto;
   min-height: 700px;
