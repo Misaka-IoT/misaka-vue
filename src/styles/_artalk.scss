@@ -1,6 +1,14 @@
 .artalk,
 .atk-layer-wrap {
   --at-color-main: var(--color-theme) !important;
+  --at-color-bg: var(--color-background) !important;
+  --at-color-bg-grey: var(--color-surface-variant) !important;
+  --at-color-bg-transl: rgba(var(--color-background-rgb), 0.94) !important;
+  --at-color-deep: var(--color-text-variant) !important;
+  --at-color-grey: var(--color-text-variant) !important;
+  --at-color-font: var(--color-text) !important;
+  --at-color-meta: var(--color-theme) !important;
+  --at-color-border: var(--color-outline) !important;
 }
 .atk-main-editor {
   width: 100% !important;

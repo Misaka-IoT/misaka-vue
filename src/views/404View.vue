@@ -1,7 +1,7 @@
 <template>
-  <div style="text-align: center">
-    <h1 style="color: aqua">404</h1>
+  <div class="container">
+    <h1>404</h1>
     <p>你进入到了没有御坂的荒原</p>
-    <a href="/">回到首页</a>
+    <RouterLink to="/">回到首页</RouterLink>
   </div>
 </template>

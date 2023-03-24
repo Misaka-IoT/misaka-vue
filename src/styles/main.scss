@@ -37,24 +37,28 @@ body {
   --color-theme-rgb: 196, 149, 130;
   --color-theme-variant: #c37a5d;
   --color-on-theme: #ffffff;
-  --color-surface: #eeeeee;
-  --color-surface-variant: #dddddd;
+  --color-surface: #eaeaea;
+  --color-surface-variant: #dedede;
   --color-outline: #434343;
   --color-background: #ffffff;
+  --color-background-rgb: 255, 255, 255;
+  --color-background-variant: #eaeaea;
   --color-text: #171717;
-  --color-text-variant: #888888;
+  --color-text-variant: #333333;
 }
 [data-theme='dark'] {
   --color-theme: #c49582;
   --color-theme-rgb: 96, 49, 30;
   --color-theme-variant: #c37a5d;
   --color-on-theme: #ffffff;
-  --color-surface: #272727;
+  --color-surface: #212121;
   --color-surface-variant: #333333;
   --color-outline: #434343;
   --color-background: #171717;
+  --color-background-rgb: 23, 23, 23;
+  --color-background-variant: #212121;
   --color-text: #ffffff;
-  --color-text-variant: #aaaaaa;
+  --color-text-variant: #eaeaea;
 }
 
 button,
