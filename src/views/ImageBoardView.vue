@@ -1,10 +1,13 @@
 <template>
-  <div id="imgboard">
-    <img
-      v-for="(item, index) in list"
-      :key="index"
-      v-lazy="item.url"
-      :alt="item.name" />
+  <div class="container">
+    <h1>御坂美琴的照片墙</h1>
+    <div id="imgboard">
+      <img
+        v-for="(item, index) in list"
+        :key="index"
+        v-lazy="item.url"
+        :alt="item.name" />
+    </div>
   </div>
 </template>
 
@@ -58,6 +61,7 @@ export default {
 </script>
 <style scoped lang="scss">
 img {
+  height: auto;
   border: 1px solid goldenrod;
   box-shadow: 8px 8px 15px 1px #aaa;
 }

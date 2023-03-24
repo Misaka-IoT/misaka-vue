@@ -1,20 +1,39 @@
 <template>
   <div>
-    <button class="fab back-to-top material-symbols-outlined">straight</button>
     <div class="container">
-      <h3>一、网站基本性质</h3>
+      <h1>关于</h1>
+      <h2>一、网站</h2>
       <p>
         这个网站为<i><b>公益网站</b></i
         >，非必须情况下，不接受资助或投资，不会发起<i><b>汇款</b></i
         >等活动。
       </p>
       <hr />
-      <h3>二、个人数据管理</h3>
+      <h2>二、联系</h2>
+      <p>你可以通过以下方式同我们取得联系。</p>
+      <ul>
+        <li>QQ群：872099522</li>
+        <li>
+          GitHub：<a href="https://github.com/Misaka-IoT/misaka-vue"
+            >Misaka-IoT/misaka-vue</a
+          >
+        </li>
+      </ul>
+      <hr />
+      <h2>三、隐私和数据</h2>
       <p>
-        在使用评论区系统（在匿名发布中填写邮箱）时，网站将会记录您的邮箱，用作联系邮箱。您的邮箱地址不会公开，但可以被管理员查询。
+        在使用评论区系统（包括在匿名发布中填写邮箱）时，网站将会记录您的邮箱，用作联系邮箱。您的邮箱地址不会公开，但可以被管理员查询。
       </p>
       <hr />
-      <h3>三、贡献者</h3>
+      <h2>四、安全</h2>
+      <p>
+        本网站采用 Japan register service (JPRS)
+        颁发的TLS/SSL证书，为网站安全性再添一层防护，
+        如要验证此网站的安全性，可点击页脚的锁头查看证书的可用性。或点击浏览器上的锁头，已确保当前链接收到保护。
+        <a href="ssl" target="_blank">点击此以验证证书完整性</a>
+      </p>
+      <hr />
+      <h2>五、贡献</h2>
       <a
         href="https://github.com/Misaka-IoT/misaka-vue/graphs/contributors"
         target="_blank"
@@ -65,22 +84,14 @@
         </ContributorCard>
       </div>
       <hr />
-      <h3>四、本项目使用的开源项目</h3>
+      <h2>六、项目引用</h2>
       <p>
         <a href="https://visjs.github.io/vis-network/" target="_blank"
-          >Vis-network（MIT）：用于：人物介绍页面</a
+          >Vis-network（许可证：MIT）：人物介绍</a
         ><br />
         <a href="https://github.com/arcxingye/EatKano/" target="_blank"
-          >吃掉小鹿乃（MIT）：用于：新概念音游</a
+          >吃掉小鹿乃（许可证：MIT）：新概念音游</a
         >
-      </p>
-      <hr />
-      <h3>五、TLS/SSL证书</h3>
-      <p>
-        本网站采用 Japan register service (JPRS)
-        颁发的TLS/SSL证书，为网站安全性再添一层防护，
-        如要验证此网站的安全性，可点击页脚的锁头查看证书的可用性。或点击浏览器上的锁头，已确保当前链接收到保护。
-        <a href="ssl" target="_blank">点击此以验证证书完整性</a>
       </p>
     </div>
   </div>
@@ -95,5 +106,23 @@ img {
   max-width: 100%;
   width: 400px;
   height: auto;
+}
+
+.contributors {
+  margin-top: 16px;
+  column-count: 3;
+  column-gap: 16px;
+}
+
+@media (max-width: 1080px) {
+  .contributors {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 780px) {
+  .contributors {
+    column-count: 1;
+  }
 }
 </style>

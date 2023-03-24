@@ -6,6 +6,10 @@ a {
   text-decoration: none;
   color: var(--color-theme);
 }
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
 
 *,
 ::after,
@@ -14,20 +18,18 @@ a {
   box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
   scroll-behavior: smooth;
-}
-html,
-body {
-  height: 100%;
-}
-
-#app {
-  width: 100%;
-  height: 100%;
 }
 
 [data-theme='light'] {
@@ -40,7 +42,7 @@ body {
   --color-outline: #434343;
   --color-background: #ffffff;
   --color-text: #171717;
-  --color-text-variant: #666666;
+  --color-text-variant: #888888;
 }
 [data-theme='dark'] {
   --color-theme: #c49582;
@@ -52,51 +54,7 @@ body {
   --color-outline: #434343;
   --color-background: #171717;
   --color-text: #ffffff;
-  --color-text-variant: #cecece;
-}
-
-.meme {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16rem;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@media (max-width: 1200px) {
-  .meme {
-    font-size: 8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .meme {
-    font-size: 4rem;
-  }
-}
-
-.main-title {
-  padding: 10px 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 5px;
-}
-
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-ul,
-li,
-p {
-  padding: 0;
-  margin: 0;
+  --color-text-variant: #aaaaaa;
 }
 
 button,
@@ -106,39 +64,6 @@ a,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.contributors {
-  margin-top: 16px;
-  column-count: 3;
-  column-gap: 16px;
-}
-
-@media (max-width: 1080px) {
-  .contributors {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 780px) {
-  .contributors {
-    column-count: 1;
-  }
-}
-
-/* If CSS can do, why JavaScript? */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translate(calc(-100% + 4 * 416px));
-  }
 }
 
 hr {
@@ -161,11 +86,12 @@ hr {
 }
 
 .banner {
-  min-height: 64px;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 64px;
   padding: 12px 24px;
+  z-index: 10;
 }
 
 .banner p {
@@ -177,6 +103,19 @@ hr {
 
 .container {
   padding: 24px 24px 24px 40px;
+
+  h1 {
+    margin: 24px 0;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  h2 {
+    margin: 24px 0;
+    font-size: 1.5rem;
+  }
+  p {
+    margin: 8px 0;
+  }
 }
 
 .select-site {

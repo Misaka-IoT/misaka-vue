@@ -50,7 +50,7 @@ let isPnone = ref(window.innerWidth > 600)
     <main class="container">
       <div class="music-player"></div>
       <hr />
-      <h3>Hi，朋友，你好！</h3>
+      <h2>Hi，朋友，你好！</h2>
       <p>
         如果你还不了解御坂美琴的话，这个页面可能会帮到你！欢迎访问导航栏中的“关于电磁炮”栏目详细了解御坂美琴。
       </p>
@@ -63,7 +63,7 @@ let isPnone = ref(window.innerWidth > 600)
         alt="炮姐吃蛋糕"
         style="width: 180px; height: 180px; float: right" />
       <hr />
-      <h3>你可以在这里找到：</h3>
+      <h2>你可以在这里找到：</h2>
       <p>超电磁炮小百科：新人可以初步了解御坂美琴的性格、人设等信息。</p>
       <p>美琴相册：收集、分享美琴的照片</p>
       <p>
@@ -74,7 +74,7 @@ let isPnone = ref(window.innerWidth > 600)
       <p>获奖时间线：了解美琴在各个萌战活动中的战绩</p>
       <p>留言板：在这里留下你宝贵的意见</p>
       <hr />
-      <h3>什么？想加入计划？</h3>
+      <h2>什么？想加入计划？</h2>
       <p>
         如果你想参加开发这个网页，或有好的建议，欢迎联系<a
           href="mailto:shbwb@misaka-mikoto.jp"

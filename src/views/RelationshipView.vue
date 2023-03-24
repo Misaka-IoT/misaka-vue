@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid">
+  <div class="container container-fluid">
+    <h1>人物关系</h1>
     <div class="IR">
       <InterpersonalRelationship></InterpersonalRelationship>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="accordion-item">
-    <h2 class="accordion-header" :id="'flush-heading' + id">
+    <div class="accordion-header" :id="'flush-heading' + id">
       <a
         class="accordion-button collapsed"
         type="button"
@@ -11,7 +11,7 @@
         :id="'flush-heading-a-button' + id">
         {{ name }}<img :src="img" :alt="name" height="40" width="34" />
       </a>
-    </h2>
+    </div>
     <div
       :id="'flush-collapse' + id"
       class="accordion-collapse collapse"

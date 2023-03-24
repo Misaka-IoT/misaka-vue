@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <h1>这个页面是干什么的？</h1>
+    <h1>捐助</h1>
+    <h2>这个页面是干什么的？</h2>
     <p>感谢你对这个项目的喜爱与支持！</p>
     <br />
     <p>
@@ -13,11 +14,8 @@
     <br />
     <p>2、付款了不会拥有诸如头衔，会员之类的权益，所以在捐助前请深思！！！</p>
     <br />
-    <h1>下面是目前可用的支付方式：</h1>
+    <h2>下面是目前可用的支付方式</h2>
     <img src="/src/assets/wxpay.jpg" />
-  </div>
-  <div class="center">
-    <RouterLink to="/">返回主页</RouterLink>
   </div>
 </template>
 <style>

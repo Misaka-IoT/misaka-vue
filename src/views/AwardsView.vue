@@ -2,7 +2,7 @@
 const props = defineProps(['cdnRootUrl'])
 // eslint-disable-next-line vue/no-setup-props-destructure
 let cdnRootUrl = props.cdnRootUrl
-let awardCards = [
+let data = [
   {
     title: '红宝石项链',
     time: '2010',
@@ -76,7 +76,7 @@ let awardCards = [
 
     <div class="awards-container">
       <div
-        v-for="(item, index) in awardCards"
+        v-for="(item, index) in data"
         :key="index"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
         class="award-card">
@@ -138,9 +138,6 @@ let awardCards = [
 
 <style lang="scss">
 .container {
-  h1 {
-    margin-left: 30px;
-  }
   .awards-container {
     margin: auto;
     position: relative;
@@ -243,7 +240,8 @@ let awardCards = [
 
   // highlight
   [hl] {
-    color: #ec0b43;
+    color: var(--color-text-variant);
+    font-weight: 500;
   }
 }
 </style>
