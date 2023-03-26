@@ -34,5 +34,5 @@
 
 ## 开发
 
-- 图片 CDN - `https://img.misaka-mikoto.jp/`
+- 图片 CDN - `https://img.moeu.moe/`
 - 使用插件 - Pio 看板娘
