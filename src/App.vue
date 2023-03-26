@@ -31,6 +31,13 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
       </LinksWrapper>
     </template>
     <AppTopAppBar :backToTop="backToTop">
+      <!--弹幕头-->
+      <vue-danmaku v-model:danmus="danmu.danmus" 
+      v-model:channels="danmu.channels" 
+      v-model:loop="danmu.loops" 
+      v-model:fontSize="danmu.fontSize" 
+      style="height:100%; width:100%; position:absolute ;z-index:-1 ;"></vue-danmaku>
+      <!--弹幕尾-->
       <template #navBtns>
         <button
           class="icon-btn standard no-color material-symbols-outlined drawer-opener"
@@ -76,16 +83,13 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
           </a>
         </div>
       </template>
-
       <template #actionBtns>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
-
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
-
       <AppFooter></AppFooter>
-
+      
       <button
         class="fab back-to-top material-symbols-outlined"
         @click="backToTop = !backToTop">
@@ -97,6 +101,8 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
 
 <script lang="ts">
 import axios from 'axios'
+import vueDanmaku from 'vue3-danmaku'
+
 export default {
   computed: {
     navIcon(): string {
@@ -104,6 +110,13 @@ export default {
     },
   },
   created() {
+    if(localStorage.getItem("beta")=="1")
+    {
+      for(var i=0;i<=100;i++)
+      {
+        this.danmu.danmus.push("弹幕")
+      }
+    }
     switch (location.host) {
       case 'misaka-mikoto.jp':
         this.site = 'jp'
@@ -129,6 +142,15 @@ export default {
       forksCount: 0,
       site: 'jp',
       cdnRootUrl: 'https://img.moeu.moe/',
+      //弹幕头
+      danmu:{
+        danmus : [] as any,
+        channels:0,
+        loops:true,
+        fontSize:30,
+      }
+      //弹幕尾
+
     }
   },
   methods: {
@@ -146,5 +168,6 @@ export default {
       location.href = 'eat-mikoto/index.html'
     },
   },
+  
 }
 </script>
