@@ -112,10 +112,14 @@ export default {
   created() {
     if(localStorage.getItem("beta")=="1")
     {
-      for(var i=0;i<=100;i++)
-      {
-        this.danmu.danmus.push("弹幕")
-      }
+      //使用axios获取弹幕
+      axios
+        .get('https://danmu.init-misaka-mikoto.workers.dev/')
+        .then((res) => {
+          this.danmu.danmus = res.data.split(",")
+          console.log(res.data.split(","));
+          
+        })
     }
     switch (location.host) {
       case 'misaka-mikoto.jp':
