@@ -115,6 +115,5 @@ export default {
   padding-top: 64px;
   height: calc(100% + 64px);
   scroll-behavior: smooth;
-  z-index: 1;
 }
 </style>

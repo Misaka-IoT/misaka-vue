@@ -36,7 +36,7 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
       v-model:channels="danmu.channels" 
       v-model:loop="danmu.loops" 
       v-model:fontSize="danmu.fontSize" 
-      style="height:100%; width:100%; position:absolute ;z-index:-1 ;"></vue-danmaku>
+      style="height:100%; width:100%; position:absolute ;pointer-events: none;"></vue-danmaku>
       <!--弹幕尾-->
       <template #navBtns>
         <button
