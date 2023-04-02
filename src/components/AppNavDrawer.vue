@@ -111,22 +111,18 @@ export default {
 
 // 外链图标
 .app-nav-drawer a[target='_blank']::after {
-  content: 'arrow_outward';
+  content: '';
   margin-left: auto;
-
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
   display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+  width: 16px;
+  height: 16px;
+  color: var(--color-text);
+}
+[data-theme='light'] .app-nav-drawer a[target='_blank']::after {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iYmxhY2siIGQ9Ik02LjQgMThMNSAxNi42TDE0LjYgN0g2VjVoMTJ2MTJoLTJWOC40TDYuNCAxOFoiPjwvcGF0aD48L3N2Zz4K');
+}
+[data-theme='dark'] .app-nav-drawer a[target='_blank']::after {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik02LjQgMThMNSAxNi42TDE0LjYgN0g2VjVoMTJ2MTJoLTJWOC40TDYuNCAxOFoiPjwvcGF0aD48L3N2Zz4K');
 }
 
 .icon-btn:active::before,

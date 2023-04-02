@@ -9,6 +9,8 @@ import AppFooter from '@/components/AppFooter.vue'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import MusicSwitcher from '@/components/MusicSwitcher.vue'
 import LinksWrapper from '@/components/LinksWrapper.vue'
+// other components
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
@@ -40,10 +42,10 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
       <!--弹幕尾-->
       <template #navBtns>
         <button
-          class="icon-btn standard no-color material-symbols-outlined drawer-opener"
+          class="icon-btn standard no-color drawer-opener"
           ref="drawerOpener"
           @click="drawerOpened = true">
-          {{ navIcon }}
+          <Icon :icon="navIcon" width="24" height="24" />
         </button>
       </template>
 
@@ -89,11 +91,9 @@ import LinksWrapper from '@/components/LinksWrapper.vue'
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
-      
-      <button
-        class="fab back-to-top material-symbols-outlined"
-        @click="backToTop = !backToTop">
-        straight
+
+      <button class="fab back-to-top" @click="backToTop = !backToTop">
+        <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
     </AppTopAppBar>
   </AppNavDrawer>
@@ -106,7 +106,9 @@ import vueDanmaku from 'vue3-danmaku'
 export default {
   computed: {
     navIcon(): string {
-      return this.drawerOpened ? 'menu_open' : 'menu'
+      return this.drawerOpened
+        ? 'material-symbols:menu-open'
+        : 'material-symbols:menu'
     },
   },
   created() {
