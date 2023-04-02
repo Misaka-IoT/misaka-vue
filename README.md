@@ -1,10 +1,13 @@
 # Misaka Mikoto
 
+[![.jp 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.jp&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.jp)](https://misaka-mikoto.jp)
+[![.cn 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.cn&up_color=a6e3a1&url=https%3A%2F%2Fwww.misaka-mikoto.cn)](https://www.misaka-mikoto.cn)
+[![.com 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.com&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.com)](https://misaka-mikoto.com)
+[![Netlify 部署状态](https://api.netlify.com/api/v1/badges/acb9cf1b-e17f-4990-bc06-3a7e21edb16b/deploy-status)](https://app.netlify.com/sites/misaka-right-now/deploys)
+
 > 你指尖跃动的电光，是我此生不变的信仰！
 
-<a href="https://github.com/misaka-fans/misaka-fans.github.io" target="_blank"><img src="https://img.shields.io/github/stars/misaka-fans/misaka-fans.github.io" /></a>
-
-![御坂美琴-标题图片](https://github.com/shbwb/misaka/blob/main/pic/0EE7D24A-F64D-4818-AEE8-E5C83A5696B3.jpeg)
+![标题图片](https://github.com/shbwb/misaka/blob/main/pic/0EE7D24A-F64D-4818-AEE8-E5C83A5696B3.jpeg)
 
 ## 网站地址
 
