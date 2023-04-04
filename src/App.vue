@@ -170,7 +170,7 @@ export default {
         //使用axios获取弹幕
         console.log(window.location.pathname);
         axios
-          .get('https://danmu.init-misaka-mikoto.workers.dev/',{headers:{"page":window.location.pathname}} )
+          .get('https://danmu.z2bguoguos.gq/',{headers:{"page":window.location.pathname}} )
           .then((res) => {
             this.danmu.danmus = res.data.split(",")
             console.log(res.data.split(","));
