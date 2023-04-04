@@ -87,22 +87,6 @@ hr {
   right: 16px;
 }
 
-.banner {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 64px;
-  padding: 12px 24px;
-  z-index: 10;
-}
-
-.banner p {
-  color: var(--color-theme);
-  font-size: 0.875rem;
-  font-weight: 100;
-  letter-spacing: 0.5em;
-}
-
 .container {
   padding: 24px 24px 24px 40px;
 

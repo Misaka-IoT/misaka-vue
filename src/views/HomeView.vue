@@ -95,10 +95,29 @@ let isPnone = ref(window.innerWidth > 600)
 </template>
 
 <style lang="scss">
+.banner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 64px;
+  padding: 12px 24px;
+  z-index: 10;
+  p {
+    color: var(--color-theme);
+    font-size: 0.875rem;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    margin: 0;
+  }
+}
+
+.marquee {
+  margin-top: 32px;
+}
+
 .el-carousel--horizontal {
   overflow: hidden;
 }
-
 .el-carousel__mask {
   background-color: var(--color-background) !important;
 }
