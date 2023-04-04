@@ -112,7 +112,8 @@ export default {
     },
   },
   created() {
-    this.LinksWrapperclick()
+    this.danmuget()
+    
     switch (location.host) {
       case 'misaka-mikoto.jp':
         this.site = 'jp'
@@ -165,6 +166,11 @@ export default {
     },
     LinksWrapperclick()
     {
+      this.danmuget()
+      //this.AddDanmu("弹幕们")//增加弹幕
+    },
+    danmuget()
+    {
       if(localStorage.getItem("beta")=="1")
       {
         //使用axios获取弹幕
@@ -173,9 +179,23 @@ export default {
           .get('https://danmu.z2bguoguos.gq/',{headers:{"page":window.location.pathname}} )
           .then((res) => {
             this.danmu.danmus = res.data.split(",")
-            console.log(res.data.split(","));
+            console.log("获取弹幕",this.danmu.danmus)
             
           })
+      }
+    },
+    AddDanmu(str:string)
+    {
+      if(localStorage.getItem("beta")=="1")
+      {
+        axios
+          .post('https://danmu.z2bguoguos.gq/',str,{headers:{"page":window.location.pathname}} )
+          .then((res)=>{
+            console.log("增加弹幕返回",res.data);
+            
+          })
+        this.danmu.danmus.push(str)
+        console.log("增加弹幕后弹幕",this.danmu.danmus)
       }
     },
   },
