@@ -16,7 +16,7 @@ import { Icon } from '@iconify/vue'
 <template>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper>
+      <LinksWrapper @click.native="LinksWrapperclick">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutraligun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -112,17 +112,7 @@ export default {
     },
   },
   created() {
-    if(localStorage.getItem("beta")=="1")
-    {
-      //使用axios获取弹幕
-      axios
-        .get('https://danmu.init-misaka-mikoto.workers.dev/')
-        .then((res) => {
-          this.danmu.danmus = res.data.split(",")
-          console.log(res.data.split(","));
-          
-        })
-    }
+    this.LinksWrapperclick()
     switch (location.host) {
       case 'misaka-mikoto.jp':
         this.site = 'jp'
@@ -172,6 +162,21 @@ export default {
      */
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html'
+    },
+    LinksWrapperclick()
+    {
+      if(localStorage.getItem("beta")=="1")
+      {
+        //使用axios获取弹幕
+        console.log(window.location.pathname);
+        axios
+          .get('https://danmu.init-misaka-mikoto.workers.dev/',{headers:{"page":window.location.pathname}} )
+          .then((res) => {
+            this.danmu.danmus = res.data.split(",")
+            console.log(res.data.split(","));
+            
+          })
+      }
     },
   },
   
