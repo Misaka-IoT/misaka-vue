@@ -149,6 +149,7 @@ packages:
 
   /@vue/compiler-dom/3.2.47:
     resolution: {integrity: sha512-dBBnEHEPoftUiS03a4ggEig74J2YBZ2UIeyfpcRM2tavgMWo4bsEfgCGsu+uJIL/vax9S+JztH8NmQerUo7shQ==}
+    requiresBuild: true
     dependencies:
       '@vue/compiler-core': registry.npmmirror.com/@vue/compiler-core/3.2.47
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.47
@@ -165,6 +166,7 @@ packages:
 
   /@vue/server-renderer/3.2.47_vue@3.2.47:
     resolution: {integrity: sha512-dN9gc1i8EvmP9RCzvneONXsKfBRgqFeFZLurmHOveL7oH6HiFXJw5OGu294n1nHc/HMgTy6LulU/tv5/A7f/LA==}
+    requiresBuild: true
     peerDependencies:
       vue: 3.2.47
     dependencies:
@@ -648,28 +650,6 @@ packages:
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.47
     dev: false
-
-  registry.npmmirror.com/@esbuild/android-arm/0.15.18:
-    resolution: {integrity: sha512-5GT+kcs2WVGjVs7+boataCkO5Fg0y4kCjzkB5bAip7H4jfnOS3dA6KPiww9W1OEKTKeAcUVhdZGvgI65OXmUnw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/android-arm/-/android-arm-0.15.18.tgz}
-    name: '@esbuild/android-arm'
-    version: 0.15.18
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/@esbuild/linux-loong64/0.15.18:
-    resolution: {integrity: sha512-L4jVKS82XVhw2nvzLg/19ClLWg0y27ulRwuP7lcyL6AbUWB5aPglXY3M21mauDQMDfRLs8cQmeT03r/+X3cZYQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-loong64/-/linux-loong64-0.15.18.tgz}
-    name: '@esbuild/linux-loong64'
-    version: 0.15.18
-    engines: {node: '>=12'}
-    cpu: [loong64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/@eslint-community/eslint-utils/4.4.0_eslint@8.37.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz}
@@ -1862,7 +1842,7 @@ packages:
       '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor/3.6.0
       '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.1.0_vue@3.2.47
       '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom/1.2.5
-      '@popperjs/core': registry.npmmirror.com/@sxzz/popperjs-es/2.11.7
+      '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.192
       '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.7
       '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.13.0_vue@3.2.47
