@@ -89,6 +89,9 @@
         <a href="https://visjs.github.io/vis-network/" target="_blank"
           >Vis-network（许可证：MIT）：人物介绍</a
         ><br />
+        <a href="https://github.com/hellodigua/vue-danmaku" target="_blank"
+          >vue3-danmaku（许可证：MIT）：弹幕功能</a
+        ><br />
         <a href="https://github.com/arcxingye/EatKano/" target="_blank"
           >吃掉小鹿乃（许可证：MIT）：新概念音游</a
         >
