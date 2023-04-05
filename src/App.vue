@@ -35,11 +35,17 @@ import { Icon } from '@iconify/vue'
     </template>
     <AppTopAppBar :backToTop="backToTop">
       <!--弹幕头-->
-      <vue-danmaku v-model:danmus="danmu.danmus" 
-      v-model:channels="danmu.channels" 
-      v-model:loop="danmu.loops" 
-      v-model:fontSize="danmu.fontSize" 
-      style="height:100%; width:100%; position:absolute ;pointer-events: none;"></vue-danmaku>
+      <vue-danmaku
+        v-model:danmus="danmu.danmus"
+        v-model:channels="danmu.channels"
+        v-model:loop="danmu.loops"
+        v-model:fontSize="danmu.fontSize"
+        style="
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          pointer-events: none;
+        "></vue-danmaku>
       <!--弹幕尾-->
       <template #navBtns>
         <button
@@ -141,14 +147,13 @@ export default {
       site: 'jp',
       cdnRootUrl: 'https://img.moeu.moe/',
       //弹幕头
-      danmu:{
-        danmus : [] as any,
-        channels:0,
-        loops:true,
-        fontSize:30,
-      }
+      danmu: {
+        danmus: [] as any,
+        channels: 0,
+        loops: true,
+        fontSize: 30,
+      },
       //弹幕尾
-
     }
   },
   methods: {
@@ -165,41 +170,37 @@ export default {
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html'
     },
-    LinksWrapperclick()
-    {
+    LinksWrapperclick() {
       this.danmuget()
       //this.AddDanmu("弹幕们")//增加弹幕
     },
-    danmuget()
-    {
-      if(localStorage.getItem("beta")=="1")
-      {
+    danmuget() {
+      if (localStorage.getItem('beta') == '1') {
         //使用axios获取弹幕
-        console.log(window.location.pathname);
+        console.log(window.location.pathname)
         axios
-          .get('https://danmu.z2bguoguos.gq/',{headers:{"page":window.location.pathname}} )
+          .get('https://danmu.z2bguoguos.gq/', {
+            headers: { page: window.location.pathname },
+          })
           .then((res) => {
-            this.danmu.danmus = res.data.split(",")
-            console.log("获取弹幕",this.danmu.danmus)
-            
+            this.danmu.danmus = res.data.split(',')
+            console.log('获取弹幕', this.danmu.danmus)
           })
       }
     },
-    AddDanmu(str:string)
-    {
-      if(localStorage.getItem("beta")=="1")
-      {
+    AddDanmu(str: string) {
+      if (localStorage.getItem('beta') == '1') {
         axios
-          .post('https://danmu.z2bguoguos.gq/',str,{headers:{"page":window.location.pathname}} )
-          .then((res)=>{
-            console.log("增加弹幕返回",res.data);
-            
+          .post('https://danmu.z2bguoguos.gq/', str, {
+            headers: { page: window.location.pathname },
+          })
+          .then((res) => {
+            console.log('增加弹幕返回', res.data)
           })
         this.danmu.danmus.push(str)
-        console.log("增加弹幕后弹幕",this.danmu.danmus)
+        console.log('增加弹幕后弹幕', this.danmu.danmus)
       }
     },
   },
-  
 }
 </script>
