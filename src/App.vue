@@ -9,6 +9,7 @@ import AppFooter from '@/components/AppFooter.vue'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import MusicSwitcher from '@/components/MusicSwitcher.vue'
 import LinksWrapper from '@/components/LinksWrapper.vue'
+import AddDanmuButton from './components/AddDanmuButton.vue'
 // other components
 import { Icon } from '@iconify/vue'
 </script>
@@ -86,6 +87,7 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
+        <AddDanmuButton :AddDM="AddDanmu"></AddDanmuButton>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
@@ -113,7 +115,6 @@ export default {
   },
   created() {
     this.danmuget()
-    
     switch (location.host) {
       case 'misaka-mikoto.jp':
         this.site = 'jp'
