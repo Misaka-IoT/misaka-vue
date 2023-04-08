@@ -9,6 +9,7 @@ import AppFooter from '@/components/AppFooter.vue'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import MusicSwitcher from '@/components/MusicSwitcher.vue'
 import LinksWrapper from '@/components/LinksWrapper.vue'
+import AddDanmuButton from './components/AddDanmuButton.vue'
 // other components
 import { Icon } from '@iconify/vue'
 </script>
@@ -16,7 +17,7 @@ import { Icon } from '@iconify/vue'
 <template>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper>
+      <LinksWrapper @click.native="LinksWrapperclick">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutraligun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -33,6 +34,19 @@ import { Icon } from '@iconify/vue'
       </LinksWrapper>
     </template>
     <AppTopAppBar :backToTop="backToTop">
+      <!--弹幕头-->
+      <vue-danmaku
+        v-model:danmus="danmu.danmus"
+        v-model:channels="danmu.channels"
+        v-model:loop="danmu.loops"
+        v-model:fontSize="danmu.fontSize"
+        style="
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          pointer-events: none;
+        "></vue-danmaku>
+      <!--弹幕尾-->
       <template #navBtns>
         <button
           class="icon-btn standard no-color drawer-opener"
@@ -78,14 +92,12 @@ import { Icon } from '@iconify/vue'
           </a>
         </div>
       </template>
-
       <template #actionBtns>
+        <AddDanmuButton :AddDM="AddDanmu"></AddDanmuButton>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
-
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
-
       <AppFooter></AppFooter>
 
       <button class="fab back-to-top" @click="backToTop = !backToTop">
@@ -97,6 +109,8 @@ import { Icon } from '@iconify/vue'
 
 <script lang="ts">
 import axios from 'axios'
+import vueDanmaku from 'vue3-danmaku'
+
 export default {
   computed: {
     navIcon(): string {
@@ -106,6 +120,7 @@ export default {
     },
   },
   created() {
+    this.danmuget()
     switch (location.host) {
       case 'misaka-mikoto.jp':
         this.site = 'jp'
@@ -131,6 +146,14 @@ export default {
       forksCount: 0,
       site: 'jp',
       cdnRootUrl: 'https://img.moeu.moe/',
+      //弹幕头
+      danmu: {
+        danmus: [] as any,
+        channels: 0,
+        loops: true,
+        fontSize: 30,
+      },
+      //弹幕尾
     }
   },
   methods: {
@@ -146,6 +169,37 @@ export default {
      */
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html'
+    },
+    LinksWrapperclick() {
+      this.danmuget()
+      //this.AddDanmu("弹幕们")//增加弹幕
+    },
+    danmuget() {
+      if (localStorage.getItem('beta') == '1') {
+        //使用axios获取弹幕
+        console.log(window.location.pathname)
+        axios
+          .get('https://danmu.z2bguoguos.gq/', {
+            headers: { page: window.location.pathname },
+          })
+          .then((res) => {
+            this.danmu.danmus = res.data.split(',')
+            console.log('获取弹幕', this.danmu.danmus)
+          })
+      }
+    },
+    AddDanmu(str: string) {
+      if (localStorage.getItem('beta') == '1') {
+        axios
+          .post('https://danmu.z2bguoguos.gq/', str, {
+            headers: { page: window.location.pathname },
+          })
+          .then((res) => {
+            console.log('增加弹幕返回', res.data)
+          })
+        this.danmu.danmus.push(str)
+        console.log('增加弹幕后弹幕', this.danmu.danmus)
+      }
     },
   },
 }
