@@ -44,10 +44,9 @@ export default {
     },
   },
   mounted() {
-    if (localStorage.getItem('beta') != '1') {
-      console.log(document.getElementById('AddD'))
+    /*if (localStorage.getItem('beta') != '1') {
       document.getElementById('AddD')?.setAttribute('style', 'display:none')
-    }
+    }*/
   },
   props: ['AddDM'],
 }

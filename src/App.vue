@@ -175,7 +175,7 @@ export default {
       //this.AddDanmu("弹幕们")//增加弹幕
     },
     danmuget() {
-      if (localStorage.getItem('beta') == '1') {
+      if (localStorage.getItem('beta') == '1' || true) {
         //使用axios获取弹幕
         console.log(window.location.pathname)
         axios
@@ -189,7 +189,7 @@ export default {
       }
     },
     AddDanmu(str: string) {
-      if (localStorage.getItem('beta') == '1') {
+      if (localStorage.getItem('beta') == '1' || true) {
         axios
           .post('https://danmu.z2bguoguos.gq/', str, {
             headers: { page: window.location.pathname },
