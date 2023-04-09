@@ -15,6 +15,19 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
+  <vue-danmaku
+    v-model:danmus="danmu.danmus"
+    v-model:channels="danmu.channels"
+    v-model:loop="danmu.loops"
+    v-model:fontSize="danmu.fontSize"
+    style="
+      height: calc(100vh - 64px);
+      width: 100vw;
+      position: fixed;
+      top: 64px;
+      pointer-events: none;
+      z-index: 10000;
+    "></vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
       <LinksWrapper @click.native="LinksWrapperclick">
@@ -34,19 +47,6 @@ import { Icon } from '@iconify/vue'
       </LinksWrapper>
     </template>
     <AppTopAppBar :backToTop="backToTop">
-      <!--弹幕头-->
-      <vue-danmaku
-        v-model:danmus="danmu.danmus"
-        v-model:channels="danmu.channels"
-        v-model:loop="danmu.loops"
-        v-model:fontSize="danmu.fontSize"
-        style="
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          pointer-events: none;
-        "></vue-danmaku>
-      <!--弹幕尾-->
       <template #navBtns>
         <button
           class="icon-btn standard no-color drawer-opener"
@@ -146,14 +146,12 @@ export default {
       forksCount: 0,
       site: 'jp',
       cdnRootUrl: 'https://img.moeu.moe/',
-      //弹幕头
       danmu: {
         danmus: [] as any,
         channels: 0,
         loops: true,
         fontSize: 30,
       },
-      //弹幕尾
     }
   },
   methods: {
