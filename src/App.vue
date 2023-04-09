@@ -183,7 +183,7 @@ export default {
             headers: { page: window.location.pathname },
           })
           .then((res) => {
-            this.danmu.danmus = res.data.split(',')
+            this.danmu.danmus = res.data.split('/**/')
             console.log('获取弹幕', this.danmu.danmus)
           })
       }

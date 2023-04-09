@@ -4,6 +4,7 @@
       <input
         type="text"
         v-model="danmu"
+        id="danmuinput"
         style="border: none; border-radius: 50px 0px 0px 50px; outline: none" />
       <input
         type="submit"
@@ -23,6 +24,11 @@ export default {
   methods: {
     PostDanmu() {
       if (this.danmu != '') {
+        var danmuinput=document.getElementById("danmuinput") as HTMLInputElement
+        if(danmuinput!=null)
+        {
+          danmuinput.value=""
+        }
         console.log('发送弹幕：', this.danmu)
         this.AddDM(this.danmu)
       }
