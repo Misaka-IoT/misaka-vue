@@ -1,9 +1,11 @@
 <template>
   <div id="AddD">
-    <form @submit.prevent="PostDanmu">
+    <form @submit.prevent="send">
       <input
         type="text"
         v-model="danmu"
+        maxlength="8"
+        ref="input"
         style="border: none; border-radius: 50px 0px 0px 50px; outline: none" />
       <input
         type="submit"
@@ -14,26 +16,20 @@
 </template>
 <script lang="ts">
 export default {
-  name: 'AddDanmuButton',
+  name: 'DanmuSender',
   data() {
     return {
       danmu: '',
     }
   },
   methods: {
-    PostDanmu() {
-      if (this.danmu != '') {
-        console.log('发送弹幕：', this.danmu)
-        this.AddDM(this.danmu)
+    send() {
+      if (this.danmu != '' && this.danmu.indexOf('/**/') == -1) {
+        this.pushDanmu(this.danmu)
+        ;(this.$refs.input as HTMLInputElement).value = ''
       }
     },
   },
-  mounted() {
-    if (localStorage.getItem('beta') != '1') {
-      console.log(document.getElementById('AddD'))
-      document.getElementById('AddD')?.setAttribute('style', 'display:none')
-    }
-  },
-  props: ['AddDM'],
+  props: ['pushDanmu'],
 }
 </script>
