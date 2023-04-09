@@ -5,6 +5,7 @@
         type="text"
         v-model="danmu"
         id="danmuinput"
+        maxlength=5
         style="border: none; border-radius: 50px 0px 0px 50px; outline: none" />
       <input
         type="submit"
@@ -25,12 +26,20 @@ export default {
     PostDanmu() {
       if (this.danmu != '') {
         var danmuinput=document.getElementById("danmuinput") as HTMLInputElement
-        if(danmuinput!=null)
+        if(this.danmu.indexOf('/**/')==-1)
         {
-          danmuinput.value=""
+          if(danmuinput!=null)
+          {
+            danmuinput.value=""
+          }
+          console.log('发送弹幕：', this.danmu)
+          this.AddDM(this.danmu)
         }
-        console.log('发送弹幕：', this.danmu)
-        this.AddDM(this.danmu)
+        else
+        {
+          alert("请勿输入/**/")
+        }
+        
       }
     },
   },
