@@ -29,11 +29,11 @@ export default {
   methods: {
     loops() {
       localStorage.setItem(
-        'danmu.loops',
-        localStorage.getItem('danmu.loops') == '1' ? '0' : '1'
+        'danmu.toggleLoop',
+        localStorage.getItem('danmu.toggleLoop') == '1' ? '0' : '1'
       )
       this.iconLoop =
-        localStorage.getItem('danmu.loops') == '1'
+        localStorage.getItem('danmu.toggleLoop') == '1'
           ? 'material-symbols:sync'
           : 'material-symbols:sync-disabled'
       this.loopsDanmu()
@@ -59,8 +59,8 @@ export default {
     },
   },
   created() {
-    if (localStorage.getItem('danmu.loops') == null) {
-      localStorage.setItem('danmu.loops', '1')
+    if (localStorage.getItem('danmu.toggleLoop') == null) {
+      localStorage.setItem('danmu.toggleLoop', '1')
     }
     if (localStorage.getItem('danmu.on') == null) {
       localStorage.setItem('danmu.on', '1')
@@ -69,7 +69,7 @@ export default {
         ? true
         : false
     this.iconLoop =
-      localStorage.getItem('danmu.loops') == '1'
+      localStorage.getItem('danmu.toggleLoop') == '1'
         ? 'material-symbols:sync'
         : 'material-symbols:sync-disabled'
     this.iconEnable =

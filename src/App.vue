@@ -19,7 +19,7 @@ import { Icon } from '@iconify/vue'
   <vue-danmaku
     v-model:danmus="danmu.danmus"
     v-model:channels="danmu.channels"
-    v-model:loop="danmu.loops"
+    v-model:loop="danmu.toggleLoop"
     v-model:fontSize="danmu.fontSize"
     ref="danmuku"
     style="
@@ -158,7 +158,7 @@ export default {
       danmu: {
         danmus: [] as any,
         channels: 0,
-        loops: true,
+        toggleLoop: true,
         fontSize: 20,
         toggleDanmu:true,
       },
@@ -208,8 +208,8 @@ export default {
       }
     },
     loopsDanmu() {
-      this.danmu.loops =
-        localStorage.getItem('danmu.loops') == '0' ? false : true
+      this.danmu.toggleLoop =
+        localStorage.getItem('danmu.toggleLoop') == '0' ? false : true
     },
   },
 }
