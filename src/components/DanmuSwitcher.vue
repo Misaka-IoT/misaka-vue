@@ -9,7 +9,7 @@ import { Icon } from '@iconify/vue'
         <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
         <Icon :icon="icon" width="24" height="24"/>
         </button>
-        <button @click="ondanmu" class="icon-btn standard no-color">
+        <button @click="toggleDanmus" class="icon-btn standard no-color">
             <Icon :icon="icon2" width="24" height="24" />
         </button>
     </div>  
@@ -38,7 +38,7 @@ export default {
           : 'material-symbols:sync-disabled'
       this.loopsDanmu()
     },
-    ondanmu() {
+    toggleDanmus() {
       localStorage.setItem(
         'danmu.on',
         localStorage.getItem('danmu.on') == '1' ? '0' : '1'
@@ -50,7 +50,7 @@ export default {
         localStorage.getItem('danmu.on') == '1'
           ? 'material-symbols:toggle-on'
           : 'material-symbols:toggle-off'
-      this.onDanmu()
+      this.toggleDanmu()
     },
     settings()
     {
@@ -77,6 +77,6 @@ export default {
         ? 'material-symbols:toggle-on'
         : 'material-symbols:toggle-off'
   },
-  props: ['loopsDanmu', 'onDanmu'],
+  props: ['loopsDanmu', 'toggleDanmu'],
 }
 </script>

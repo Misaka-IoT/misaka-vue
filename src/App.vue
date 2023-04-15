@@ -96,7 +96,7 @@ import { Icon } from '@iconify/vue'
       </template>
       <template #actionBtns>
         <DanmuSender
-          :pushDanmu="pushDanmu" v-if="danmu.ondanmu"></DanmuSender>
+          :pushDanmu="pushDanmu" v-if="danmu.toggleDanmu"></DanmuSender>
         
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
@@ -105,7 +105,7 @@ import { Icon } from '@iconify/vue'
       <AppFooter></AppFooter>
       <DanmuSwitcher 
           :loopsDanmu="loopsDanmu"
-          :onDanmu="onDanmu"></DanmuSwitcher>
+          :toggleDanmu="toggleDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
@@ -126,7 +126,7 @@ export default {
     },
   },
   created() {
-    this.danmu.ondanmu=localStorage.getItem('danmu.on') == '1'
+    this.danmu.toggleDanmu=localStorage.getItem('danmu.on') == '1'
       ? true
       : false
     this.getDanmu()
@@ -160,7 +160,7 @@ export default {
         channels: 0,
         loops: true,
         fontSize: 20,
-        ondanmu:true,
+        toggleDanmu:true,
       },
     }
   },
@@ -197,8 +197,8 @@ export default {
       })
       this.danmu.danmus.push(str)
     },
-    onDanmu() {
-      this.danmu.ondanmu=localStorage.getItem('danmu.on') == '1'
+    toggleDanmu() {
+      this.danmu.toggleDanmu=localStorage.getItem('danmu.on') == '1'
         ? true
         : false
       if (localStorage.getItem('danmu.on') == '0') {
