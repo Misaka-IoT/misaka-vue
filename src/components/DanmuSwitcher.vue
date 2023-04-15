@@ -35,8 +35,8 @@ export default {
       this.iconLoop =
         localStorage.getItem('danmu.toggleLoop') == '1'
           ? 'material-symbols:sync'
-          : 'material-symbols:sync-disabled'
-      this.loopsDanmu()
+          : 'material-symbols:sync-disabled' 
+      this.toggleLoopDanmu()
     },
     toggleDanmus() {
       localStorage.setItem(
@@ -77,6 +77,6 @@ export default {
         ? 'material-symbols:toggle-on'
         : 'material-symbols:toggle-off'
   },
-  props: ['loopsDanmu', 'toggleDanmu'],
+  props: ['toggleLoopDanmu', 'toggleDanmu'],
 }
 </script>

@@ -104,7 +104,7 @@ import { Icon } from '@iconify/vue'
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
       <DanmuSwitcher 
-          :loopsDanmu="loopsDanmu"
+          :toggleLoopDanmu="loopsDanmu"
           :toggleDanmu="toggleDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
