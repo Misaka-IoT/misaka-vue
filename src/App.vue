@@ -178,7 +178,7 @@ export default {
           headers: { page: window.location.pathname },
         })
         .then((res) => {
-          this.danmu.danmus = res.data.split(',')
+          this.danmu.danmus = res.data.split('/**/')
         })
     },
     pushDanmu(str: string) {
