@@ -20,6 +20,7 @@ import { Icon } from '@iconify/vue'
     v-model:channels="danmu.channels"
     v-model:loop="danmu.loops"
     v-model:fontSize="danmu.fontSize"
+    ref="danmuku"
     style="
       height: calc(100vh - 64px);
       width: 100vw;
@@ -93,7 +94,7 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
-        <DanmuSender :pushDanmu="pushDanmu"></DanmuSender>
+        <DanmuSender :pushDanmu="pushDanmu" :loopsDanmu="loopsDanmu" :onDanmu="onDanmu"></DanmuSender>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
@@ -186,6 +187,19 @@ export default {
         headers: { page: window.location.pathname },
       })
       this.danmu.danmus.push(str)
+    },
+    onDanmu(){
+      if(localStorage.getItem("danmu.on")=='0')
+      {
+        (this.$refs.danmuku as HTMLFormElement).stop()
+      }
+      else
+      {
+        (this.$refs.danmuku as HTMLFormElement).play()
+      }
+    },
+    loopsDanmu(){
+      this.danmu.loops=localStorage.getItem("danmu.loops")=='0'?false:true
     },
   },
 }
