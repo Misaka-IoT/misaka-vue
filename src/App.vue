@@ -94,7 +94,10 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
-        <DanmuSender :pushDanmu="pushDanmu" :loopsDanmu="loopsDanmu" :onDanmu="onDanmu"></DanmuSender>
+        <DanmuSender
+          :pushDanmu="pushDanmu"
+          :loopsDanmu="loopsDanmu"
+          :onDanmu="onDanmu"></DanmuSender>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
@@ -188,18 +191,16 @@ export default {
       })
       this.danmu.danmus.push(str)
     },
-    onDanmu(){
-      if(localStorage.getItem("danmu.on")=='0')
-      {
-        (this.$refs.danmuku as HTMLFormElement).stop()
-      }
-      else
-      {
-        (this.$refs.danmuku as HTMLFormElement).play()
+    onDanmu() {
+      if (localStorage.getItem('danmu.on') == '0') {
+        ;(this.$refs.danmuku as HTMLFormElement).stop()
+      } else {
+        ;(this.$refs.danmuku as HTMLFormElement).play()
       }
     },
-    loopsDanmu(){
-      this.danmu.loops=localStorage.getItem("danmu.loops")=='0'?false:true
+    loopsDanmu() {
+      this.danmu.loops =
+        localStorage.getItem('danmu.loops') == '0' ? false : true
     },
   },
 }
