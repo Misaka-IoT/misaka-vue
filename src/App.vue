@@ -158,7 +158,7 @@ export default {
       danmu: {
         danmus: [] as any,
         channels: 0,
-        toggleLoop: true,
+        toggleLoop: localStorage.getItem('danmu.toggleLoop') == '1',
         fontSize: 20,
         toggleDanmu:true,
       },
