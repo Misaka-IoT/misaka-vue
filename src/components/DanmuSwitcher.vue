@@ -6,7 +6,7 @@ import { Icon } from '@iconify/vue'
         <Icon :icon="iconsettings" width="24" height="24"/>
     </button>
     <div class="danmu-setting-on" v-if="settingon">
-        <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
+        <button @click="toggleLoop" class="icon-btn standard no-color" v-if="danmuon">
         <Icon :icon="iconLoop" width="24" height="24"/>
         </button>
         <button @click="toggleDanmus" class="icon-btn standard no-color">
@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    loops() {
+    toggleLoop() {
       localStorage.setItem(
         'danmu.toggleLoop',
         localStorage.getItem('danmu.toggleLoop') == '1' ? '0' : '1'

@@ -104,7 +104,7 @@ import { Icon } from '@iconify/vue'
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
       <DanmuSwitcher 
-          :toggleLoopDanmu="loopsDanmu"
+          :toggleLoopDanmu="toggleLoopDanmu"
           :toggleDanmu="toggleDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
@@ -207,7 +207,7 @@ export default {
         ;(this.$refs.danmuku as HTMLFormElement).play()
       }
     },
-    loopsDanmu() {
+    toggleLoopDanmu() {
       this.danmu.toggleLoop =
         localStorage.getItem('danmu.toggleLoop') == '0' ? false : true
     },
