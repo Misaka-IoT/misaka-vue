@@ -96,7 +96,7 @@ import { Icon } from '@iconify/vue'
       </template>
       <template #actionBtns>
         <DanmuSender
-          :pushDanmu="pushDanmu"></DanmuSender>
+          :pushDanmu="pushDanmu" v-if="danmu.ondanmu"></DanmuSender>
         <DanmuSwitcher 
           :loopsDanmu="loopsDanmu"
           :onDanmu="onDanmu"></DanmuSwitcher>
@@ -126,6 +126,9 @@ export default {
     },
   },
   created() {
+    this.danmu.ondanmu=localStorage.getItem('danmu.on') == '1'
+      ? true
+      : false
     this.getDanmu()
     switch (location.host) {
       case 'misaka-mikoto.jp':
@@ -157,6 +160,7 @@ export default {
         channels: 0,
         loops: true,
         fontSize: 20,
+        ondanmu:true,
       },
     }
   },
@@ -194,6 +198,9 @@ export default {
       this.danmu.danmus.push(str)
     },
     onDanmu() {
+      this.danmu.ondanmu=localStorage.getItem('danmu.on') == '1'
+        ? true
+        : false
       if (localStorage.getItem('danmu.on') == '0') {
         ;(this.$refs.danmuku as HTMLFormElement).stop()
       } else {

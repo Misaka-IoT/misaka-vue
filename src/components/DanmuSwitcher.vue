@@ -2,12 +2,12 @@
 import { Icon } from '@iconify/vue'
 </script>
 <template>
-<button @click="loops" class="icon-btn standard no-color">
-    <Icon :icon="icon" width="24" height="24" />
-</button>
-<button @click="ondanmu" class="icon-btn standard no-color">
-    <Icon :icon="icon2" width="24" height="24" />
-</button>
+    <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
+        <Icon :icon="icon" width="24" height="24"/>
+    </button>
+    <button @click="ondanmu" class="icon-btn standard no-color">
+        <Icon :icon="icon2" width="24" height="24" />
+    </button>
 </template>
 <script lang="ts">
 export default {
@@ -16,6 +16,7 @@ export default {
     return {
       icon: 'material-symbols:sync-disabled',
       icon2: 'material-symbols:toggle-on',
+      danmuon:true
     }
   },
   methods: {
@@ -35,6 +36,9 @@ export default {
         'danmu.on',
         localStorage.getItem('danmu.on') == '1' ? '0' : '1'
       )
+      this.danmuon=localStorage.getItem('danmu.on') == '1'
+          ? true
+          : false
       this.icon2 =
         localStorage.getItem('danmu.on') == '1'
           ? 'material-symbols:toggle-on'
@@ -49,6 +53,9 @@ export default {
     if (localStorage.getItem('danmu.on') == null) {
       localStorage.setItem('danmu.on', '1')
     }
+    this.danmuon=localStorage.getItem('danmu.on') == '1'
+        ? true
+        : false
     this.icon =
       localStorage.getItem('danmu.loops') == '1'
         ? 'material-symbols:sync'
