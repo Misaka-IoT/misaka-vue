@@ -19,8 +19,8 @@ export default {
   name: 'DanmuSwitcher',
   data() {
     return {
-        iconLoop: 'material-symbols:sync-disabled',
-        iconEnable: 'material-symbols:toggle-on',
+        iconLoop: '',
+        iconEnable: '',
         iconsettings:'material-symbols:settings',
         danmuon:true,
         settingon:false,
