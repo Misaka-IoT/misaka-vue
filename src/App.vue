@@ -96,16 +96,17 @@ import { Icon } from '@iconify/vue'
       </template>
       <template #actionBtns>
         <DanmuSender
-          :pushDanmu="pushDanmu" v-if="danmu.toggleDanmu"></DanmuSender>
-        
+          :pushDanmu="pushDanmu"
+          v-if="danmu.toggleDanmu"></DanmuSender>
+
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
-      <DanmuSwitcher 
-          :toggleLoopDanmu="toggleLoopDanmu"
-          :toggleDanmu="toggleDanmu"></DanmuSwitcher>
+      <DanmuSwitcher
+        :toggleLoopDanmu="toggleLoopDanmu"
+        :toggleDanmu="toggleDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
@@ -126,9 +127,8 @@ export default {
     },
   },
   created() {
-    this.danmu.toggleDanmu=localStorage.getItem('danmu.on') == '1'
-      ? true
-      : false
+    this.danmu.toggleDanmu =
+      localStorage.getItem('danmu.on') == '1' ? true : false
     this.getDanmu()
     switch (location.host) {
       case 'misaka-mikoto.jp':
@@ -160,7 +160,7 @@ export default {
         channels: 0,
         toggleLoop: localStorage.getItem('danmu.toggleLoop') == '1',
         fontSize: 20,
-        toggleDanmu:true,
+        toggleDanmu: true,
       },
     }
   },
@@ -198,9 +198,8 @@ export default {
       this.danmu.danmus.push(str)
     },
     toggleDanmu() {
-      this.danmu.toggleDanmu=localStorage.getItem('danmu.on') == '1'
-        ? true
-        : false
+      this.danmu.toggleDanmu =
+        localStorage.getItem('danmu.on') == '1' ? true : false
       if (localStorage.getItem('danmu.on') == '0') {
         ;(this.$refs.danmuku as HTMLFormElement).stop()
       } else {
