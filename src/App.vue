@@ -10,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import MusicSwitcher from '@/components/MusicSwitcher.vue'
 import LinksWrapper from '@/components/LinksWrapper.vue'
 import DanmuSender from './components/DanmuSender.vue'
+import DanmuSwitcher from './components/DanmuSwitcher.vue'
 // other components
 import { Icon } from '@iconify/vue'
 </script>
@@ -95,9 +96,10 @@ import { Icon } from '@iconify/vue'
       </template>
       <template #actionBtns>
         <DanmuSender
-          :pushDanmu="pushDanmu"
+          :pushDanmu="pushDanmu"></DanmuSender>
+        <DanmuSwitcher 
           :loopsDanmu="loopsDanmu"
-          :onDanmu="onDanmu"></DanmuSender>
+          :onDanmu="onDanmu"></DanmuSwitcher>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
