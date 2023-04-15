@@ -3,14 +3,14 @@ import { Icon } from '@iconify/vue'
 </script>
 <template>
     <button @click="settings" class="fab danmu-setting">
-        <Icon :icon="icon3" width="24" height="24"/>
+        <Icon :icon="iconsettings" width="24" height="24"/>
     </button>
     <div class="danmu-setting-on" v-if="settingon">
         <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
-        <Icon :icon="icon" width="24" height="24"/>
+        <Icon :icon="iconLoop" width="24" height="24"/>
         </button>
         <button @click="toggleDanmus" class="icon-btn standard no-color">
-            <Icon :icon="icon2" width="24" height="24" />
+            <Icon :icon="iconEnable" width="24" height="24" />
         </button>
     </div>  
 </template>
@@ -19,11 +19,11 @@ export default {
   name: 'DanmuSwitcher',
   data() {
     return {
-      icon: 'material-symbols:sync-disabled',
-      icon2: 'material-symbols:toggle-on',
-      icon3:'material-symbols:settings',
-      danmuon:true,
-      settingon:false,
+        iconLoop: 'material-symbols:sync-disabled',
+        iconEnable: 'material-symbols:toggle-on',
+        iconsettings:'material-symbols:settings',
+        danmuon:true,
+        settingon:false,
     }
   },
   methods: {
@@ -32,7 +32,7 @@ export default {
         'danmu.loops',
         localStorage.getItem('danmu.loops') == '1' ? '0' : '1'
       )
-      this.icon =
+      this.iconLoop =
         localStorage.getItem('danmu.loops') == '1'
           ? 'material-symbols:sync'
           : 'material-symbols:sync-disabled'
@@ -46,7 +46,7 @@ export default {
       this.danmuon=localStorage.getItem('danmu.on') == '1'
           ? true
           : false
-      this.icon2 =
+      this.iconEnable =
         localStorage.getItem('danmu.on') == '1'
           ? 'material-symbols:toggle-on'
           : 'material-symbols:toggle-off'
@@ -54,7 +54,7 @@ export default {
     },
     settings()
     {
-        this.icon3=this.icon3=='material-symbols:settings'?'material-symbols:close':'material-symbols:settings'
+        this.iconsettings=this.iconsettings=='material-symbols:settings'?'material-symbols:close':'material-symbols:settings'
         this.settingon=!this.settingon
     },
   },
@@ -68,11 +68,11 @@ export default {
     this.danmuon=localStorage.getItem('danmu.on') == '1'
         ? true
         : false
-    this.icon =
+    this.iconLoop =
       localStorage.getItem('danmu.loops') == '1'
         ? 'material-symbols:sync'
         : 'material-symbols:sync-disabled'
-    this.icon2 =
+    this.iconEnable =
       localStorage.getItem('danmu.on') == '1'
         ? 'material-symbols:toggle-on'
         : 'material-symbols:toggle-off'
