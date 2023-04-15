@@ -2,12 +2,17 @@
 import { Icon } from '@iconify/vue'
 </script>
 <template>
-    <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
+    <button @click="settings" class="fab danmu-setting">
+        <Icon :icon="icon3" width="24" height="24"/>
+    </button>
+    <div class="danmu-setting-on" v-if="settingon">
+        <button @click="loops" class="icon-btn standard no-color" v-if="danmuon">
         <Icon :icon="icon" width="24" height="24"/>
-    </button>
-    <button @click="ondanmu" class="icon-btn standard no-color">
-        <Icon :icon="icon2" width="24" height="24" />
-    </button>
+        </button>
+        <button @click="ondanmu" class="icon-btn standard no-color">
+            <Icon :icon="icon2" width="24" height="24" />
+        </button>
+    </div>  
 </template>
 <script lang="ts">
 export default {
@@ -16,7 +21,9 @@ export default {
     return {
       icon: 'material-symbols:sync-disabled',
       icon2: 'material-symbols:toggle-on',
-      danmuon:true
+      icon3:'material-symbols:settings',
+      danmuon:true,
+      settingon:false,
     }
   },
   methods: {
@@ -44,6 +51,11 @@ export default {
           ? 'material-symbols:toggle-on'
           : 'material-symbols:toggle-off'
       this.onDanmu()
+    },
+    settings()
+    {
+        this.icon3=this.icon3=='material-symbols:settings'?'material-symbols:close':'material-symbols:settings'
+        this.settingon=!this.settingon
     },
   },
   created() {

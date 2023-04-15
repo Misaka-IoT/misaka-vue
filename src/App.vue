@@ -97,15 +97,15 @@ import { Icon } from '@iconify/vue'
       <template #actionBtns>
         <DanmuSender
           :pushDanmu="pushDanmu" v-if="danmu.ondanmu"></DanmuSender>
-        <DanmuSwitcher 
-          :loopsDanmu="loopsDanmu"
-          :onDanmu="onDanmu"></DanmuSwitcher>
+        
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
-
+      <DanmuSwitcher 
+          :loopsDanmu="loopsDanmu"
+          :onDanmu="onDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>

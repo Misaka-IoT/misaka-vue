@@ -86,7 +86,19 @@ hr {
   bottom: 16px;
   right: 16px;
 }
-
+.danmu-setting{
+  position: fixed;
+  bottom: 76px;
+  right: 16px;
+}
+.danmu-setting-on{
+  position: fixed;
+  bottom: 76px;
+  right: 76px;
+  background: var(--color-theme);
+  border-radius:15px;
+  color:var(--color-on-theme);
+}
 .container {
   padding: 24px 24px 24px 40px;
 
