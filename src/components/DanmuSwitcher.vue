@@ -13,7 +13,10 @@ import { Icon } from '@iconify/vue'
       v-if="danmuon">
       <Icon :icon="iconLoop" width="24" height="24" />
     </button>
-    <button @click="toggleDanmus" class="icon-btn standard no-color" title="开关弹幕">
+    <button
+      @click="toggleDanmus"
+      class="icon-btn standard no-color"
+      title="开关弹幕">
       <Icon :icon="iconEnable" width="24" height="24" />
     </button>
   </div>
