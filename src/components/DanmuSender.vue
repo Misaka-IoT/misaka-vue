@@ -11,6 +11,7 @@
           border-radius: 50px 0px 0px 50px;
           outline: none;
           opacity: 0.5;
+          width: 50px;
         " />
       <input
         type="submit"

@@ -19,16 +19,18 @@ import { Icon } from '@iconify/vue'
       title="开关弹幕">
       <Icon :icon="iconEnable" width="24" height="24" />
     </button>
+    <DanmuSender :pushDanmu="pushDanmu" v-if="danmuon"></DanmuSender>
   </div>
 </template>
 <script lang="ts">
+import DanmuSender from './DanmuSender.vue';
 export default {
   name: 'DanmuSwitcher',
   data() {
     return {
       iconLoop: '',
       iconEnable: '',
-      iconsettings: 'material-symbols:settings',
+      iconsettings: 'material-symbols:chat',
       danmuon: true,
       settingon: false,
     }
@@ -59,9 +61,9 @@ export default {
     },
     settings() {
       this.iconsettings =
-        this.iconsettings == 'material-symbols:settings'
+        this.iconsettings == 'material-symbols:chat'
           ? 'material-symbols:close'
-          : 'material-symbols:settings'
+          : 'material-symbols:chat'
       this.settingon = !this.settingon
     },
   },
@@ -82,6 +84,6 @@ export default {
         ? 'material-symbols:toggle-on'
         : 'material-symbols:toggle-off'
   },
-  props: ['toggleLoopDanmu', 'toggleDanmu'],
+  props: ['toggleLoopDanmu', 'toggleDanmu','pushDanmu'],
 }
 </script>

@@ -95,9 +95,7 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
-        <DanmuSender
-          :pushDanmu="pushDanmu"
-          v-if="danmu.toggleDanmu"></DanmuSender>
+        
 
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
@@ -106,7 +104,7 @@ import { Icon } from '@iconify/vue'
       <AppFooter></AppFooter>
       <DanmuSwitcher
         :toggleLoopDanmu="toggleLoopDanmu"
-        :toggleDanmu="toggleDanmu"></DanmuSwitcher>
+        :toggleDanmu="toggleDanmu" :pushDanmu="pushDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
