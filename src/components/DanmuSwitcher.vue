@@ -2,17 +2,18 @@
 import { Icon } from '@iconify/vue'
 </script>
 <template>
-  <button @click="settings" class="fab danmu-setting">
+  <button @click="settings" class="fab danmu-setting" title="弹幕设置">
     <Icon :icon="iconsettings" width="24" height="24" />
   </button>
   <div class="danmu-setting-on" v-if="settingon">
     <button
       @click="toggleLoop"
       class="icon-btn standard no-color"
+      title="弹幕循环播放"
       v-if="danmuon">
       <Icon :icon="iconLoop" width="24" height="24" />
     </button>
-    <button @click="toggleDanmus" class="icon-btn standard no-color">
+    <button @click="toggleDanmus" class="icon-btn standard no-color" title="开关弹幕">
       <Icon :icon="iconEnable" width="24" height="24" />
     </button>
   </div>

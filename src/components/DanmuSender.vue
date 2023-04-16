@@ -9,7 +9,7 @@
         style="border: none; border-radius: 50px 0px 0px 50px; outline: none" />
       <input
         type="submit"
-        value="发送"
+        value="发送弹幕"
         style="border: none; border-radius: 0px 50px 50px 0px" />
     </form>
   </div>
