@@ -6,11 +6,17 @@
         v-model="danmu"
         maxlength="8"
         ref="input"
-        style="border: none; border-radius: 50px 0px 0px 50px; outline: none" />
+        style="
+          border: none;
+          border-radius: 50px 0px 0px 50px;
+          outline: none;
+          opacity: 0.5;
+          width: 50px;
+        " />
       <input
         type="submit"
-        value="发送"
-        style="border: none; border-radius: 0px 50px 50px 0px" />
+        value="发送弹幕"
+        style="border: none; border-radius: 0px 50px 50px 0px; opacity: 0.7" />
     </form>
   </div>
 </template>

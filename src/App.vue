@@ -10,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import MusicSwitcher from '@/components/MusicSwitcher.vue'
 import LinksWrapper from '@/components/LinksWrapper.vue'
 import DanmuSender from './components/DanmuSender.vue'
+import DanmuSwitcher from './components/DanmuSwitcher.vue'
 // other components
 import { Icon } from '@iconify/vue'
 </script>
@@ -18,8 +19,9 @@ import { Icon } from '@iconify/vue'
   <vue-danmaku
     v-model:danmus="danmu.danmus"
     v-model:channels="danmu.channels"
-    v-model:loop="danmu.loops"
+    v-model:loop="danmu.toggleLoop"
     v-model:fontSize="danmu.fontSize"
+    ref="danmuku"
     style="
       height: calc(100vh - 64px);
       width: 100vw;
@@ -93,13 +95,16 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
-        <DanmuSender :pushDanmu="pushDanmu"></DanmuSender>
+        
+
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
-
+      <DanmuSwitcher
+        :toggleLoopDanmu="toggleLoopDanmu"
+        :toggleDanmu="toggleDanmu" :pushDanmu="pushDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
@@ -120,6 +125,8 @@ export default {
     },
   },
   created() {
+    this.danmu.toggleDanmu =
+      localStorage.getItem('danmu.on') == '1' ? true : false
     this.getDanmu()
     switch (location.host) {
       case 'misaka-mikoto.jp':
@@ -149,8 +156,9 @@ export default {
       danmu: {
         danmus: [] as any,
         channels: 0,
-        loops: true,
+        toggleLoop: localStorage.getItem('danmu.toggleLoop') == '1',
         fontSize: 20,
+        toggleDanmu: true,
       },
     }
   },
@@ -178,7 +186,7 @@ export default {
           headers: { page: window.location.pathname },
         })
         .then((res) => {
-          this.danmu.danmus = res.data.split(',')
+          this.danmu.danmus = res.data.split('/**/')
         })
     },
     pushDanmu(str: string) {
@@ -186,6 +194,19 @@ export default {
         headers: { page: window.location.pathname },
       })
       this.danmu.danmus.push(str)
+    },
+    toggleDanmu() {
+      this.danmu.toggleDanmu =
+        localStorage.getItem('danmu.on') == '1' ? true : false
+      if (localStorage.getItem('danmu.on') == '0') {
+        ;(this.$refs.danmuku as HTMLFormElement).stop()
+      } else {
+        ;(this.$refs.danmuku as HTMLFormElement).play()
+      }
+    },
+    toggleLoopDanmu() {
+      this.danmu.toggleLoop =
+        localStorage.getItem('danmu.toggleLoop') == '0' ? false : true
     },
   },
 }
