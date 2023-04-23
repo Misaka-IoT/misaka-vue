@@ -13,10 +13,9 @@
 
 _\*存活状况见上方徽标_
 
-0. [国际站/日本（https://www.misaka-mikoto.jp）](https://www.misaka-mikoto.jp)，更新稍慢
-1. [国内站（https://misaka-mikoto.cn）](https://misaka-mikoto.cn)，更新稍慢
-2. [即时版本（https://misaka-right-now.netlify.app/）](https://misaka-right-now.netlify.app/)，新功能将会直接同步到这里
-3. [旧版存档（https://static.misaka-mikoto.jp）](https://static.misaka-mikoto.jp)，不再更新
+0. [国际站（https://www.misaka-mikoto.jp）](https://www.misaka-mikoto.jp)，更新稍慢
+1. 国内站（https://misaka-mikoto.cn），未来将规划使用
+2. [旧版存档（https://static.misaka-mikoto.jp）](https://static.misaka-mikoto.jp)，不再更新
 
 ## 关于
 
