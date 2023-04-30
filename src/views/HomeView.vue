@@ -59,7 +59,7 @@ let isPnone = ref(window.innerWidth > 600)
         <del-text>（遇到当麻会脸红）</del-text>
       </p>
       <img
-        src="../assets/炮姐吃蛋糕.png"
+        src="../assets/炮姐吃蛋糕.webp"
         alt="炮姐吃蛋糕"
         style="width: 180px; height: 180px; float: right" />
       <hr />
