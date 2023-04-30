@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://misaka-vue.netlify.app"
+  to = "https://misaka-mikoto.jp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
