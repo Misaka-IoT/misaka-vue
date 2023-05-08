@@ -135,6 +135,9 @@ export default {
       case 'misaka-mikoto.cn':
         this.site = 'cn'
         break
+      case 'misaka-fans.space':
+        this.site = 'main'
+        break
     }
 
     // 使用axios获取star和fork数量
