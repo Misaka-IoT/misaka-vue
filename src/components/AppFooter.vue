@@ -13,11 +13,6 @@
         >鄂ICP备2022000892号-3</a
       >
     </div>
-    <div class="site-record site-record--main" v-else-if="site == 'main'">
-      <a href="https://icp.gov.moe/?keyword=20231500" target="_blank"
-        >萌ICP备20231500号</a
-      >
-    </div>
     <div class="site-record site-record--jp" v-else-if="site == 'jp'">
       <a href="https://icp.gov.moe/?keyword=20220436" target="_blank"
         >萌ICP备20220436号</a
@@ -44,7 +39,11 @@
         <!--証明書のコモンネーム及び証明書種別（DVもしくはOV）を指定します。-->
       </form>
     </div>
-
+    <div class="site-record site-record--main" v-else="site == 'main'">
+      <a href="https://icp.gov.moe/?keyword=20231500" target="_blank"
+        >萌ICP备20231500号</a
+      >
+    </div>
     <div class="site-record site-record--main" v-else>
       <p>陌生的域名……</p>
       <p>你多半在开发服务器里（</p>
@@ -67,7 +66,8 @@ export default {
       this.site = 'cn'
     } else if (location.href.indexOf('misaka-mikoto.jp') != -1) {
       this.site = 'jp'
-    }
+    } else if (location.href.indexOf('misaka-fans.space') != -2) {
+      this.site = 'main'
   },
 }
 </script>
