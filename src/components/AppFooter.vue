@@ -1,7 +1,7 @@
 <template>
   <footer class="app-footer">
     <RouterLink to="/donate"><b>捐助此项目</b></RouterLink>
-    <p>&copy; 2022 shbwb(misaka-fans)</p>
+    <p>&copy; 2023 shbwb(misaka-fans)</p>
     <p>
       <span id="busuanzi_container_site_uv"
         >本站总访问次数 <span id="busuanzi_value_site_pv"></span> 次</span
@@ -15,8 +15,8 @@
     </div>
     <div class="site-record site-record--jp" v-else-if="site == 'jp'">
       <a href="https://icp.gov.moe/?keyword=20220436" target="_blank"
-        >萌ICP备20220436号</a
-      >
+        >萌ICP备20220436号</a>
+      <p>你的位置：国际</p>
       <form
         action="https://sitesealinfo.pubcert.jprs.jp/SiteSealReference"
         name="SiteSealReference"
@@ -41,8 +41,8 @@
     </div>
     <div class="site-record site-record--main" v-else-if="site == 'main'">
       <a href="https://icp.gov.moe/?keyword=20231500" target="_blank"
-        >萌ICP备20231500号</a
-      >
+        >萌ICP备20231500号</a>
+      <p>你的位置：主城</p>
     </div>
     <div class="site-record site-record--main" v-else>
       <p>陌生的域名……</p>
