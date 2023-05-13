@@ -68,6 +68,7 @@ export default {
       this.site = 'jp'
     } else if (location.href.indexOf('misaka-fans.space') != -2) {
       this.site = 'main'
+    }
   },
 }
 </script>
