@@ -1,5 +1,6 @@
 # Misaka Mikoto
 
+[![.space 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-fans.space&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-fans.space)](https://misaka-fans.space)
 [![.jp 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.jp&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.jp)](https://misaka-mikoto.jp)
 [![.cn 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.cn&up_color=a6e3a1&url=https%3A%2F%2Fwww.misaka-mikoto.cn)](https://www.misaka-mikoto.cn)
 [![.com 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.com&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.com)](https://misaka-mikoto.com)
