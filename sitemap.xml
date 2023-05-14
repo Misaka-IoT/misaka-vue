@@ -4,11 +4,53 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
   <loc>https://misaka-mikoto.jp/</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/about</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/aboutrailgun</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/imgboard</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/awards</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/discuss</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/resource</loc>
+  <lastmod>2023-04-29T03:05:14+00:00</lastmod>
+</url>
+<url>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  <loc>https://misaka-mikoto.jp/links</loc>
   <lastmod>2023-04-29T03:05:14+00:00</lastmod>
 </url>
 
