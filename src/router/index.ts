@@ -19,9 +19,9 @@ const router = createRouter({
       component: () => import('@/views/AboutView.vue'),
     },
     {
-      path: '/aboutraligun',
-      name: 'aboutraligun',
-      component: () => import('@/views/AboutRaligunView.vue'),
+      path: '/aboutrailgun',
+      name: 'aboutrailgun',
+      component: () => import('@/views/AboutRailgunView.vue'),
     },
     {
       path: '/awards',
