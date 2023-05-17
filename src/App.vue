@@ -34,7 +34,7 @@ import { Icon } from '@iconify/vue'
     <template #drawer>
       <LinksWrapper @click.native="LinksWrapperclick">
         <RouterLink to="/">主页</RouterLink>
-        <RouterLink to="/aboutraligun">关于美琴</RouterLink>
+        <RouterLink to="/aboutrailgun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
         <RouterLink to="/imgboard">美琴照片墙</RouterLink>
         <RouterLink to="/awards">世萌战绩</RouterLink>
