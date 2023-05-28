@@ -15,7 +15,7 @@
     <p>2、付款了不会拥有诸如头衔，会员之类的权益，所以在捐助前请深思！！！</p>
     <br />
     <h2>下面是目前可用的支付方式</h2>
-    <img src="/src/assets/wxpay.jpg" />
+    <img src="/src/assets/wxpay2.jpg" />
   </div>
 </template>
 <style>
