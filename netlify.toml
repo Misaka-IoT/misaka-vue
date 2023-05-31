@@ -3,42 +3,7 @@
   to = "https://misaka-fans.space"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/aboutrailgun"
-  to = "/aboutrailgun"
-  status = 200
   
-[[redirects]]
-  from = "/relationship"
-  to = "/relationship"
-  status = 200
-  
-[[redirects]]
-  from = "/imgboard"
-  to = "/imgboard"
-  status = 200
-
-[[redirects]]
-  from = "/discuss"
-  to = "/discuss"
-  status = 200
-
-[[redirects]]
-  from = "/resource"
-  to = "/resource"
-  status = 200
-
-[[redirects]]
-  from = "/about"
-  to = "/about"
-  status = 200
-
-[[redirects]]
-  from = "/links"
-  to = "/links"
-  status = 200
-
 [[redirects]]
   from = "/*"
   to = "/"
