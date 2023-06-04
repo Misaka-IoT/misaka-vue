@@ -31,7 +31,7 @@ import { Icon } from '@iconify/vue';
     "></vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper @click="LinksWrapperclick">
+      <LinksWrapper @click="LinksWrapperClick">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutrailgun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -177,7 +177,7 @@ export default {
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
     },
-    LinksWrapperclick() {
+    LinksWrapperClick() {
       this.getDanmu();
     },
     getDanmu() {
