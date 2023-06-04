@@ -14,8 +14,8 @@
       "type": "ico"
     }
   ],
-  "background_color": "#fff",
-  "theme_color": "#000",
+  "background_color": "#000000",
+  "theme_color": "#c49582",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
