@@ -29,18 +29,18 @@ export default {
       return [
         'app-top-app-bar__container',
         this.scrolled ? 'app-top-app-bar--scrolled' : '',
-      ].join(' ')
+      ].join(' ');
     },
   },
   data() {
     return {
       scrolled: false,
-    }
+    };
   },
   methods: {
     handleScroll() {
       this.scrolled =
-        (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false
+        (this.$refs.contents as HTMLDivElement).scrollTop > 0 ? true : false;
     },
   },
   props: {
@@ -48,11 +48,11 @@ export default {
   },
   watch: {
     backToTop: function (newVal, oldVal) {
-      if (newVal === oldVal) return
-      ;(this.$refs.contents as HTMLDivElement).scroll(0, 0)
+      if (newVal === oldVal) return;
+      (this.$refs.contents as HTMLDivElement).scroll(0, 0);
     },
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

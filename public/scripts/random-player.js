@@ -3,18 +3,18 @@
  */
 export default class RandomPlayer extends HTMLElement {
   static get is() {
-    return 'random-player'
+    return 'random-player';
   }
   get ids() {
-    return ['28012031', '26379178', '1831600483', '27528656', '1833118660']
+    return ['28012031', '26379178', '1831600483', '27528656', '1833118660'];
   }
   get randomMusicId() {
-    return this.ids[Math.floor(Math.random() * this.ids.length)]
+    return this.ids[Math.floor(Math.random() * this.ids.length)];
   }
   constructor() {
-    super()
-    this.attachShadow({ mode: 'open' })
-    this.render()
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.render();
   }
   render() {
     this.shadowRoot.innerHTML = `
@@ -25,15 +25,15 @@ export default class RandomPlayer extends HTMLElement {
           this.randomMusicId
         }&auto=1&height=66"
       ></iframe>
-    `
+    `;
   }
   renderStyle() {
     return `
       :host {
         display: block;
       }
-    `
+    `;
   }
 }
 
-customElements.define(RandomPlayer.is, RandomPlayer)
+customElements.define(RandomPlayer.is, RandomPlayer);

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
@@ -37,7 +37,7 @@ export default {
     username: String,
     name: String,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

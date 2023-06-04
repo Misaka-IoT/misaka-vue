@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue';
 </script>
 <template>
   <button @click="settings" class="fab danmu-setting" title="弹幕设置">
@@ -33,57 +33,57 @@ export default {
       iconsettings: 'material-symbols:chat',
       danmuon: true,
       settingon: false,
-    }
+    };
   },
   methods: {
     toggleLoop() {
       localStorage.setItem(
         'danmu.toggleLoop',
         localStorage.getItem('danmu.toggleLoop') == '1' ? '0' : '1'
-      )
+      );
       this.iconLoop =
         localStorage.getItem('danmu.toggleLoop') == '1'
           ? 'material-symbols:sync'
-          : 'material-symbols:sync-disabled'
-      this.toggleLoopDanmu()
+          : 'material-symbols:sync-disabled';
+      this.toggleLoopDanmu();
     },
     toggleDanmus() {
       localStorage.setItem(
         'danmu.on',
         localStorage.getItem('danmu.on') == '1' ? '0' : '1'
-      )
-      this.danmuon = localStorage.getItem('danmu.on') == '1' ? true : false
+      );
+      this.danmuon = localStorage.getItem('danmu.on') == '1' ? true : false;
       this.iconEnable =
         localStorage.getItem('danmu.on') == '1'
           ? 'material-symbols:toggle-on'
-          : 'material-symbols:toggle-off'
-      this.toggleDanmu()
+          : 'material-symbols:toggle-off';
+      this.toggleDanmu();
     },
     settings() {
       this.iconsettings =
         this.iconsettings == 'material-symbols:chat'
           ? 'material-symbols:close'
-          : 'material-symbols:chat'
-      this.settingon = !this.settingon
+          : 'material-symbols:chat';
+      this.settingon = !this.settingon;
     },
   },
   created() {
     if (localStorage.getItem('danmu.toggleLoop') == null) {
-      localStorage.setItem('danmu.toggleLoop', '1')
+      localStorage.setItem('danmu.toggleLoop', '1');
     }
     if (localStorage.getItem('danmu.on') == null) {
-      localStorage.setItem('danmu.on', '1')
+      localStorage.setItem('danmu.on', '1');
     }
-    this.danmuon = localStorage.getItem('danmu.on') == '1' ? true : false
+    this.danmuon = localStorage.getItem('danmu.on') == '1' ? true : false;
     this.iconLoop =
       localStorage.getItem('danmu.toggleLoop') == '1'
         ? 'material-symbols:sync'
-        : 'material-symbols:sync-disabled'
+        : 'material-symbols:sync-disabled';
     this.iconEnable =
       localStorage.getItem('danmu.on') == '1'
         ? 'material-symbols:toggle-on'
-        : 'material-symbols:toggle-off'
+        : 'material-symbols:toggle-off';
   },
-  props: ['toggleLoopDanmu', 'toggleDanmu','pushDanmu'],
-}
+  props: ['toggleLoopDanmu', 'toggleDanmu', 'pushDanmu'],
+};
 </script>

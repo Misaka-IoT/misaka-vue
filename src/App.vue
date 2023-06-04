@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
 
 // app-level components
-import AppNavDrawer from '@/components/AppNavDrawer.vue'
-import AppTopAppBar from '@/components/AppTopAppBar.vue'
-import AppFooter from '@/components/AppFooter.vue'
+import AppNavDrawer from '@/components/AppNavDrawer.vue';
+import AppTopAppBar from '@/components/AppTopAppBar.vue';
+import AppFooter from '@/components/AppFooter.vue';
 // components
-import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
-import MusicSwitcher from '@/components/MusicSwitcher.vue'
-import LinksWrapper from '@/components/LinksWrapper.vue'
-import DanmuSender from './components/DanmuSender.vue'
-import DanmuSwitcher from './components/DanmuSwitcher.vue'
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
+import MusicSwitcher from '@/components/MusicSwitcher.vue';
+import LinksWrapper from '@/components/LinksWrapper.vue';
+import DanmuSwitcher from './components/DanmuSwitcher.vue';
 // other components
-import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
@@ -32,7 +31,7 @@ import { Icon } from '@iconify/vue'
     "></vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper @click.native="LinksWrapperclick">
+      <LinksWrapper @click="LinksWrapperclick">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutrailgun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -95,8 +94,6 @@ import { Icon } from '@iconify/vue'
         </div>
       </template>
       <template #actionBtns>
-        
-
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
       </template>
@@ -104,7 +101,8 @@ import { Icon } from '@iconify/vue'
       <AppFooter></AppFooter>
       <DanmuSwitcher
         :toggleLoopDanmu="toggleLoopDanmu"
-        :toggleDanmu="toggleDanmu" :pushDanmu="pushDanmu"></DanmuSwitcher>
+        :toggleDanmu="toggleDanmu"
+        :pushDanmu="pushDanmu"></DanmuSwitcher>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
@@ -113,40 +111,40 @@ import { Icon } from '@iconify/vue'
 </template>
 
 <script lang="ts">
-import axios from 'axios'
-import vueDanmaku from 'vue3-danmaku'
+import axios from 'axios';
+import vueDanmaku from 'vue3-danmaku';
 
 export default {
   computed: {
     navIcon(): string {
       return this.drawerOpened
         ? 'material-symbols:menu-open'
-        : 'material-symbols:menu'
+        : 'material-symbols:menu';
     },
   },
   created() {
     this.danmu.toggleDanmu =
-      localStorage.getItem('danmu.on') == '1' ? true : false
-    this.getDanmu()
+      localStorage.getItem('danmu.on') == '1' ? true : false;
+    this.getDanmu();
     switch (location.host) {
       case 'misaka-mikoto.jp':
-        this.site = 'jp'
-        break
+        this.site = 'jp';
+        break;
       case 'misaka-mikoto.cn':
-        this.site = 'cn'
-        break
+        this.site = 'cn';
+        break;
       case 'misaka-fans.space':
-        this.site = 'main'
-        break
+        this.site = 'main';
+        break;
     }
 
     // 使用axios获取star和fork数量
     axios
       .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')
       .then((res) => {
-        this.stargazersCount = res.data.stargazers_count
-        this.forksCount = res.data.forks_count
-      })
+        this.stargazersCount = res.data.stargazers_count;
+        this.forksCount = res.data.forks_count;
+      });
   },
   data() {
     return {
@@ -163,13 +161,13 @@ export default {
         fontSize: 20,
         toggleDanmu: true,
       },
-    }
+    };
   },
   methods: {
     handleDrawerChange(value: boolean) {
-      this.drawerOpened = value
+      this.drawerOpened = value;
       if (!this.drawerOpened)
-        (this.$refs.drawerOpener as HTMLButtonElement).focus()
+        (this.$refs.drawerOpener as HTMLButtonElement).focus();
     },
     /**
      * @author: longyu12345
@@ -177,40 +175,40 @@ export default {
      * 觉得写得离谱就打他去 o(*￣▽￣*)ブ
      */
     loadEatMikoto(): void {
-      location.href = 'eat-mikoto/index.html'
+      location.href = 'eat-mikoto/index.html';
     },
     LinksWrapperclick() {
-      this.getDanmu()
+      this.getDanmu();
     },
     getDanmu() {
-      console.log(window.location.pathname)
+      console.log(window.location.pathname);
       axios
         .get('https://danmu.z2bguoguos.gq/', {
           headers: { page: window.location.pathname },
         })
         .then((res) => {
-          this.danmu.danmus = res.data.split('/**/')
-        })
+          this.danmu.danmus = res.data.split('/**/');
+        });
     },
     pushDanmu(str: string) {
       axios.post('https://danmu.z2bguoguos.gq/', str, {
         headers: { page: window.location.pathname },
-      })
-      this.danmu.danmus.push(str)
+      });
+      this.danmu.danmus.push(str);
     },
     toggleDanmu() {
       this.danmu.toggleDanmu =
-        localStorage.getItem('danmu.on') == '1' ? true : false
+        localStorage.getItem('danmu.on') == '1' ? true : false;
       if (localStorage.getItem('danmu.on') == '0') {
-        ;(this.$refs.danmuku as HTMLFormElement).stop()
+        (this.$refs.danmuku as HTMLFormElement).stop();
       } else {
-        ;(this.$refs.danmuku as HTMLFormElement).play()
+        (this.$refs.danmuku as HTMLFormElement).play();
       }
     },
     toggleLoopDanmu() {
       this.danmu.toggleLoop =
-        localStorage.getItem('danmu.toggleLoop') == '0' ? false : true
+        localStorage.getItem('danmu.toggleLoop') == '0' ? false : true;
     },
   },
-}
+};
 </script>

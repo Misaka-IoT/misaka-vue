@@ -15,7 +15,8 @@
     </div>
     <div class="site-record site-record--jp" v-else-if="site == 'jp'">
       <a href="https://icp.gov.moe/?keyword=20220436" target="_blank"
-        >萌ICP备20220436号</a>
+        >萌ICP备20220436号</a
+      >
       <p>你的位置：国际</p>
       <form
         action="https://sitesealinfo.pubcert.jprs.jp/SiteSealReference"
@@ -41,7 +42,8 @@
     </div>
     <div class="site-record site-record--main" v-else-if="site == 'main'">
       <a href="https://icp.gov.moe/?keyword=20231500" target="_blank"
-        >萌ICP备20231500号</a>
+        >萌ICP备20231500号</a
+      >
       <p>你的位置：主城</p>
     </div>
     <div class="site-record site-record--main" v-else>
@@ -52,25 +54,25 @@
 </template>
 
 <script lang="ts">
-import jprs_DV_png from '@/assets/jprs_DV.png'
+import jprs_DV_png from '@/assets/jprs_DV.png';
 
 export default {
   data() {
     return {
       jprs_DV_png,
       site: 'unknown',
-    }
+    };
   },
   created() {
     if (location.href.indexOf('misaka-mikoto.cn') != -1) {
-      this.site = 'cn'
+      this.site = 'cn';
     } else if (location.href.indexOf('misaka-mikoto.jp') != -1) {
-      this.site = 'jp'
+      this.site = 'jp';
     } else if (location.href.indexOf('misaka-fans.space') != -1) {
-      this.site = 'main'
+      this.site = 'main';
     }
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

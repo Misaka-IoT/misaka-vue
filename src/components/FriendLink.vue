@@ -53,5 +53,5 @@ export default {
     desc: String,
     link: String,
   },
-}
+};
 </script>

@@ -47,11 +47,11 @@ const fun = (param) => {
 const str = 'str content'
 ```
 
-3. 无分号（如果可以）
+3. 分号
 
 ```typescript
 // e.g.
-const str = 'str content'
-const printStr = (_str: string) => console.log(_str)
-printStr(str)
+const str = 'str content';
+const printStr = (_str: string) => console.log(_str);
+printStr(str);
 ```

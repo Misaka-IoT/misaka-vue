@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FriendLink from '@/components/FriendLink.vue'
+import FriendLink from '@/components/FriendLink.vue';
 
 const data = [
   {
@@ -52,7 +52,7 @@ const data = [
     desc: '这只是一个小破站而已！',
     link: 'https://www.misaka.rest',
   },
-]
+];
 </script>
 
 <template>

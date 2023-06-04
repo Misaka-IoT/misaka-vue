@@ -23,7 +23,7 @@ export default {
         this.opened ? 'app-nav-drawer--opened' : '',
         this.opening ? 'app-nav-drawer--opening' : '',
         this.closing ? 'app-nav-drawer--closing' : '',
-      ].join(' ')
+      ].join(' ');
     },
   },
   data() {
@@ -31,37 +31,37 @@ export default {
       opened: false,
       opening: false,
       closing: false,
-    }
+    };
   },
   methods: {
     openDrawer() {
-      this.opening = true
+      this.opening = true;
       setTimeout(() => {
-        this.opening = false
-        this.opened = true
-        ;(this.$refs.drawer as HTMLElement).focus()
-        this.statusChanged?.(this.opened)
+        this.opening = false;
+        this.opened = true;
+        (this.$refs.drawer as HTMLElement).focus();
+        this.statusChanged?.(this.opened);
         // this.updateDrawerFocusTrap();
-      }, 16)
+      }, 16);
     },
     closeDrawer() {
-      this.closing = true
+      this.closing = true;
       setTimeout(() => {
-        this.closing = false
-        this.opened = false
-        this.statusChanged?.(this.opened)
+        this.closing = false;
+        this.opened = false;
+        this.statusChanged?.(this.opened);
         // this.updateDrawerFocusTrap();
-      }, 200)
+      }, 200);
     },
     handleKeydown({ key }: { key: string }) {
       switch (key) {
         case 'ESC':
         case 'Escape':
-          this.closeDrawer()
-          break
+          this.closeDrawer();
+          break;
 
         default:
-          break
+          break;
       }
     },
   },
@@ -71,11 +71,11 @@ export default {
   },
   watch: {
     open: function (newVal, oldVal) {
-      if (newVal === oldVal) return
-      newVal ? this.openDrawer() : this.closeDrawer()
+      if (newVal === oldVal) return;
+      newVal ? this.openDrawer() : this.closeDrawer();
     },
   },
-}
+};
 </script>
 
 <style lang="scss">

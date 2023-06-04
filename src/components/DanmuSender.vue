@@ -26,16 +26,16 @@ export default {
   data() {
     return {
       danmu: '',
-    }
+    };
   },
   methods: {
     send() {
       if (this.danmu != '' && this.danmu.indexOf('/**/') == -1) {
-        this.pushDanmu(this.danmu)
-        ;(this.$refs.input as HTMLInputElement).value = ''
+        this.pushDanmu(this.danmu);
+        (this.$refs.input as HTMLInputElement).value = '';
       }
     },
   },
   props: ['pushDanmu'],
-}
+};
 </script>

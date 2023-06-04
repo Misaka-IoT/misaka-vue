@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import 'artalk/dist/Artalk.css'
-import Artalk from 'artalk'
+import 'artalk/dist/Artalk.css';
+import Artalk from 'artalk';
 
 export default {
   mounted: function () {
@@ -15,9 +15,9 @@ export default {
       server: 'https://chat.mashiro.pub:23366',
       site: 'lolimashiro-comment-sys',
       // ...
-    })
+    });
   },
-}
+};
 </script>
 
 <style>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import DelText from '@/components/DelText.vue'
-import { ref } from 'vue'
-let carouselHeight = ref('60vw') // 定义一变量控制轮播高度,在页面宽度不同时返回不同高度
+import DelText from '@/components/DelText.vue';
+import { ref } from 'vue';
+let carouselHeight = ref('60vw'); // 定义一变量控制轮播高度,在页面宽度不同时返回不同高度
 if (window.innerWidth > 600) {
-  carouselHeight.value = '400px'
+  carouselHeight.value = '400px';
 }
 
-let isPnone = ref(window.innerWidth > 600)
+let isPnone = ref(window.innerWidth > 600);
 </script>
 <template>
   <div class="homeview-box">

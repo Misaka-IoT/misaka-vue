@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
@@ -16,26 +16,26 @@ export default {
   data() {
     return {
       icon: '',
-    }
+    };
   },
   created() {
     this.icon =
       localStorage.getItem('settings.theme') == 'dark'
         ? 'material-symbols:sunny'
-        : 'material-symbols:bedtime'
+        : 'material-symbols:bedtime';
   },
   methods: {
     switchTheme: function () {
       if (localStorage.getItem('settings.theme') == 'light') {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        localStorage.setItem('settings.theme', 'dark')
-        this.icon = 'material-symbols:sunny'
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('settings.theme', 'dark');
+        this.icon = 'material-symbols:sunny';
       } else {
-        document.documentElement.setAttribute('data-theme', 'light')
-        localStorage.setItem('settings.theme', 'light')
-        this.icon = 'material-symbols:bedtime'
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('settings.theme', 'light');
+        this.icon = 'material-symbols:bedtime';
       }
     },
   },
-}
+};
 </script>

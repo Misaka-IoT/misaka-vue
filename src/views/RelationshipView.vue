@@ -56,10 +56,10 @@
 </template>
 
 <script setup lang="ts">
-import InterpersonalRelationship from './InterpersonalRelationship.vue'
-import { ref } from 'vue'
+import InterpersonalRelationship from './InterpersonalRelationship.vue';
+import { ref } from 'vue';
 
-const activeName = ref('1')
+const activeName = ref('1');
 </script>
 
 <style scoped lang="scss">
