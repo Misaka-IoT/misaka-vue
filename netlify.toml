@@ -1,10 +1,10 @@
 [[redirects]]
-  from = "/*"
+  from = "https://misaka-vue.netlify.app"
   to = "https://misaka-fans.space"
-  status = 200
+  status = 301
   force = true
 
-# [[redirects]]
-  # from = "/*"
-  # to = "/"
-  # status = 200
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
