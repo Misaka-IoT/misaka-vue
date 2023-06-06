@@ -31,7 +31,7 @@ import { Icon } from '@iconify/vue';
     "></vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper @click="LinksWrapperClick">
+      <LinksWrapper @click="LinksWrapperClick($event)">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutrailgun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -177,14 +177,26 @@ export default {
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
     },
-    LinksWrapperClick() {
-      this.getDanmu();
+    LinksWrapperClick(e:Event) {
+      (this.$refs.danmuku as HTMLFormElement).stop();
+      this.getDanmu2((<HTMLElement>e.target).getAttribute("href"));
+      (this.$refs.danmuku as HTMLFormElement).play();
     },
     getDanmu() {
       console.log(window.location.pathname);
       axios
         .get('https://danmu.z2bguoguos.gq/', {
           headers: { page: window.location.pathname },
+        })
+        .then((res) => {
+          this.danmu.danmus = res.data.split('/**/');
+        });
+    },
+    getDanmu2(herfs:string |null) {
+      console.log(herfs);
+      axios
+        .get('https://danmu.z2bguoguos.gq/', {
+          headers: { page: herfs },
         })
         .then((res) => {
           this.danmu.danmus = res.data.split('/**/');
