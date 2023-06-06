@@ -10,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import MusicSwitcher from '@/components/MusicSwitcher.vue';
 import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
+import AdvancedDanMu from './components/AdvancedDanMu.vue';
 // other components
 import { Icon } from '@iconify/vue';
 </script>
@@ -21,6 +22,7 @@ import { Icon } from '@iconify/vue';
     v-model:loop="danmu.toggleLoop"
     v-model:fontSize="danmu.fontSize"
     ref="danmuku"
+    :useSlot=true
     style="
       height: calc(100vh - 64px);
       width: 100vw;
@@ -28,10 +30,14 @@ import { Icon } from '@iconify/vue';
       top: 64px;
       pointer-events: none;
       z-index: 10000;
-    "></vue-danmaku>
+    ">
+    <template v-slot:dm="{ index, danmu }">
+      <AdvancedDanMu :txt=danmu></AdvancedDanMu>
+    </template>
+    </vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
-      <LinksWrapper @click="LinksWrapperClick">
+      <LinksWrapper @click="LinksWrapperClick($event)">
         <RouterLink to="/">主页</RouterLink>
         <RouterLink to="/aboutrailgun">关于美琴</RouterLink>
         <RouterLink to="/relationship">人物介绍</RouterLink>
@@ -177,14 +183,26 @@ export default {
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
     },
-    LinksWrapperClick() {
-      this.getDanmu();
+    LinksWrapperClick(e:Event) {
+      (this.$refs.danmuku as HTMLFormElement).stop();
+      this.getDanmu2((<HTMLElement>e.target).getAttribute("href"));
+      (this.$refs.danmuku as HTMLFormElement).play();
     },
     getDanmu() {
       console.log(window.location.pathname);
       axios
         .get('https://danmu.z2bguoguos.gq/', {
           headers: { page: window.location.pathname },
+        })
+        .then((res) => {
+          this.danmu.danmus = res.data.split('/**/');
+        });
+    },
+    getDanmu2(herfs:string |null) {
+      console.log(herfs);
+      axios
+        .get('https://danmu.z2bguoguos.gq/', {
+          headers: { page: herfs },
         })
         .then((res) => {
           this.danmu.danmus = res.data.split('/**/');
