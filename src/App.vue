@@ -10,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import MusicSwitcher from '@/components/MusicSwitcher.vue';
 import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
+import AdvancedDanMu from './components/AdvancedDanMu.vue';
 // other components
 import { Icon } from '@iconify/vue';
 </script>
@@ -21,6 +22,7 @@ import { Icon } from '@iconify/vue';
     v-model:loop="danmu.toggleLoop"
     v-model:fontSize="danmu.fontSize"
     ref="danmuku"
+    :useSlot=true
     style="
       height: calc(100vh - 64px);
       width: 100vw;
@@ -28,7 +30,11 @@ import { Icon } from '@iconify/vue';
       top: 64px;
       pointer-events: none;
       z-index: 10000;
-    "></vue-danmaku>
+    ">
+    <template v-slot:dm="{ index, danmu }">
+      <AdvancedDanMu :txt=danmu></AdvancedDanMu>
+    </template>
+    </vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
       <LinksWrapper @click="LinksWrapperClick($event)">
