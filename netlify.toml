@@ -1,7 +1,7 @@
 [[redirects]]
   from = "/*"
   to = "https://misaka-fans.space"
-  status = 301
+  status = 200
   force = true
 
 # [[redirects]]
