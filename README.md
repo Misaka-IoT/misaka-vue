@@ -1,9 +1,6 @@
 # Misaka Mikoto
 
 [![.space 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-fans.space&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-fans.space)](https://misaka-fans.space)
-[![.jp 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.jp&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.jp)](https://misaka-mikoto.jp)
-[![.cn 网站状态(待修复）](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.cn&up_color=a6e3a1&url=https%3A%2F%2Fwww.misaka-mikoto.cn)](https://www.misaka-mikoto.cn)
-[![.com 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-mikoto.com&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-mikoto.com)](https://misaka-mikoto.com)
 [![Netlify 部署状态](https://api.netlify.com/api/v1/badges/acb9cf1b-e17f-4990-bc06-3a7e21edb16b/deploy-status)](https://app.netlify.com/sites/misaka-right-now/deploys)
 
 > 你指尖跃动的电光，是我此生不变的信仰！
