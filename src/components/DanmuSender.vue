@@ -4,7 +4,7 @@
       <input
         type="text"
         v-model="danmu"
-        maxlength="30"
+        maxlength="100"
         ref="input"
         style="
           border: none;
