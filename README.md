@@ -11,9 +11,7 @@
 
 _\*存活状况见上方徽标_
 
-0. [国际站（https://misaka-fans.space）](https://misaka-fans.space)，更新稍慢
-1. [国际站（https://www.misaka-mikoto.jp）](https://www.misaka-mikoto.jp)，更新稍慢
-2. [国内站（https://misaka-mikoto.cn）](https://misaka-mikoto.cn)，未来将规划使用
+0. [主站（https://misaka-fans.space）](https://misaka-fans.space)，更新稍慢
 3. [旧版存档（https://static.misaka-mikoto.jp）](https://static.misaka-mikoto.jp)，不再更新
 
 ## 关于
@@ -37,7 +35,7 @@ _\*存活状况见上方徽标_
 
 _\*代码风格等参照 [`CONTRIBUTING.md`](./CONTRIBUTING.md)。_
 
-_\*贡献者将会展现在 [关于](https://misaka-mikoto.jp/about) 页面。_
+_\*贡献者将会展现在 [关于](https://misaka-fans.space/about) 页面。_
 
 ## 开发
 
