@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "/*"
-  conditions = {Path: "!^/about", "!^/imgboard", "!^/aboutrailgun", "!^/discuss", "!^/resource", "!^/links", "!^/relationship"}
   to = "/"
+  conditions = {Path: "!^/about"}
   status = 200
   force = true
