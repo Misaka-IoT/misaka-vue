@@ -7,4 +7,4 @@
 [[redirects]]
   from = "/*"
   to = "/"
-  status = 301
+  status = 200
