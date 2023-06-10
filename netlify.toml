@@ -7,6 +7,4 @@
 [[redirects]]
   from = "/*"
   to = "/"
-  conditions = {Path: "!^/about"}
   status = 200
-  force = true
