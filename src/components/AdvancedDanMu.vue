@@ -1,7 +1,7 @@
 <template>
   <a
     class="a"
-    :style="{ color: color, 'font-size': FontSize, 'font-family': FontFamily }"
+    :style="{ color: color, 'font-size': fontSize, 'font-family': fontFamily }"
     >{{ danmu }}</a
   >
 </template>
@@ -15,9 +15,9 @@ export default {
     return {
       danmu: '',
       color: '#D0CFCF',
-      FontSize: '20px',
+      fontSize: '20px',
       css: '',
-      FontFamily: 'Georgia',
+      fontFamily: 'Georgia',
     };
   },
   methods: {
@@ -26,10 +26,10 @@ export default {
         this.color = str.substring(0, 7);
         this.AnalyzeDanMu(str.toString().substring(7));
       } else if (str.substring(0, 6) == '[size]') {
-        this.FontSize = str.substring(6, 8) + 'px';
+        this.fontSize = str.substring(6, 8) + 'px';
         this.AnalyzeDanMu(str.toString().substring(8));
       } else if (str.substring(0, 7) == '[font]{') {
-        this.FontFamily = str.substring(7, str.indexOf('}'));
+        this.fontFamily = str.substring(7, str.indexOf('}'));
         this.AnalyzeDanMu(str.toString().substring(str.indexOf('}') + 1));
       } else if (str.charAt(0) == '{') {
         //屎山+114514
