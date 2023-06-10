@@ -8,4 +8,3 @@
   from = "/*"
   to = "/"
   status = 301
-  conditions = {Path= ["!^/about", "!^/imgboard", "!^/discuss", "!^/aboutrailgun", "!^/resource", "!^/awards", "!^/relationship", "!^/links"]} 
