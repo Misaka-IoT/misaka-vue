@@ -9,4 +9,4 @@
   to = "/"
   status = 200
   force = true
-  conditions = {Path= "!^/about"} 
+  conditions = {Path= ["!^/about", "!^/imgboard", "!^/discuss", "!^/aboutrailgun", "!^/resource", "!^/awards", "!^/relationship", "!^/links"]} 
