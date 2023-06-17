@@ -21,20 +21,20 @@ export default {
     };
   },
   methods: {
-    AnalyzeDanMu(str: String) {
+    checkDanMu(str: String) {
       if (str.charAt(0) == '#') {
         this.color = str.substring(0, 7);
-        this.AnalyzeDanMu(str.toString().substring(7));
+        this.checkDanMu(str.toString().substring(7));
       } else if (str.substring(0, 6) == '[size]') {
         this.fontSize = str.substring(6, 8) + 'px';
-        this.AnalyzeDanMu(str.toString().substring(8));
+        this.checkDanMu(str.toString().substring(8));
       } else if (str.substring(0, 7) == '[font]{') {
         this.fontFamily = str.substring(7, str.indexOf('}'));
-        this.AnalyzeDanMu(str.toString().substring(str.indexOf('}') + 1));
+        this.checkDanMu(str.toString().substring(str.indexOf('}') + 1));
       } else if (str.charAt(0) == '{') {
         //屎山+114514
         this.css = str.substring(1, str.indexOf('}'));
-        this.AnalyzeDanMu(str.toString().substring(str.indexOf('}') + 1));
+        this.checkDanMu(str.toString().substring(str.indexOf('}') + 1));
       } else {
         this.danmu = str.toString();
       }
@@ -42,7 +42,7 @@ export default {
   },
   created() {
     if (this.txt != undefined) {
-      this.AnalyzeDanMu(this.txt);
+      this.checkDanMu(this.txt);
     }
   },
 };
