@@ -1,0 +1,52 @@
+<template>
+<form @submit.prevent="PutDanmu" style="text-align:center">
+    页面（如/aboutrailgun）：<input type="text" ref="input" v-model="page"/>
+    <button type="button" @click="GetDanmu">获取弹幕</button>
+    <br>
+    弹幕内容：<textarea v-model="Danmu"/>
+    <br>
+    密钥：<input type="text" ref="input" v-model="password"/>
+    <br>
+    <input type="submit" value="修改弹幕">
+</form>
+<h1 style="color: red;text-align:center" id="PutDanmuInfo"></h1>
+</template>
+<script lang="ts">
+import axios from 'axios';
+export default {
+    data() {
+    return {
+      page: '',
+      Danmu:'',
+      password:'',
+    };
+  },
+    methods:{
+        PutDanmu(){
+            axios
+            .put('https://danmu.z2bguoguos.gq/', this.Danmu,{
+                headers: { page: this.page,password:this.password },
+            })
+            .then((res) => {
+                var info=document.getElementById("PutDanmuInfo")
+                if(info!=null)
+                {
+                    info.innerText=res.data
+                }
+                
+            
+            });
+        },
+        GetDanmu()
+        {
+            axios
+            .get('https://danmu.z2bguoguos.gq/', {
+            headers: { page: this.page },
+            })
+            .then((res) => {
+            this.Danmu= res.data
+            });
+        }
+    }
+}
+</script>

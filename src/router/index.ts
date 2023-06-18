@@ -62,6 +62,11 @@ const router = createRouter({
       name: '404',
       component: () => import('@/views/404View.vue'),
     },
+    {
+      path: '/PutDanmu',
+      name: 'PutDanmu',
+      component: () => import('@/views/PutDanmu.vue'),
+    },
   ],
 });
 
