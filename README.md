@@ -1,7 +1,7 @@
+# 已重新迁移至原版静态仓库！
 # Misaka Mikoto
 
 [![.space 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-fans.space&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-fans.space)](https://misaka-fans.space)
-[![Netlify 部署状态](https://api.netlify.com/api/v1/badges/acb9cf1b-e17f-4990-bc06-3a7e21edb16b/deploy-status)](https://app.netlify.com/sites/misaka-right-now/deploys)
 
 > 你指尖跃动的电光，是我此生不变的信仰！
 
@@ -11,8 +11,7 @@
 
 _\*存活状况见上方徽标_
 
-0. [主站（https://misaka-fans.space）](https://misaka-fans.space)，更新稍慢
-3. [旧版存档（https://static.misaka-mikoto.jp）](https://static.misaka-mikoto.jp)，不再更新
+[主站（https://misaka-fans.space）](https://misaka-fans.space)
 
 ## 关于
 
