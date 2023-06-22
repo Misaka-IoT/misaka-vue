@@ -22,7 +22,7 @@ import { Icon } from '@iconify/vue';
     v-model:loop="danmu.toggleLoop"
     v-model:fontSize="danmu.fontSize"
     ref="danmuku"
-    :useSlot=true
+    :useSlot="true"
     style="
       height: calc(100vh - 64px);
       width: 100vw;
@@ -32,9 +32,9 @@ import { Icon } from '@iconify/vue';
       z-index: 10000;
     ">
     <template v-slot:dm="{ index, danmu }">
-      <AdvancedDanMu :txt=danmu></AdvancedDanMu>
+      <AdvancedDanMu :txt="danmu"></AdvancedDanMu>
     </template>
-    </vue-danmaku>
+  </vue-danmaku>
   <AppNavDrawer :open="drawerOpened" :statusChanged="handleDrawerChange">
     <template #drawer>
       <LinksWrapper @click="LinksWrapperClick($event)">
@@ -183,9 +183,9 @@ export default {
     loadEatMikoto(): void {
       location.href = 'eat-mikoto/index.html';
     },
-    LinksWrapperClick(e:Event) {
+    LinksWrapperClick(e: Event) {
       (this.$refs.danmuku as HTMLFormElement).stop();
-      this.getDanmu2((<HTMLElement>e.target).getAttribute("href"));
+      this.getDanmu2((<HTMLElement>e.target).getAttribute('href'));
       (this.$refs.danmuku as HTMLFormElement).play();
     },
     getDanmu() {
@@ -198,7 +198,7 @@ export default {
           this.danmu.danmus = res.data.split('/**/');
         });
     },
-    getDanmu2(herfs:string |null) {
+    getDanmu2(herfs: string | null) {
       console.log(herfs);
       axios
         .get('https://danmu.z2bguoguos.gq/', {
