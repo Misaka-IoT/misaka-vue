@@ -1,9 +1,9 @@
 <template>
-  <form @submit.prevent="PutDanmu" style="text-align: center">
+  <form @submit.prevent="putDanmu" style="text-align: center">
     页面（如/aboutrailgun）：<input type="text" ref="input" v-model="page" />
-    <button type="button" @click="GetDanmu">获取弹幕</button>
+    <button type="button" @click="getDanmu">获取弹幕</button>
     <br />
-    弹幕内容：<textarea v-model="Danmu" />
+    弹幕内容：<textarea v-model="danmu" />
     <br />
     密钥：<input type="text" ref="input" v-model="password" />
     <br />
@@ -17,14 +17,14 @@ export default {
   data() {
     return {
       page: '',
-      Danmu: '',
+      danmu: '',
       password: '',
     };
   },
   methods: {
-    PutDanmu() {
+    putDanmu() {
       axios
-        .put('https://danmu.z2bguoguos.gq/', this.Danmu, {
+        .put('https://danmu.z2bguoguos.gq/', this.danmu, {
           headers: { page: this.page, password: this.password },
         })
         .then((res) => {
@@ -34,13 +34,13 @@ export default {
           }
         });
     },
-    GetDanmu() {
+    getDanmu() {
       axios
         .get('https://danmu.z2bguoguos.gq/', {
           headers: { page: this.page },
         })
         .then((res) => {
-          this.Danmu = res.data;
+          this.danmu = res.data;
         });
     },
   },
