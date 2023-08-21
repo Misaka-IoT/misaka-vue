@@ -26,7 +26,7 @@ let isPnone = ref(window.innerWidth > 600);
         <el-carousel-item v-for="item in 4" :key="item">
           <el-image
             fit="cover"
-            :src="`https://img.moeu.moe/main/waterfall${item}.webp`"
+            :src="`https://misaka-fans-photos.github.io/pic/waterfall${item}.webp`"
             class="carousel-img"
             alt="" />
         </el-carousel-item>
