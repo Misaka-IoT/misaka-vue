@@ -159,7 +159,7 @@ export default {
       stargazersCount: 0,
       forksCount: 0,
       site: 'jp',
-      cdnRootUrl: 'https://img.moeu.moe/',
+      cdnRootUrl: 'https://misaka-fans-photos.github.io/',
       danmu: {
         danmus: [] as any,
         channels: 0,
