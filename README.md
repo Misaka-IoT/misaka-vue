@@ -1,4 +1,3 @@
-# 已重新迁移至原版静态仓库！
 # Misaka Mikoto
 
 [![.space 网站状态](https://img.shields.io/website?down_color=f38ba8&label=misaka-fans.space&up_color=a6e3a1&url=https%3A%2F%2Fmisaka-fans.space)](https://misaka-fans.space)
