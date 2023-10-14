@@ -68,7 +68,7 @@ import { Icon } from '@iconify/vue';
 
         <div class="md-header__source">
           <a
-            href="https://github.com/misaka-fans/misaka-fans.github.io"
+            href="https://github.com/Misaka-IoT/misaka-vue/"
             title="前往仓库"
             class="md-source"
             data-md-component="source">
@@ -86,7 +86,7 @@ import { Icon } from '@iconify/vue';
             <div
               class="md-source__repository md-source__repository--active"
               style="width: 150%">
-              misaka-fans.github.io
+              misaka-fans
               <ul class="md-source__facts">
                 <li class="md-source__fact md-source__fact--stars">
                   {{ stargazersCount }}
@@ -146,7 +146,7 @@ export default {
 
     // 使用axios获取star和fork数量
     axios
-      .get('https://api.github.com/repos/misaka-fans/misaka-fans.github.io')
+      .get('https://api.github.com/repos/Misaka-IoT/misaka-vue/')
       .then((res) => {
         this.stargazersCount = res.data.stargazers_count;
         this.forksCount = res.data.forks_count;
@@ -158,8 +158,8 @@ export default {
       backToTop: false,
       stargazersCount: 0,
       forksCount: 0,
-      site: 'jp',
-      cdnRootUrl: 'https://misaka-fans-photos.github.io/',
+      site: 'main',
+      cdnRootUrl: 'http://img-cdn-for-misaka.misaka-network.tk/',
       danmu: {
         danmus: [] as any,
         channels: 0,
