@@ -9,16 +9,15 @@
 
     <div>
       <el-collapse
+        bg-color="black"
         class="accordion"
         id="accordionFlush"
         v-model="activeName"
         accordion>
         <el-collapse-item title="御坂美琴" name="1">
-          <div>
-            学园都市中仅有的七名超能力者中排名第三位，学园都市最强“电击使”，
-            代号“超电磁炮”。贵族女校常盘台中学二年级学生，有“常盘台的王牌”和“最强无敌的电击公主”之称。
-            性格好胜、正义感强，有着男孩子般的爽朗性格，但是却没有耐心，非常不坦率。
-          </div>
+          学园都市中仅有的七名超能力者中排名第三位，学园都市最强“电击使”，
+          代号“超电磁炮”。贵族女校常盘台中学二年级学生，有“常盘台的王牌”和“最强无敌的电击公主”之称。
+          性格好胜、正义感强，有着男孩子般的爽朗性格，但是却没有耐心，非常不坦率。
         </el-collapse-item>
         <el-collapse-item title="上条当麻" name="2">
           <div>
@@ -63,19 +62,41 @@ const activeName = ref('1');
 </script>
 
 <style scoped lang="scss">
+// * {
+//   color: var(--color-theme);
+//   background-color: var(--color-background);
+// }
+
 @media screen and (min-width: 900px) {
   .container-fluid {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+
     .accordion {
+      --el-collapse-header-bg-color: var(--bg-color-background);
+      --el-collapse-header-color: var(--color-theme);
+      --el-collapse-header-text-color: var(--color-theme);
+      --el-collapse-content-bg-color: var(--bg-color-background);
+      --el-collapse-content-text-color: var(--color-theme);
+      border: 0;
       width: 30vw;
       height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+    .el-collapse-item {
+      .el-collapse-item__wrap {
+        background-color: var(--bg-color-background);
+        color: var(--color-theme);
+      }
+    }
+    .el-collapse-item__header {
+      --el-collapse-header-text-color: var(--color-theme);
+    }
+
     .IR {
       width: 30vw;
     }
@@ -84,6 +105,7 @@ const activeName = ref('1');
     padding: 6px;
   }
 }
+
 .accordion {
   color: var(--color-theme);
 }

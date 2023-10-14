@@ -100,7 +100,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .InterpersonalRelationshipBox {
   height: 75vh;
   color: var(--color-theme);
