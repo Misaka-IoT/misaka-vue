@@ -52,6 +52,11 @@ const data = [
     desc: '这只是一个小破站而已！',
     link: 'https://www.misaka.rest',
   },
+  {
+    name: '何穷',
+    desc: '龙驭的博客 | 世事无极，谁可穷之？',
+    link: 'https://blog.misaka-mikoto.cn',
+  },
 ];
 </script>
 
