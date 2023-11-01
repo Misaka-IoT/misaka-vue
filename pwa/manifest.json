@@ -1,15 +1,15 @@
 {
   "name": "爱我超电磁炮",
   "short_name": "爱我超电磁炮",
-  "description": "爱我超电磁炮",
+  "description": "御坂粉丝站",
   "icons": [
     {
-      "src": "/src/assets/128.ico",
+      "src": "128.ico",
       "sizes": "128x128",
       "type": "ico"
     },
     {
-      "src": "/src/assets/128.ico",
+      "src": "512.ico",
       "sizes": "512x512",
       "type": "ico"
     }
