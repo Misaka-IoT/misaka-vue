@@ -4,12 +4,12 @@
   "description": "御坂粉丝站",
   "icons": [
     {
-      "src": "./128.ico",
+      "src": "https://vue.misaka-fans.space/128.ico",
       "sizes": "128x128",
       "type": "ico"
     },
     {
-      "src": "./512.ico",
+      "src": "https://vue.misaka-fans.space/512.ico",
       "sizes": "512x512",
       "type": "ico"
     }
