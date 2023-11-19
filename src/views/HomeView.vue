@@ -77,8 +77,8 @@ let isPnone = ref(window.innerWidth > 600);
       <h2>什么？想加入计划？</h2>
       <p>
         如果你想参加开发这个网页，或有好的建议，欢迎联系<a
-          href="mailto:shbwb@misaka-mikoto.jp"
-          >shbwb@misaka-mikoto.jp</a
+          href="mailto:contact@misaka-fans.space"
+          >contact@misaka-fans.space</a
         >或在bilibili私信<a
           href="https://space.bilibili.com/1421279902"
           target="_blank"
