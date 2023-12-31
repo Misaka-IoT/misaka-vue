@@ -1,33 +1,28 @@
-<template>
-    
-</template>
+<template></template>
 <script lang="ts">
-  import axios from 'axios';
-  export default {
-    name: 'MisakaGpt',
-    data() {
-      return {
-        messages:[{}]
-      };
+import axios from 'axios';
+export default {
+  name: 'MisakaGpt',
+  data() {
+    return {
+      messages: [{}],
+    };
+  },
+  methods: {
+    GetReply(newmessage: string) {
+      this.messages.push({ role: 'user', content: newmessage });
+      axios
+        .post('https://misakagpt.z2bguoguos.gq/', JSON.stringify(this.messages))
+        .then((res) => {
+          this.messages.push({ role: 'assistant', content: res.data.result });
+          alert(res.data.result);
+          console.log(res.data.result);
+        });
     },
-    methods: {
-    GetReply(newmessage:string)
-        {
-            this.messages.push({"role": "user","content": newmessage})
-            axios.post('https://misakagpt.z2bguoguos.gq/',JSON.stringify(this.messages))
-            .then((res) => {
-                this.messages.push({"role": "assistant","content":res.data.result}) ;
-                alert(res.data.result)
-                console.log(res.data.result);   
-            });
-        },
-    },
-    created() {
-        this.messages.splice(0,this.messages.length);
-    },
-    
-  };
+  },
+  created() {
+    this.messages.splice(0, this.messages.length);
+  },
+};
 </script>
-<style lang="scss" scoped>
-</style>
-  
+<style lang="scss" scoped></style>
