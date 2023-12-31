@@ -10,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import MusicSwitcher from '@/components/MusicSwitcher.vue';
 import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
+import MisakaGpt from './components/MisakaGpt.vue';
 import AdvancedDanMu from './components/AdvancedDanMu.vue';
 // other components
 import { Icon } from '@iconify/vue';
@@ -109,6 +110,7 @@ import { Icon } from '@iconify/vue';
         :toggleLoopDanmu="toggleLoopDanmu"
         :toggleDanmu="toggleDanmu"
         :pushDanmu="pushDanmu"></DanmuSwitcher>
+      <MisakaGpt></MisakaGpt>
       <button class="fab back-to-top" @click="backToTop = !backToTop">
         <Icon icon="material-symbols:straight" width="24" height="24" />
       </button>
