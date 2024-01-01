@@ -41,7 +41,7 @@ export default {
         {
           id: 'Misaka',
           name: 'Misaka',
-          imageUrl: './src/assets/炮姐吃蛋糕.webp',
+          imageUrl: 'https://raw.githubusercontent.com/Misaka-IoT/misaka-vue/main/src/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.webp',
         },
       ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       messageList: [{ type: 'text', author: `me`, data: { text: `` } }], // the list of the messages to show, can be paginated and adjusted dynamically
