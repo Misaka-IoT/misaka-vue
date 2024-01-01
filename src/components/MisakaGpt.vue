@@ -19,10 +19,20 @@ export default {
           console.log(res.data.result);
         });
     },
+    GetReply2(newmessage: string) {
+      this.messages.push({ role: 'user', content: newmessage });
+      axios
+        .post('https://misakagpt.z2bguoguos.gq/', JSON.stringify(this.messages))
+        .then((res) => {
+          this.messages.push({ role: 'assistant', content: res.data.result });
+          this.SendGPT(res.data.result)
+        });
+    },
   },
   created() {
     this.messages.splice(0, this.messages.length);
   },
+  props: ['SendGPT'],
 };
 </script>
 <style lang="scss" scoped></style>
