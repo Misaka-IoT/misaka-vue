@@ -25,7 +25,7 @@ export default {
         .post('https://misakagpt.z2bguoguos.gq/', JSON.stringify(this.messages))
         .then((res) => {
           this.messages.push({ role: 'assistant', content: res.data.result });
-          this.SendGPT(res.data.result)
+          this.SendGPT(res.data.result);
         });
     },
   },

@@ -11,7 +11,7 @@ import MusicSwitcher from '@/components/MusicSwitcher.vue';
 import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
 import AdvancedDanMu from './components/AdvancedDanMu.vue';
-import ChatMisaka from './components/ChatMisaka.vue'
+import ChatMisaka from './components/ChatMisaka.vue';
 // other components
 import { Icon } from '@iconify/vue';
 </script>
