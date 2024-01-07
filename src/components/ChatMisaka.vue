@@ -107,6 +107,9 @@ export default {
       document
         .getElementsByClassName('sc-user-input--text')[0]
         .setAttribute('placeholder', '请输入想询问御坂的内容');
+      document
+        .getElementsByClassName('sc-message-list')[0]
+        .setAttribute('style', 'border-radius:50px');
       this.newMessagesCount = 0;
     },
     handleScrollToTop() {
