@@ -27,7 +27,7 @@
       <hr />
       <h2>四、安全</h2>
       <p>
-        本网站采用 Japan register service (JPRS)
+        本网站采用 Let's Encrypt（来源于CloudFlare）
         颁发的TLS/SSL证书，为网站安全性再添一层防护，
         如要验证此网站的安全性，可点击页脚的锁头查看证书的可用性。或点击浏览器上的锁头，已确保当前链接收到保护。
         <a href="ssl" target="_blank">点击此以验证证书完整性</a>
@@ -43,7 +43,7 @@
         <ContributorCard
           username="misaka-fans"
           name="Misaka Fans"
-          email="shbwb@misaka-mikoto.jp">
+          email="contact@misaka-fans.space">
           主要贡献：绝大多数内容，留言板，PWA，照片收集、整理，吉祥物，细节内容审查修改
         </ContributorCard>
         <ContributorCard
