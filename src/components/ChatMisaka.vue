@@ -41,7 +41,7 @@ export default {
         {
           id: 'Misaka',
           name: 'Misaka',
-          imageUrl: 'https://raw.githubusercontent.com/Misaka-IoT/misaka-vue/main/src/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.webp',
+          imageUrl: 'https://vue.misaka-fans.space/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.6c221c5c.webp',
         },
       ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       messageList: [{ type: 'text', author: `me`, data: { text: `` } }], // the list of the messages to show, can be paginated and adjusted dynamically
@@ -93,13 +93,20 @@ export default {
       // called when the user sends a message
       this.messageList = [...this.messageList, message];
       (this.$refs.MisakaGpts as any).GetReply2(message.data.text);
+      this.messageList = [
+        ...this.messageList,
+        { type: 'text', author: `Misaka`, data: { text: '生成中...' } },
+      ];
     },
     ClickChat() {
       // called when the user clicks on the fab button to open the chat
       this.isChatOpen = !this.isChatOpen;
       document
         .getElementsByClassName('sc-chat-window')[0]
-        .setAttribute('style', 'bottom:200px;z-index:20');
+        .setAttribute('style', 'bottom:200px;z-index:20;max-height:50%');
+      document
+        .getElementsByClassName('sc-user-input--text')[0]
+        .setAttribute('placeholder', '请输入想询问御坂的内容');
       this.newMessagesCount = 0;
     },
     handleScrollToTop() {
@@ -112,10 +119,7 @@ export default {
       this.isChatOpen = false;
     },
     SendGPTs(res: any) {
-      this.messageList = [
-        ...this.messageList,
-        { type: 'text', author: `Misaka`, data: { text: res } },
-      ];
+      this.messageList[this.messageList.length-1] ={ type: 'text', author: `Misaka`, data: { text: res } };
     },
   },
   created() {
