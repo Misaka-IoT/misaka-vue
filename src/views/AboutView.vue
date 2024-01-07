@@ -6,7 +6,7 @@
       <p>
         这个网站为<i><b>公益网站</b></i
         >，非必须情况下，不接受资助或投资，不会发起<i><b>汇款</b></i
-        >等活动。
+        >或强制性付款等活动，仅以自愿捐款形式在底部留有一个收款码以贴支出，不存在其他收款方式。目前共回收成本：8元。
       </p>
       <hr />
       <h2>二、联系</h2>
@@ -94,6 +94,9 @@
         ><br />
         <a href="https://github.com/arcxingye/EatKano/" target="_blank"
           >吃掉小鹿乃（许可证：MIT）：新概念音游</a
+        ><br />
+        <a href="https://github.com/Sitronik/vue3-beautiful-chat" target="_blank"
+          >vue3-beautiful-chat（许可证：MIT）：御坂AI入口UI</a
         >
       </p>
     </div>
