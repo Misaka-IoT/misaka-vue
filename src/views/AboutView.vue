@@ -47,7 +47,7 @@
           主要贡献：绝大多数内容，留言板，PWA，照片收集、整理，吉祥物，细节内容审查修改
         </ContributorCard>
         <ContributorCard
-          username="volpan"
+          username="vollowx"
           name="HugePancake"
           email="huge.pancake.zxr@gmail.com">
           主要贡献：样式，package相关，规范化，代码复用，开启vue项目
