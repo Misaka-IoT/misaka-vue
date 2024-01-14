@@ -88,14 +88,6 @@ import { Icon } from '@iconify/vue';
               class="md-source__repository md-source__repository--active"
               style="width: 150%">
               misaka-fans
-              <ul class="md-source__facts">
-                <li class="md-source__fact md-source__fact--stars">
-                  {{ stargazersCount }}
-                </li>
-                <li class="md-source__fact md-source__fact--forks">
-                  {{ forksCount }}
-                </li>
-              </ul>
             </div>
           </a>
         </div>
