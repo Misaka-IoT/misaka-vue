@@ -62,10 +62,10 @@ const activeName = ref('1');
 </script>
 
 <style scoped lang="scss">
-// * {
-//   color: var(--color-theme);
-//   background-color: var(--color-background);
-// }
+* {
+    color: var(--color-theme);
+    background-color: var(--color-background);
+ }
 
 @media screen and (min-width: 900px) {
   .container-fluid {
