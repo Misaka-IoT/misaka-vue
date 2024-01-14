@@ -1,7 +1,8 @@
 <template>
   <footer class="app-footer">
     <RouterLink to="/donate"><b>捐助此项目</b></RouterLink>
-    <p>&copy; 2023 shbwb(misaka-fans)</p>
+    <p>&copy; 2022-2024 shbwb(misaka-fans)</p>
+    <p>Developed For Each Animate Lovers</p>
     <p>
       <span id="busuanzi_container_site_uv"
         >本站总访问次数 <span id="busuanzi_value_site_pv"></span> 次</span
