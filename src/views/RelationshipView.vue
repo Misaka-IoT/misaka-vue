@@ -66,7 +66,13 @@ const activeName = ref('1');
     color: var(--color-theme);
     background-color: var(--color-background);
  }
-
+.accordion {
+      --el-collapse-header-bg-color: var(--bg-color-background);
+      --el-collapse-header-color: var(--color-theme);
+      --el-collapse-header-text-color: var(--color-theme);
+      --el-collapse-content-bg-color: var(--bg-color-background);
+      --el-collapse-content-text-color: var(--color-theme);
+}
 @media screen and (min-width: 900px) {
   .container-fluid {
     display: flex;
