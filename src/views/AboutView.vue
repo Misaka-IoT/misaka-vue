@@ -95,7 +95,9 @@
         <a href="https://github.com/arcxingye/EatKano/" target="_blank"
           >吃掉小鹿乃（许可证：MIT）：新概念音游</a
         ><br />
-        <a href="https://github.com/Sitronik/vue3-beautiful-chat" target="_blank"
+        <a
+          href="https://github.com/Sitronik/vue3-beautiful-chat"
+          target="_blank"
           >vue3-beautiful-chat（许可证：MIT）：御坂AI入口UI</a
         >
       </p>

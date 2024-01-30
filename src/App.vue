@@ -134,7 +134,7 @@ export default {
     }
 
     // 使用axios获取star和fork数量
-  /*axios
+    /*axios
       .get('https://api.github.com/repos/Misaka-IoT/misaka-vue/')
       .then((res) => {
         this.stargazersCount = res.data.stargazers_count;

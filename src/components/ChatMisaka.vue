@@ -29,22 +29,26 @@ import { Icon } from '@iconify/vue';
       :messageStyling="messageStyling"
       @onType="handleOnType" />
   </div>
-  <vueLive2d style="position: fixed; bottom: 0; right: 50;opacity:0.6" :model="mode" apiPath="https://misaka-fans.github.io/live2d/"></vueLive2d>
+  <vueLive2d
+    style="position: fixed; bottom: 0; right: 50; opacity: 0.6"
+    :model="mode"
+    apiPath="https://misaka-fans.github.io/live2d/"></vueLive2d>
 </template>
 <script lang="ts">
 import MisakaGpt from './MisakaGpt.vue';
-import vueLive2d from 'vue-live2d'
+import vueLive2d from 'vue-live2d';
 export default {
   name: 'ChatMisaka',
   components: { MisakaGpt },
   data() {
     return {
-      mode:["mikoto","mikoto.model"],
+      mode: ['mikoto', 'mikoto.model'],
       participants: [
         {
           id: 'Misaka',
           name: 'Misaka',
-          imageUrl: 'https://vue.misaka-fans.space/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.6c221c5c.webp',
+          imageUrl:
+            'https://vue.misaka-fans.space/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.6c221c5c.webp',
         },
       ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       messageList: [{ type: 'text', author: `me`, data: { text: `` } }], // the list of the messages to show, can be paginated and adjusted dynamically
@@ -125,18 +129,23 @@ export default {
       this.isChatOpen = false;
     },
     SendGPTs(res: any) {
-      this.messageList[this.messageList.length-1] ={ type: 'text', author: `Misaka`, data: { text: res } };
+      this.messageList[this.messageList.length - 1] = {
+        type: 'text',
+        author: `Misaka`,
+        data: { text: res },
+      };
     },
   },
   created() {
     this.messageList.splice(0, this.messageList.length);
-    
   },
-  mounted()
-  {
-    document.getElementsByClassName("vue-live2d-tool")[0].setAttribute('style', 'opacity:0');
-    document.getElementsByClassName("vue-live2d-tip vue-live2d-tip-on-top")[0].setAttribute('style', 'opacity:0');
-    
+  mounted() {
+    document
+      .getElementsByClassName('vue-live2d-tool')[0]
+      .setAttribute('style', 'opacity:0');
+    document
+      .getElementsByClassName('vue-live2d-tip vue-live2d-tip-on-top')[0]
+      .setAttribute('style', 'opacity:0');
   },
 };
 </script>
