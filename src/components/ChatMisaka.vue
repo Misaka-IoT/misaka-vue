@@ -29,14 +29,17 @@ import { Icon } from '@iconify/vue';
       :messageStyling="messageStyling"
       @onType="handleOnType" />
   </div>
+  <vueLive2d style="position: fixed; bottom: 0; right: 50;opacity:0.6" :model="mode" apiPath="https://misaka-fans.github.io/live2d/"></vueLive2d>
 </template>
 <script lang="ts">
 import MisakaGpt from './MisakaGpt.vue';
+import vueLive2d from 'vue-live2d'
 export default {
   name: 'ChatMisaka',
   components: { MisakaGpt },
   data() {
     return {
+      mode:["mikoto","mikoto.model"],
       participants: [
         {
           id: 'Misaka',
@@ -127,6 +130,13 @@ export default {
   },
   created() {
     this.messageList.splice(0, this.messageList.length);
+    
+  },
+  mounted()
+  {
+    document.getElementsByClassName("vue-live2d-tool")[0].setAttribute('style', 'opacity:0');
+    document.getElementsByClassName("vue-live2d-tip vue-live2d-tip-on-top")[0].setAttribute('style', 'opacity:0');
+    
   },
 };
 </script>
