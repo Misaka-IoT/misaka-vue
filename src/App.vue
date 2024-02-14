@@ -148,7 +148,8 @@ export default {
       stargazersCount: 0,
       forksCount: 0,
       site: 'main',
-      cdnRootUrl: 'https://img-cdn-for-misaka.misaka-network.tk/',
+      cdnRootUrl: 'https://raw.misaka-fans.space/pic/',
+      //https://img-cdn-for-misaka.misaka-network.tk/
       danmu: {
         danmus: [] as any,
         channels: 0,
