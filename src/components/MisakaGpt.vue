@@ -12,7 +12,7 @@ export default {
     GetReply(newmessage: string) {
       this.messages.push({ role: 'user', content: newmessage });
       axios
-        .post('https://misakagpt.z2bguoguos.gq/', JSON.stringify(this.messages))
+        .post('https://misakagpt.init-misaka-mikoto.workers.dev/', JSON.stringify(this.messages))
         .then((res) => {
           this.messages.push({ role: 'assistant', content: res.data.result });
           alert(res.data.result);
@@ -22,7 +22,7 @@ export default {
     GetReply2(newmessage: string) {
       this.messages.push({ role: 'user', content: newmessage });
       axios
-        .post('https://misakagpt.z2bguoguos.gq/', JSON.stringify(this.messages))
+        .post('https://misakagpt.init-misaka-mikoto.workers.dev/', JSON.stringify(this.messages))
         .then((res) => {
           this.messages.push({ role: 'assistant', content: res.data.result });
           this.SendGPT(res.data.result);
