@@ -20,7 +20,7 @@ const data = [
   {
     name: "liangburs' blog",
     desc: 'May all the beauty be blessed. —— 《Moon Halo》',
-    link: 'https://static.misaka-mikoto.jp/',
+    link: 'https://blog.cnmobile.link/',
   },
   {
     name: '倾丞の小窝',
