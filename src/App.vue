@@ -181,7 +181,7 @@ export default {
     getDanmu() {
       console.log(window.location.pathname);
       axios
-        .get('https://danmu.init-misaka-mikoto.workers.dev/', {
+        .get('https://danmu.z2bguoguo.cn/', {
           headers: { page: window.location.pathname },
         })
         .then((res) => {
@@ -191,7 +191,7 @@ export default {
     getDanmu2(herfs: string | null) {
       console.log(herfs);
       axios
-        .get('https://danmu.init-misaka-mikoto.workers.dev/', {
+        .get('https://danmu.z2bguoguo.cn/', {
           headers: { page: herfs },
         })
         .then((res) => {
@@ -199,7 +199,7 @@ export default {
         });
     },
     pushDanmu(str: string) {
-      axios.post('https://danmu.init-misaka-mikoto.workers.dev/', str, {
+      axios.post('https://danmu.z2bguoguo.cn/', str, {
         headers: { page: window.location.pathname },
       });
       this.danmu.danmus.push(str);

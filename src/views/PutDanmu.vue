@@ -24,7 +24,7 @@ export default {
   methods: {
     putDanmu() {
       axios
-        .put('https://danmu.init-misaka-mikoto.workers.dev/', this.danmu, {
+        .put('https://danmu.z2bguoguo.cn/', this.danmu, {
           headers: { page: this.page, password: this.password },
         })
         .then((res) => {
@@ -36,7 +36,7 @@ export default {
     },
     getDanmu() {
       axios
-        .get('https://danmu.init-misaka-mikoto.workers.dev/', {
+        .get('https://danmu.z2bguoguo.cn/', {
           headers: { page: this.page },
         })
         .then((res) => {
