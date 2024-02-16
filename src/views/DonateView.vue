@@ -15,7 +15,7 @@
     <p>2、付款了不会拥有诸如头衔，会员之类的权益，所以在捐助前请深思！！！</p>
     <br />
     <h2>下面是目前可用的支付方式</h2>
-    <p><a href="https://www.buymeacoffee.com/misakafanst" target="_blank">Buy Me A Coffee</a>：需要借记卡/银行卡，未成年人请获得监护人批准后操作。</p>
+    <p><a href="https://www.buymeacoffee.com/misakatomoyo" target="_blank">Buy Me A Coffee</a>：需要借记卡/银行卡，未成年人请获得监护人批准后操作。</p>
   </div>
 </template>
 <style>
