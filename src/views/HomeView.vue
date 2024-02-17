@@ -26,7 +26,7 @@ let isPnone = ref(window.innerWidth > 600);
         <el-carousel-item v-for="item in 4" :key="item">
           <el-image
             fit="cover"
-            :src="`https://misaka-fans-photos.github.io/pic/waterfall${item}.webp`"
+            :src="`https://raw.misaka-fans.space/pic/waterfall${item}.webp`"
             class="carousel-img"
             alt="" />
         </el-carousel-item>
@@ -41,7 +41,7 @@ let isPnone = ref(window.innerWidth > 600);
         <el-carousel-item v-for="item in 4" :key="item">
           <el-image
             fit="cover"
-            :src="`https://misaka-fans-photos.github.io/pic/waterfall${item}.webp`"
+            :src="`https://raw.misaka-fans.space/pic/waterfall${item}.webp`"
             class="carousel-img"
             alt="" />
         </el-carousel-item>
