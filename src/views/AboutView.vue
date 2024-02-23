@@ -67,7 +67,7 @@
         <ContributorCard
           username="z2bguoguo"
           name="中二病guoguo"
-          email="z2bguoguo@z2bguoguos.ml">
+          email="z2bguoguo@z2bguoguo.cn">
           主要贡献：css切换器，静音按钮，人际关系页面，部分内容的美化，参与vue版改造
         </ContributorCard>
         <ContributorCard
