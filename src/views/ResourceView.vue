@@ -1,4 +1,6 @@
 <template>
+  <h1>温馨提示</h1>
+  <p>部分资源存在OneDrive中。由于OneDrive网页版在国内无法正常连接，请在安装OneDrive App后再点击链接，没问题的话将自动跳转至App内查看，才可正常下载。如遇到困难，请联系站长。</p>
   <div class="container">
     <!-- 某科学的超电磁炮 第一季 -->
     <div id="card-1" class="card">
@@ -7,9 +9,10 @@
         <h2>01</h2>
         <h3>某科学的超电磁炮第一季</h3>
         <p>动画生肉资源</p>
-        <p><b>提取码：06if</b></p>
-        <p>资源提供：@sudoriaa</p>
-        <a href="https://www.aliyundrive.com/s/LgMNktwcV1o">阿里云盘</a>
+        <p><b>提示安装OneDrive软件后打开</b></p>
+        <p>资源提供：@abigdealman</p>
+        <a href="https://1drv.ms/f/c/46d0f49f6fdf53a3/Ehs1p3_5fChFtRHRYBKMTVwBcng_FqebDVLqjkCvq009vQ?e=O3cfMA" target="_blank">OneDrive</a>
+        <!--<a href="https://www.aliyundrive.com/s/LgMNktwcV1o">阿里云盘</a>-->
       </div>
     </div>
     <!-- 某科学的超电磁炮S -->
@@ -19,9 +22,10 @@
         <h2>02</h2>
         <h3>某科学的超电磁炮S</h3>
         <p>动画生肉资源</p>
-        <p><b>提取码：2fb4</b></p>
-        <p>资源提供：@sudoriaa</p>
-        <a href="https://www.aliyundrive.com/s/gcDkhdZvHiZ">阿里云盘</a>
+        <p><b>提示：安装OneDrive软件后打开</b></p>
+        <p>资源提供：@abigdealman</p>
+        <a href="https://1drv.ms/f/c/46d0f49f6fdf53a3/EilI5RDosDRLnNTNbGDIAmABxbufe4gxypdR7P2FS9xC_w?e=TMu1zi" target="_blank">OneDrive</a>
+        <!--<a href="https://www.aliyundrive.com/s/gcDkhdZvHiZ">阿里云盘</a>-->
       </div>
     </div>
     <!-- 某科学的超电磁炮T-->
@@ -30,7 +34,7 @@
         <h2>03</h2>
         <h3>某科学的超电磁炮T</h3>
         <p>动画生肉资源</p>
-        <p><b>提取码：6vc3</b></p>
+        <p><b>密码：6vc3</b></p>
         <p>资源提供：@sudoriaa</p>
         <a href="https://www.aliyundrive.com/s/9PZWRyxYbUt">阿里云盘</a>
       </div>
