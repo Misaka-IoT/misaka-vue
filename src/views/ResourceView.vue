@@ -1,7 +1,7 @@
 <template>
-  <h1>温馨提示</h1>
-  <p>部分资源存在OneDrive中。由于OneDrive网页版在国内无法正常连接，请在安装OneDrive App后再点击链接，没问题的话将自动跳转至App内查看，才可正常下载。如遇到困难，请联系站长。</p>
   <div class="container">
+    <h1>温馨提示:</h1>
+    <p>部分资源存在OneDrive中。由于OneDrive网页版在国内无法正常连接，请在安装OneDrive App后再点击链接，没问题的话将自动跳转至App内查看，才可正常下载。如遇到困难，请联系站长。</p>
     <!-- 某科学的超电磁炮 第一季 -->
     <div id="card-1" class="card">
       <div id="bg" class="bg1"></div>
