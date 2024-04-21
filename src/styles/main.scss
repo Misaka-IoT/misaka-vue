@@ -100,6 +100,15 @@ hr {
   color: var(--color-on-theme);
   opacity: 0.8;
 }
+.Login-on {
+  position: fixed;
+  bottom: 76px;
+  right: 76px;
+  background: var(--color-theme);
+  border-radius: 15px;
+  color: var(--color-on-theme);
+  opacity: 0.8;
+}
 .GPT-setting {
   position: fixed;
   bottom: 135px;
