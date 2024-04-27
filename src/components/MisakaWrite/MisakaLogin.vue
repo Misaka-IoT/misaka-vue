@@ -1,11 +1,9 @@
 <template>
 <div v-if="on" style="border: solid;border-radius:25px;padding:10px;margin: 10px;width:250px">
-    <from @submit.prevent="Logins">
-        邮箱：<input type="text" v-model="em"/><br>
-        验证码：<input type="text" v-model="code"/>
-        <button :onClick="Send">发送验证码</button><br>
-        <input type="submit" value="登陆" />
-    </from>
+    邮箱：<input type="text" v-model="em"/><br>
+    验证码：<input type="text" v-model="code"/>
+    <button :onClick="Send">发送验证码</button><br>
+    <button :onClick="Logins">登陆</button>
 </div>
 </template>
 <script lang="ts">
@@ -21,15 +19,35 @@
       };
     },
     methods: {
-        Login(tokens:string,ems:string):Boolean{
-            axios
-            .get('https://yzm.z2bguoguo.cn/',{
-                headers: { mode:"login",em:ems,token:tokens },
-            })
-            .then((res) => {
-                return res.data=="ok";
-            });
-            return false;
+        async Login(){
+            
+            var logins=localStorage.getItem("Login");
+            var lo=false;
+            if(logins!=null)
+            {
+                var l=JSON.parse(logins)
+                await axios
+                .get('https://yzm.z2bguoguo.cn/',{
+                    headers: { mode:"login",em:l?.em,token:l?.token },
+                })
+                .then((res) => {
+                    if(res.data=="ok")
+                    {
+                        this.loginx=l
+                        lo=true;
+                    }
+                    else
+                    {
+                        localStorage.removeItem("Login")
+                        lo=false;
+                    }
+                    
+                });
+               
+            }
+            this.on=!lo;
+            
+            
         },
         Logins()
         {
@@ -38,11 +56,12 @@
                 headers: { mode:"yzm",em:this.em,code:this.code },
             })
             .then((res) => {
-                var b=JSON.parse(res.data);
+                var b=res.data;
                 if(b?.con=="ok")
                 {
                     this.loginx.token=b.token;
                     this.loginx.em=this.em;
+                    localStorage.setItem("Login", JSON.stringify( this.loginx))
                     alert("登陆成功")
                 }
                 else
@@ -69,26 +88,8 @@
         }
     },
     created() {   
-        var logins=localStorage.getItem("Login");
-        var lo=false;
-        if(logins!=null)
-        {
-            var l=JSON.parse(logins)
-            if(this.Login(l?.token,l?.em))
-            {
-                this.loginx=l
-                lo=true;
-            }
-            else
-            {
-                localStorage.removeItem("Login")
-                lo=false;
-            }
-        }
-        if(!lo)
-        {
-            this.on=true;
-        }
+        this.Login();
+        
     },
   };
 </script>
