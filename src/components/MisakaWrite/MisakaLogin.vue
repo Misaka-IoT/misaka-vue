@@ -27,7 +27,7 @@
             {
                 var l=JSON.parse(logins)
                 await axios
-                .get('https://yzm.z2bguoguo.cn/',{
+                .get('https://yzm.z2bguoguo.cn',{
                     headers: { mode:"login",em:l?.em,token:l?.token },
                 })
                 .then((res) => {
