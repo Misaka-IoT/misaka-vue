@@ -3,7 +3,7 @@ import { Icon } from '@iconify/vue';
 </script>
 
 <template>
-    <MisakaLogin :on="on"></MisakaLogin>
+    <MisakaLogin :on="on" @LoginSwich="But"></MisakaLogin>
     <button class="icon-btn standard no-color" :onClick="But">
         <Icon icon="material-symbols:login" width="24" height="24" />
     </button>
