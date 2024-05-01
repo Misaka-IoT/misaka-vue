@@ -101,13 +101,15 @@ hr {
   opacity: 0.8;
 }
 .Login-on {
-  position: fixed;
-  bottom: 76px;
-  right: 76px;
+  position: absolute;
+  bottom: -750%;
+  left: 40%;
   background: var(--color-theme);
-  border-radius: 15px;
   color: var(--color-on-theme);
-  opacity: 0.8;
+  border-radius:25px;
+  padding:10px;
+  z-index: 999;
+  transform: scale(1.5);
 }
 .GPT-setting {
   position: fixed;

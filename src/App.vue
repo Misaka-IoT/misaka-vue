@@ -12,6 +12,7 @@ import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
 import AdvancedDanMu from './components/AdvancedDanMu.vue';
 import ChatMisaka from './components/ChatMisaka.vue';
+import LoginButton from './components/MisakaWrite/LoginButton.vue';
 // other components
 import { Icon } from '@iconify/vue';
 </script>
@@ -90,6 +91,7 @@ import { Icon } from '@iconify/vue';
       <template #actionBtns>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
+        <LoginButton></LoginButton>
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>

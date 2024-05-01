@@ -1,9 +1,9 @@
 <template>
-<div v-if="on" style="border: solid;border-radius:25px;padding:10px;margin: 10px;width:250px">
-    邮箱：<input type="text" v-model="em"/><br>
-    验证码：<input type="text" v-model="code"/>
-    <button :onClick="Send">发送验证码</button><br>
-    <button :onClick="Logins">登陆</button>
+<div v-if="on" class="Login-on">
+    邮&nbsp&nbsp&nbsp箱：<input type="text" v-model="em" style="border: none;border-radius: 50px"/><br>
+    验证码：<input type="text" v-model="code" style="border: none;border-radius: 50px 0px 0px 50px;"/>
+    <button :onClick="Send" style="border: none;border-radius: 0px 50px 50px 0px;" >发送验证码</button><br>
+    <button :onClick="Logins" style="border: none;border-radius: 50px ;margin-left: 100px;margin-top: 10px;width: 100px;height: 50px;">登陆</button>
 </div>
 </template>
 <script lang="ts">
@@ -13,16 +13,15 @@
     data() {
       return {
         loginx:{token:"",em:""},
-        on:false,
         em:"",
         code:"",
+        login:false,
       };
     },
     methods: {
         async Login(){
             
             var logins=localStorage.getItem("Login");
-            var lo=false;
             if(logins!=null)
             {
                 var l=JSON.parse(logins)
@@ -34,18 +33,18 @@
                     if(res.data=="ok")
                     {
                         this.loginx=l
-                        lo=true;
+                        this.login=true;
                     }
                     else
                     {
                         localStorage.removeItem("Login")
-                        lo=false;
+                        this.login=false;
                     }
                     
                 });
                
             }
-            this.on=!lo;
+            //this.on=!lo;
             
             
         },
@@ -89,8 +88,8 @@
     },
     created() {   
         this.Login();
-        
     },
+    props:['on'],
   };
 </script>
   
