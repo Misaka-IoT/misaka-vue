@@ -27,7 +27,7 @@
             {
                 var l=JSON.parse(logins)
                 await axios
-                .get('https://yzm.z2bguoguo.cn',{
+                .get('https://yzm.z2bguoguo.cn/',{
                     headers: { mode:"login",em:l?.em,token:l?.token },
                 })
                 .then((res) => {
@@ -73,7 +73,7 @@
         Send()
         {
             axios
-            .put('http://yzm.z2bguoguo.cn/',this.em, {
+            .put('https://yzm.z2bguoguo.cn/',this.em, {
           headers: {},})
             .then((res) => {
                 if(res.data=="good")
