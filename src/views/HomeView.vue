@@ -80,9 +80,9 @@ let isPnone = ref(window.innerWidth > 600);
           href="mailto:contact@misaka-fans.space"
           >contact@misaka-fans.space</a
         >或在bilibili私信<a
-          href="https://space.bilibili.com/1421279902"
+          href=""
           target="_blank"
-          >@shbwb</a
+          >@kanadeCN</a
         >，也可以访问<a
           href="https://github.com/Misaka-IoT/misaka-vue"
           target="_blank"
