@@ -102,28 +102,30 @@ hr {
 }
 .Login-on {
   position: absolute;
-  bottom: -750%;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 550%;
   background: var(--color-theme);
   color: var(--color-on-theme);
   border-radius:25px;
   padding:10px;
   z-index: 11;
-  transform: scale(1.5);
-  height: 150px;
-  width:31%;
+  height: 200%;
 }
 .UP-on {
   position: absolute;
   bottom: 20%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  top:50%;
   background: var(--color-theme);
   color: var(--color-on-theme);
   border-radius:25px;
   padding:10px;
   z-index: 10;
-  transform: scale(1.5);
-  height: 440px;
+  height: 45%;
+  width: 25%;
+
 }
 .Read-on {
   position: absolute;
@@ -134,7 +136,8 @@ hr {
   border-radius:25px;
   padding:10px;
   z-index: 10;
-  transform: scale(1.5);
+  height: 50%;
+  width: 25%;
 }
 .WriteItem {
   background: var(--color-theme);

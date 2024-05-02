@@ -1,10 +1,10 @@
 <template>
 <div v-if="on" class="Read-on">
-    标题：<input type="text" :value="title" style="border: none;border-radius: 5px;margin-bottom:10px;" readonly/><br>
-    正文：<textarea :value="text" style="border: none;border-radius: 5px;height: 300px;width:300px" readonly/><br>
+    标题：<input type="text" :value="title" style="border: none;border-radius: 5px;margin-bottom:10px;width:100%" readonly/><br>
+    正文：<textarea :value="text" style="border: none;border-radius: 5px;height: 65%;width:100%" readonly/><br>
     {{ info }}
 </div>
-<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vw;background-color: rgba(0, 0, 0, 0.5);">
+<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0.5);">
 </div>
 </template>
 <script lang="ts">

@@ -1,11 +1,11 @@
 <template>
 <div v-if="on" class="UP-on">
-    标题：<input type="text" v-model="title" style="border: none;border-radius: 5px;margin-bottom:10px;"/><br>
-    正文：<textarea v-model="text" style="border: none;border-radius: 5px;height: 300px;width:300px"/><br>
+    标题：<input type="text" v-model="title" style="border: none;border-radius: 5px;margin-bottom:10px;width: 100%;"/><br>
+    正文：<textarea v-model="text" style="border: none;border-radius: 5px;height: 65%;width:100%"/><br>
     {{ info }}<br>
-    <button :onClick="Send" class="button" style="border: none;border-radius: 50px ;margin-left: 114px;margin-top: 10px;width: 100px;height: 50px;">上传</button>
+    <button :onClick="Send" class="button" style="    border: none;border-radius: 50px;left: 35%;top: 88%;height: 10%;">上传</button>
 </div>
-<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vw;background-color: rgba(0, 0, 0, 0.5);">
+<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0.5);">
 </div>
 </template>
 <script lang="ts">

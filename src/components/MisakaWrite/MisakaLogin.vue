@@ -1,12 +1,12 @@
 <template>
 <div v-if="on" class="Login-on">
     邮&nbsp&nbsp&nbsp箱：<input type="text" v-model="em" style="border: none;border-radius: 50px"/><br>
-    验证码：<input type="text" v-model="code" style="border: none;border-radius: 50px 0px 0px 50px;"/>
+    验证码：<input type="text" v-model="code" style="border: none;border-radius: 50px 0px 0px 50px;width: 40%;"/>
     <button :onClick="Send" style="border: none;border-radius: 0px 50px 50px 0px;" >发送验证码</button><br>
     {{ info }}<br>
-    <button :onClick="Logins" class="button" style="border: none;border-radius: 50px ;margin-left: 100px;margin-top: 10px;width: 100px;height: 50px;">登陆</button>
+    <button :onClick="Logins" class="button" style="border: none;border-radius: 50px ;left:35%;top: 70%;width: 20%;height: 25%;">登陆</button>
 </div>
-<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vw;background-color: rgba(0, 0, 0, 0.5);">
+<div :onclick="off" v-if="on" style="z-index: 9;position: fixed; top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0.5);">
 </div>
 </template>
 <script lang="ts">
