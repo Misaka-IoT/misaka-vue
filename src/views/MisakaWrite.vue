@@ -15,7 +15,7 @@ import { Icon } from '@iconify/vue';
   <button style="left: 12.5%;width: 50px;height: 50px;background-color: var(--color-theme);" class="icon-btn standard no-color" :onclick="UpSwich">
     <Icon icon="material-symbols:upload" width="50px" height="50px" />
   </button>
-  <Upload :on="OnUp"></Upload>
+  <Upload :on="OnUp" @UPSwich="UpSwich"></Upload>
 </template>
 <script lang="ts">
   import axios from 'axios';

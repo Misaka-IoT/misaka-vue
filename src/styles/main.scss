@@ -108,8 +108,10 @@ hr {
   color: var(--color-on-theme);
   border-radius:25px;
   padding:10px;
-  z-index: 999;
+  z-index: 11;
   transform: scale(1.5);
+  height: 150px;
+  width:31%;
 }
 .UP-on {
   position: absolute;
@@ -119,8 +121,9 @@ hr {
   color: var(--color-on-theme);
   border-radius:25px;
   padding:10px;
-  z-index: 999;
+  z-index: 10;
   transform: scale(1.5);
+  height: 440px;
 }
 .WriteItem {
   background: var(--color-theme);
