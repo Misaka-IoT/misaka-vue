@@ -107,8 +107,8 @@ hr {
   top: 550%;
   background: var(--color-theme);
   color: var(--color-on-theme);
-  border-radius:25px;
-  padding:10px;
+  border-radius: 25px;
+  padding: 10px;
   z-index: 11;
   height: 200%;
 }
@@ -117,15 +117,14 @@ hr {
   bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top:50%;
+  top: 50%;
   background: var(--color-theme);
   color: var(--color-on-theme);
-  border-radius:25px;
-  padding:10px;
+  border-radius: 25px;
+  padding: 10px;
   z-index: 10;
   height: 45%;
   width: 25%;
-
 }
 .Read-on {
   position: absolute;
@@ -133,8 +132,8 @@ hr {
   left: 50%;
   background: var(--color-theme);
   color: var(--color-on-theme);
-  border-radius:25px;
-  padding:10px;
+  border-radius: 25px;
+  padding: 10px;
   z-index: 10;
   height: 50%;
   width: 25%;
@@ -142,13 +141,14 @@ hr {
 .WriteItem {
   background: var(--color-theme);
   color: var(--color-on-theme);
-  border-radius:25px;
-  margin-bottom:10px;
+  border-radius: 25px;
+  margin-bottom: 10px;
 }
 .WriteIndex {
-  overflow-y: auto;height: 500px;
+  overflow-y: auto;
+  height: 500px;
   width: 25%;
-  border-radius:25px;
+  border-radius: 25px;
 }
 .GPT-setting {
   position: fixed;
