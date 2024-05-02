@@ -51,6 +51,7 @@ import { Icon } from '@iconify/vue';
         <a href="/eat-mikoto/index.html" target="_blank">新概念音游</a>
         <RouterLink to="/discuss">留言板</RouterLink>
         <RouterLink to="/resource">动漫资源</RouterLink>
+        <RouterLink to="/MisakaWrite">接力写作</RouterLink>
         <RouterLink to="/about">关于</RouterLink>
         <RouterLink to="/links">友情链接</RouterLink>
       </LinksWrapper>
