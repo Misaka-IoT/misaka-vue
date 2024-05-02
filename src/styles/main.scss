@@ -125,6 +125,17 @@ hr {
   transform: scale(1.5);
   height: 440px;
 }
+.Read-on {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius:25px;
+  padding:10px;
+  z-index: 10;
+  transform: scale(1.5);
+}
 .WriteItem {
   background: var(--color-theme);
   color: var(--color-on-theme);
