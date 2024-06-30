@@ -79,11 +79,7 @@ let isPnone = ref(window.innerWidth > 600);
         如果你想参加开发这个网页，或有好的建议，欢迎联系<a
           href="mailto:contact@misaka-fans.space"
           >contact@misaka-fans.space</a
-        >或在bilibili私信<a
-          href=""
-          target="_blank"
-          >@kanadeCN</a
-        >，也可以访问<a
+        >或在bilibili私信<a href="" target="_blank">@kanadeCN</a>，也可以访问<a
           href="https://github.com/Misaka-IoT/misaka-vue"
           target="_blank"
           >GitHub 仓库</a
