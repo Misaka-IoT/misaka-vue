@@ -62,8 +62,12 @@ export default {
 <style scoped lang="scss">
 img {
   height: auto;
-  border: 1px solid goldenrod;
-  box-shadow: 8px 8px 15px 1px #aaa;
+  border: 1px solid gray;
+  box-shadow: 8px 8px 12px 2px #aaa;
+}
+img:hover {
+  scale: 1.1;
+  transition: all 0.2s linear;
 }
 
 @media (min-width: 1200px) {

@@ -6,7 +6,8 @@
       <p>
         这个网站为<i><b>公益网站</b></i
         >，无收款才可开通的功能，不会发起强制<i><b>汇款</b></i
-        >或强制性付款等活动，仅以自愿捐款形式在底部留有Buy Me A Coffee与爱发电链接以贴支出，不存在其他收款方式。目前共回收成本：13元。
+        >或强制性付款等活动，仅以自愿捐款形式在底部留有Buy Me A
+        Coffee与爱发电链接以贴支出，不存在其他收款方式。目前共回收成本：13元。
       </p>
       <hr />
       <h2>二、联系</h2>
@@ -95,7 +96,9 @@
         <a href="https://github.com/arcxingye/EatKano/" target="_blank"
           >吃掉小鹿乃（许可证：MIT）：新概念音游</a
         ><br />
-        <a href="https://github.com/Sitronik/vue3-beautiful-chat" target="_blank"
+        <a
+          href="https://github.com/Sitronik/vue3-beautiful-chat"
+          target="_blank"
           >vue3-beautiful-chat（许可证：MIT）：御坂AI入口UI</a
         >
       </p>
