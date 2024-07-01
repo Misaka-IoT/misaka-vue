@@ -100,6 +100,56 @@ hr {
   color: var(--color-on-theme);
   opacity: 0.8;
 }
+.Login-on {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 550%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 11;
+  height: 200%;
+}
+.UP-on {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 10;
+  height: 45%;
+  width: 25%;
+}
+.Read-on {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 10;
+  height: 50%;
+  width: 25%;
+}
+.WriteItem {
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+.WriteIndex {
+  overflow-y: auto;
+  height: 500px;
+  width: 25%;
+  border-radius: 25px;
+}
 .GPT-setting {
   position: fixed;
   bottom: 135px;
