@@ -32,7 +32,7 @@ body {
   scroll-behavior: smooth;
 }
 
-[data-theme='light'] {
+[data-theme='light_p'] {
   --color-theme: #c49582;
   --color-theme-rgb: 196, 149, 130;
   --color-theme-variant: #c37a5d;
@@ -44,8 +44,10 @@ body {
   --color-background-rgb: 255, 255, 255;
   --color-text: #171717;
   --color-text-variant: #333333;
+  --write-w: 85%;
+  --write-l: 10%;
 }
-[data-theme='dark'] {
+[data-theme='dark_p'] {
   --color-theme: #c49582;
   --color-theme-rgb: 96, 49, 30;
   --color-theme-variant: #c37a5d;
@@ -57,8 +59,39 @@ body {
   --color-background-rgb: 23, 23, 23;
   --color-text: #ffffff;
   --color-text-variant: #eaeaea;
+  --write-w: 85%;
+  --write-l: 10%;
 }
-
+[data-theme='light_w'] {
+  --color-theme: #c49582;
+  --color-theme-rgb: 196, 149, 130;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #fffbff;
+  --color-surface-variant: #f5ded6;
+  --color-outline: #434343;
+  --color-background: #fffbff;
+  --color-background-rgb: 255, 255, 255;
+  --color-text: #171717;
+  --color-text-variant: #333333;
+  --write-w: 25%;
+  --write-l: 50%;
+}
+[data-theme='dark_w'] {
+  --color-theme: #c49582;
+  --color-theme-rgb: 96, 49, 30;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #201a18;
+  --color-surface-variant: #53433e;
+  --color-outline: #434343;
+  --color-background: #201a18;
+  --color-background-rgb: 23, 23, 23;
+  --color-text: #ffffff;
+  --color-text-variant: #eaeaea;
+  --write-w: 25%;
+  --write-l: 50%;
+}
 button,
 a,
 [tabindex] {
@@ -99,6 +132,56 @@ hr {
   border-radius: 15px;
   color: var(--color-on-theme);
   opacity: 0.8;
+}
+.Login-on {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 550%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 11;
+  height: 200%;
+}
+.UP-on {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 10;
+  height: 45%;
+  width: var(--write-w);
+}
+.Read-on {
+  position: absolute;
+  bottom: 20%;
+  left: var(--write-l);
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 10;
+  height: 50%;
+  width: var(--write-w);
+}
+.WriteItem {
+  background: var(--color-theme);
+  color: var(--color-on-theme);
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+.WriteIndex {
+  overflow-y: auto;
+  height: 500px;
+  width: var(--write-w);
+  border-radius: 25px;
 }
 .GPT-setting {
   position: fixed;
