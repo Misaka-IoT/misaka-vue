@@ -32,7 +32,7 @@ body {
   scroll-behavior: smooth;
 }
 
-[data-theme='light_p'] {
+[data-theme='light_phone'] {
   --color-theme: #c49582;
   --color-theme-rgb: 196, 149, 130;
   --color-theme-variant: #c37a5d;
@@ -47,7 +47,7 @@ body {
   --write-w: 85%;
   --write-l: 10%;
 }
-[data-theme='dark_p'] {
+[data-theme='dark_phone'] {
   --color-theme: #c49582;
   --color-theme-rgb: 96, 49, 30;
   --color-theme-variant: #c37a5d;
@@ -62,7 +62,7 @@ body {
   --write-w: 85%;
   --write-l: 10%;
 }
-[data-theme='light_w'] {
+[data-theme='light_pc'] {
   --color-theme: #c49582;
   --color-theme-rgb: 196, 149, 130;
   --color-theme-variant: #c37a5d;
@@ -77,7 +77,7 @@ body {
   --write-w: 25%;
   --write-l: 50%;
 }
-[data-theme='dark_w'] {
+[data-theme='dark_pc'] {
   --color-theme: #c49582;
   --color-theme-rgb: 96, 49, 30;
   --color-theme-variant: #c37a5d;
@@ -231,7 +231,9 @@ hr {
     color: black;
   }
 }
-
+.WriteInfo{
+  color: #ffcc00
+}
 @media (max-width: 900px) {
   .select-site {
     position: absolute;

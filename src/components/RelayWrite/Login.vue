@@ -1,6 +1,6 @@
 <template>
   <div v-if="on" class="Login-on">
-    <span style="letter-spacing:1em">邮</span>箱：<input
+    邮　箱：<input
       type="text"
       v-model="em"
       style="border: none; border-radius: 50px" /><br />
@@ -13,7 +13,7 @@
       style="border: none; border-radius: 0px 50px 50px 0px">
       发送验证码</button
     ><br />
-    <span style="color: #ffcc00">{{ info }}</span>
+    <span class="WriteInfo">{{ info }}</span>
     <br />
     <button
       :onClick="Logins"

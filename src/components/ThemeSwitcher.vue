@@ -29,8 +29,8 @@ export default {
       const flag = navigator.userAgent.match(
       /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
     )
-      ? '_p'
-      : '_w';
+      ? '_phone'
+      : '_pc';
       if (localStorage.getItem('settings.theme') == 'light') {
         document.documentElement.setAttribute('data-theme', 'dark'+flag);
         localStorage.setItem('settings.theme', 'dark');
