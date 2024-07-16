@@ -26,7 +26,7 @@
         width: 20%;
         height: 25%;
       ">
-      登陆
+      登录
     </button>
   </div>
   <div
