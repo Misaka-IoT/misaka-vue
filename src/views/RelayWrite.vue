@@ -57,19 +57,18 @@ export default {
       dzlb: [''],
     };
   },
-  watch:{ 
-  'AppThis.drawerOpened':{
-      immediate:true, 
-      handler:function (val,oldVal) {
-        if(val)
-      {
-        this.OnUp=false;
-        this.OnRead=false;
-      }
+  watch: {
+    'AppThis.drawerOpened': {
+      immediate: true,
+      handler: function (val, oldVal) {
+        if (val) {
+          this.OnUp = false;
+          this.OnRead = false;
+        }
       },
-      deep:true,
-  }
-},
+      deep: true,
+    },
+  },
   methods: {
     UpSwich() {
       this.OnUp = !this.OnUp;

@@ -113,11 +113,11 @@ import axios from 'axios';
 import vueDanmaku from 'vue3-danmaku';
 
 export default {
-  provide(){
-  return {
-    AppThis:this
-  }
-},
+  provide() {
+    return {
+      AppThis: this,
+    };
+  },
   computed: {
     navIcon(): string {
       return this.drawerOpened
