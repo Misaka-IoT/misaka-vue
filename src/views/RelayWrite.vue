@@ -48,6 +48,7 @@ import axios from 'axios';
 import Upload from '@/components/RelayWrite/Upload.vue';
 import ReadWord from '@/components/RelayWrite/ReadWord.vue';
 export default {
+  inject: ['AppThis'],
   data() {
     return {
       item: [{ id: '', title: '', star: '' }],
@@ -56,6 +57,19 @@ export default {
       dzlb: [''],
     };
   },
+  watch:{ //监听数据变化
+  'AppThis.drawerOpened':{
+      immediate:true, // 将立即以表达式的当前值触发回调
+      handler:function (val,oldVal) {
+        if(val)
+      {
+        this.OnUp=false;
+        this.OnRead=false;
+      }
+      },
+      deep:true,
+  }
+},
   methods: {
     UpSwich() {
       this.OnUp = !this.OnUp;
