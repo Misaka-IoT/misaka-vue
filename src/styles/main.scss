@@ -32,7 +32,7 @@ body {
   scroll-behavior: smooth;
 }
 
-[data-theme='light'] {
+[data-theme='light_p'] {
   --color-theme: #c49582;
   --color-theme-rgb: 196, 149, 130;
   --color-theme-variant: #c37a5d;
@@ -44,8 +44,9 @@ body {
   --color-background-rgb: 255, 255, 255;
   --color-text: #171717;
   --color-text-variant: #333333;
+  --write-w:100%
 }
-[data-theme='dark'] {
+[data-theme='dark_p'] {
   --color-theme: #c49582;
   --color-theme-rgb: 96, 49, 30;
   --color-theme-variant: #c37a5d;
@@ -57,8 +58,36 @@ body {
   --color-background-rgb: 23, 23, 23;
   --color-text: #ffffff;
   --color-text-variant: #eaeaea;
+  --write-w:100%
 }
-
+[data-theme='light_w'] {
+  --color-theme: #c49582;
+  --color-theme-rgb: 196, 149, 130;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #fffbff;
+  --color-surface-variant: #f5ded6;
+  --color-outline: #434343;
+  --color-background: #fffbff;
+  --color-background-rgb: 255, 255, 255;
+  --color-text: #171717;
+  --color-text-variant: #333333;
+  --write-w:25%
+}
+[data-theme='dark_w'] {
+  --color-theme: #c49582;
+  --color-theme-rgb: 96, 49, 30;
+  --color-theme-variant: #c37a5d;
+  --color-on-theme: #ffffff;
+  --color-surface: #201a18;
+  --color-surface-variant: #53433e;
+  --color-outline: #434343;
+  --color-background: #201a18;
+  --color-background-rgb: 23, 23, 23;
+  --color-text: #ffffff;
+  --color-text-variant: #eaeaea;
+  --write-w:25%
+}
 button,
 a,
 [tabindex] {
@@ -147,7 +176,7 @@ hr {
 .WriteIndex {
   overflow-y: auto;
   height: 500px;
-  width: 25%;
+  width: var(--write-w);
   border-radius: 25px;
 }
 .GPT-setting {

@@ -3,26 +3,26 @@ import { Icon } from '@iconify/vue';
 </script>
 
 <template>
-  <MisakaLogin :on="on" @LoginSwich="But"></MisakaLogin>
-  <button class="icon-btn standard no-color" :onClick="But">
+  <Login :on="visible" @LoginSwich="toggle_visibility"></Login>
+  <button class="icon-btn standard no-color" :onClick="toggle_visibility">
     <Icon icon="material-symbols:login" width="24" height="24" />
   </button>
 </template>
 <script lang="ts">
-import MisakaLogin from './MisakaLogin.vue';
+import Login from './Login.vue';
 export default {
   name: 'LoginButton',
   data() {
     return {
-      on: false,
+      visible: false,
     };
   },
   methods: {
-    But() {
-      this.on = !this.on;
+    toggle_visibility() {
+      this.visible = !this.visible;
     },
   },
   created() {},
-  components: { MisakaLogin },
+  components: { Login },
 };
 </script>

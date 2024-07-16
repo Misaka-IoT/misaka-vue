@@ -45,8 +45,8 @@ import { Icon } from '@iconify/vue';
 </template>
 <script lang="ts">
 import axios from 'axios';
-import Upload from '@/components/MisakaWrite/Upload.vue';
-import ReadWord from '@/components/MisakaWrite/ReadWord.vue';
+import Upload from '@/components/RelayWrite/Upload.vue';
+import ReadWord from '@/components/RelayWrite/ReadWord.vue';
 export default {
   data() {
     return {
@@ -77,7 +77,7 @@ export default {
             if (dt == 'good') {
               alert('点赞成功');
             } else if (dt == 'user') {
-              alert('用户错误');
+              alert('信息错误，请重新登陆');
             } else if (dt == 'cf') {
               alert('重复点赞');
             } else {
@@ -85,7 +85,7 @@ export default {
             }
           });
       } else {
-        alert('没有登陆');
+        alert('未登录');
       }
     },
     IsIcon(id: string) {

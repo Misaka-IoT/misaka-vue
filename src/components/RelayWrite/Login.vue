@@ -44,7 +44,7 @@
 <script lang="ts">
 import axios from 'axios';
 export default {
-  name: 'MisakaLogin',
+  name: 'Login',
   data() {
     return {
       loginx: { token: '', em: '' },

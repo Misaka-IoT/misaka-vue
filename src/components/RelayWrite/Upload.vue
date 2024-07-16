@@ -79,7 +79,7 @@ export default {
             }
           });
       } else {
-        this.info = '没有登陆';
+        this.info = '未登录';
       }
     },
   },

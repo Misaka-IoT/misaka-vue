@@ -68,9 +68,9 @@ const router = createRouter({
       component: () => import('@/views/PutDanmu.vue'),
     },
     {
-      path: '/MisakaWrite',
-      name: 'MisakaWrite',
-      component: () => import('@/views/MisakaWrite.vue'),
+      path: '/RelayWrite',
+      name: 'RelayWrite',
+      component: () => import('@/views/RelayWrite.vue'),
     },
   ],
 });
