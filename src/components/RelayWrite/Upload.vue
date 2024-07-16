@@ -17,7 +17,7 @@
         height: 65%;
         width: 100%;
       " /><br />
-    <a style="color: #ffcc00"> {{ info }}</a
+    <span style="color: #ffcc00"> {{ info }}</span
     ><br />
     <button
       :onClick="Send"
