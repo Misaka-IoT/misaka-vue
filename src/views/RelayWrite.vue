@@ -57,9 +57,9 @@ export default {
       dzlb: [''],
     };
   },
-  watch:{ //监听数据变化
+  watch:{ 
   'AppThis.drawerOpened':{
-      immediate:true, // 将立即以表达式的当前值触发回调
+      immediate:true, 
       handler:function (val,oldVal) {
         if(val)
       {

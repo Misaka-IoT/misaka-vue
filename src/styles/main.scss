@@ -44,7 +44,8 @@ body {
   --color-background-rgb: 255, 255, 255;
   --color-text: #171717;
   --color-text-variant: #333333;
-  --write-w:100%
+  --write-w:100%;
+  --write-l:0%;
 }
 [data-theme='dark_p'] {
   --color-theme: #c49582;
@@ -58,7 +59,8 @@ body {
   --color-background-rgb: 23, 23, 23;
   --color-text: #ffffff;
   --color-text-variant: #eaeaea;
-  --write-w:100%
+  --write-w:100%;
+  --write-l:0%;
 }
 [data-theme='light_w'] {
   --color-theme: #c49582;
@@ -72,7 +74,8 @@ body {
   --color-background-rgb: 255, 255, 255;
   --color-text: #171717;
   --color-text-variant: #333333;
-  --write-w:25%
+  --write-w:25%;
+  --write-l:50%;
 }
 [data-theme='dark_w'] {
   --color-theme: #c49582;
@@ -86,7 +89,8 @@ body {
   --color-background-rgb: 23, 23, 23;
   --color-text: #ffffff;
   --color-text-variant: #eaeaea;
-  --write-w:25%
+  --write-w:25%;
+  --write-l:50%;
 }
 button,
 a,
@@ -153,19 +157,19 @@ hr {
   padding: 10px;
   z-index: 10;
   height: 45%;
-  width: 25%;
+  width: var(--write-w);
 }
 .Read-on {
   position: absolute;
   bottom: 20%;
-  left: 50%;
+  left: var(--write-l);
   background: var(--color-theme);
   color: var(--color-on-theme);
   border-radius: 25px;
   padding: 10px;
   z-index: 10;
   height: 50%;
-  width: 25%;
+  width: var(--write-w);
 }
 .WriteItem {
   background: var(--color-theme);
