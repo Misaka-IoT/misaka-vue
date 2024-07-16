@@ -9,7 +9,7 @@
       :value="text"
       style="border: none; border-radius: 5px; height: 65%; width: 100%"
       readonly /><br />
-    <a style="color: #ffcc00">{{ info }}</a>
+    <span class="WriteInfo">{{ info }}</span>
   </div>
   <div
     :onclick="off"

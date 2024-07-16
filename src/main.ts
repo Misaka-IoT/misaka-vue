@@ -9,8 +9,8 @@ import Chat from 'vue3-beautiful-chat';
 const flag = navigator.userAgent.match(
   /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
 )
-  ? '_p'
-  : '_w';
+  ? '_phone'
+  : '_pc';
 const getAndSetDefaultTheme = () => {
   const value = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
