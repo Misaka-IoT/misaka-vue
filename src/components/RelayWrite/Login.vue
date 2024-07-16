@@ -13,7 +13,7 @@
       style="border: none; border-radius: 0px 50px 50px 0px">
       发送验证码</button
     ><br />
-    {{ info }}<br />
+    <a style="color:#ffcc00;">{{ info }}</a><br />
     <button
       :onClick="Logins"
       class="button"
