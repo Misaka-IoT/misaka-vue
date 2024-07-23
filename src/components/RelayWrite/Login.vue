@@ -17,10 +17,10 @@
       style="
         border: none;
         border-radius: 50px;
-        left: 25%;
+        left: 20%;
         top: 70%;
-        width: 20%;
-        height: 25%;
+        width: 30%;
+        height: 30%;
       ">
       发送验证码
     </button>
@@ -30,10 +30,10 @@
       style="
         border: none;
         border-radius: 50px;
-        left: 35%;
+        left: 55%;
         top: 70%;
         width: 20%;
-        height: 25%;
+        height: 30%;
       ">
       登录
     </button>
