@@ -7,18 +7,18 @@
     验证码：<input
       type="text"
       v-model="code"
-      style="border: none; border-radius: 50px 0px 0px 50px; width: 40%" />
+      style="border: none; border-radius: 50px 0px 0px 50px; " />
     <br />
     <span class="WriteInfo">{{ info }}</span>
     <br />
     <button
       :onClick="Send"
-      class="button"
+      class="buttonsend"
       style="
         border: none;
         border-radius: 50px;
         left: 20%;
-        top: 70%;
+        top: 68%;
         width: 30%;
         height: 30%;
       ">
@@ -31,7 +31,7 @@
         border: none;
         border-radius: 50px;
         left: 55%;
-        top: 70%;
+        top: 68%;
         width: 20%;
         height: 30%;
       ">
@@ -132,6 +132,15 @@ export default {
 };
 </script>
 <style>
+.button {
+  position: absolute;
+  background-color: #e67300;
+  color: #fff;
+  border: 0.5px #993d00;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
 .button {
   position: absolute;
   background-color: #b35900;
