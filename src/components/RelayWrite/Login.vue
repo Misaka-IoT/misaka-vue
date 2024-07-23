@@ -8,13 +8,22 @@
       type="text"
       v-model="code"
       style="border: none; border-radius: 50px 0px 0px 50px; width: 40%" />
-    <button
-      :onClick="Send"
-      style="border: none; border-radius: 0px 50px 50px 0px">
-      发送验证码</button
-    ><br />
+    <br />
     <span class="WriteInfo">{{ info }}</span>
     <br />
+    <button
+      :onClick="Send"
+      class="button"
+      style="
+        border: none;
+        border-radius: 50px;
+        left: 35%;
+        top: 70%;
+        width: 20%;
+        height: 25%;
+      ">
+      发送验证码
+    </button>
     <button
       :onClick="Logins"
       class="button"
