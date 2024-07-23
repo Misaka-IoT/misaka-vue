@@ -7,7 +7,7 @@
     验证码：<input
       type="text"
       v-model="code"
-      style="border: none; border-radius: 50px 0px 0px 50px; " />
+      style="border: none; border-radius: 50px; " />
     <br />
     <span class="WriteInfo">{{ info }}</span>
     <br />
@@ -18,7 +18,7 @@
         border: none;
         border-radius: 50px;
         left: 20%;
-        top: 68%;
+        top: 65%;
         width: 30%;
         height: 30%;
       ">
@@ -31,7 +31,7 @@
         border: none;
         border-radius: 50px;
         left: 55%;
-        top: 68%;
+        top: 65%;
         width: 20%;
         height: 30%;
       ">
@@ -132,7 +132,7 @@ export default {
 };
 </script>
 <style>
-.button {
+.buttonsend {
   position: absolute;
   background-color: #e67300;
   color: #fff;
