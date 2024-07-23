@@ -17,7 +17,7 @@
       style="
         border: none;
         border-radius: 50px;
-        left: 35%;
+        left: 25%;
         top: 70%;
         width: 20%;
         height: 25%;
