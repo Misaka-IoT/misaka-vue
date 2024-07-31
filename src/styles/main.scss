@@ -46,6 +46,7 @@ body {
   --color-text-variant: #333333;
   --write-w: 85%;
   --write-l: 10%;
+  --Login-w: 80%;
 }
 [data-theme='dark_phone'] {
   --color-theme: #c49582;
@@ -61,6 +62,7 @@ body {
   --color-text-variant: #eaeaea;
   --write-w: 85%;
   --write-l: 10%;
+  --Login-w: 80%;
 }
 [data-theme='light_pc'] {
   --color-theme: #c49582;
@@ -76,6 +78,7 @@ body {
   --color-text-variant: #333333;
   --write-w: 25%;
   --write-l: 50%;
+  --Login-w: 30%;
 }
 [data-theme='dark_pc'] {
   --color-theme: #c49582;
@@ -91,6 +94,7 @@ body {
   --color-text-variant: #eaeaea;
   --write-w: 25%;
   --write-l: 50%;
+  --Login-w: 30%;
 }
 button,
 a,
@@ -133,6 +137,7 @@ hr {
   color: var(--color-on-theme);
   opacity: 0.8;
 }
+/*
 .Login-on {
   position: absolute;
   left: 50%;
@@ -144,7 +149,7 @@ hr {
   padding: 10px;
   z-index: 11;
   height: 200%;
-}
+}*/
 .UP-on {
   position: absolute;
   bottom: 20%;

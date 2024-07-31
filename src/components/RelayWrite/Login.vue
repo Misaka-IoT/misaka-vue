@@ -1,42 +1,23 @@
 <template>
   <div v-if="on" class="Login-on">
-    邮　箱：<input
-      type="text"
-      v-model="em"
-      style="border: none; border-radius: 50px" /><br />
-    验证码：<input
-      type="text"
-      v-model="code"
-      style="border: none; border-radius: 50px; " />
-    <br />
+    <div class="juzhong">
+      <input
+        type="text"
+        v-model="em"
+        placeholder="填入你的常用邮箱"
+        class="inputbox" />
+      <br />
+    </div>
+    <div class="juzhong">
+      <input type="text" v-model="code" placeholder="验证码" class="inputbox" />
+      <br />
+    </div>
     <span class="WriteInfo">{{ info }}</span>
     <br />
-    <button
-      :onClick="Send"
-      class="buttonsend"
-      style="
-        border: none;
-        border-radius: 50px;
-        left: 20%;
-        top: 65%;
-        width: 30%;
-        height: 30%;
-      ">
-      发送验证码
-    </button>
-    <button
-      :onClick="Logins"
-      class="button"
-      style="
-        border: none;
-        border-radius: 50px;
-        left: 55%;
-        top: 65%;
-        width: 20%;
-        height: 30%;
-      ">
-      登录
-    </button>
+    <div class="juzhong">
+      <button :onClick="Send" class="button">发送验证码</button>
+      <button :onClick="Logins" class="button">登录</button>
+    </div>
   </div>
   <div
     :onclick="off"
@@ -132,32 +113,54 @@ export default {
 };
 </script>
 <style>
-.buttonsend {
+.Login-on {
   position: absolute;
-  background-color: #e67300;
-  color: #fff;
-  border: 0.5px #993d00;
-  border-radius: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 500%;
+  border-radius: 8px;
+  z-index: 11;
+  height: 200px;
   padding: 10px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  width: var(--Login-w);
+  border: 2px black solid;
+  backdrop-filter: blur(4px);
+  opacity: 0.7;
+  background: var(--color-theme);
+}
+.juzhong {
+  display: flex;
+  justify-content: center;
+}
+.inputbox {
+  line-height: 30px;
+  margin: 10px;
+  width: 70%;
+  border: 2px black solid;
+}
+.inputbox::placeholder {
+  font-size: 1.6em;
 }
 .button {
-  position: absolute;
-  background-color: #b35900;
-  color: #fff;
-  border: 0.5px #993d00;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  background: transparent;
+  border: 2px solid #0099cc;
+  border-radius: 6px;
+  color: black;
+  padding: 8px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .button:hover {
-  background-color: #c66910;
-  box-shadow: none;
-  transition: 0.7s;
+  background: #0099cc;
 }
-.button:focus {
-  outline-color: transparent;
-  outline-style: solid;
-  box-shadow: 0 0 0 4px #c66910;
+.WriteInfo {
+  color: #ffcc00;
 }
 </style>
