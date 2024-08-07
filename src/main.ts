@@ -6,11 +6,14 @@ import App from './App.vue';
 import router from './router';
 import '@/styles/main.scss';
 import Chat from 'vue3-beautiful-chat';
-const flag = navigator.userAgent.match(
-  /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-)
-  ? '_phone'
-  : '_pc';
+const flag =
+  navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  ) || window.innerHeight / window.innerWidth > 0.8
+    ? '_phone'
+    : '_pc';
+console.log(window.innerHeight / window.innerWidth);
+
 const getAndSetDefaultTheme = () => {
   const value = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
