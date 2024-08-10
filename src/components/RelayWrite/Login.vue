@@ -120,7 +120,7 @@ export default {
   top: 500%;
   border-radius: 8px;
   z-index: 11;
-  height: 200px;
+  height: 330%;
   padding: 10px;
   width: var(--Login-w);
   border: 2px black solid;
@@ -150,7 +150,7 @@ export default {
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  margin: 10px;
+  margin-right: 5%;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
