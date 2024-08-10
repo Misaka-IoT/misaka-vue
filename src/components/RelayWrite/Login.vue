@@ -15,8 +15,8 @@
     <span class="WriteInfo">{{ info }}</span>
     <br />
     <div class="juzhong">
-      <button :onClick="Send" class="button">发送验证码</button>
-      <button :onClick="Logins" class="button">登录</button>
+      <button :onClick="Send" class="LoginButton">发送验证码</button>
+      <button :onClick="Logins" class="LoginButton">登录</button>
     </div>
   </div>
   <div
@@ -141,7 +141,7 @@ export default {
 .inputbox::placeholder {
   font-size: 1.6em;
 }
-.button {
+.LoginButton {
   background: transparent;
   border: 2px solid #0099cc;
   border-radius: 6px;
@@ -157,7 +157,7 @@ export default {
   text-decoration: none;
   text-transform: uppercase;
 }
-.button:hover {
+.LoginButton:hover {
   background: #0099cc;
 }
 .WriteInfo {
