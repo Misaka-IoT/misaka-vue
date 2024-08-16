@@ -1,5 +1,5 @@
 <template>
-  <div v-if="on" class="Login-on">
+  <div v-show="on" class="Login-on">
     <div class="juzhong">
       <input
         type="text"
@@ -18,6 +18,7 @@
       <button :onClick="Send" class="LoginButton">发送验证码</button>
       <button :onClick="Logins" class="LoginButton">登录</button>
     </div>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhZk1wcvZGbv8l8" data-callback="javascriptCallback" data-size="Flexible"></div>
   </div>
   <div
     :onclick="off"
@@ -120,7 +121,7 @@ export default {
   top: 500%;
   border-radius: 8px;
   z-index: 11;
-  height: 330%;
+  height: 420%;
   padding: 10px;
   width: var(--Login-w);
   border: 2px black solid;
