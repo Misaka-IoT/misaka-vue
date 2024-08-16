@@ -18,7 +18,11 @@
       <button :onClick="Send" class="LoginButton">发送验证码</button>
       <button :onClick="Logins" class="LoginButton">登录</button>
     </div>
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhZk1wcvZGbv8l8" data-callback="javascriptCallback" data-size="Flexible"></div>
+    <br>
+    <div class="juzhong">
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhZk1wcvZGbv8l8" data-callback="javascriptCallback" data-size="compact"></div>
+    </div>
+    
   </div>
   <div
     :onclick="off"
@@ -121,7 +125,7 @@ export default {
   top: 500%;
   border-radius: 8px;
   z-index: 11;
-  height: 420%;
+  height: 570%;
   padding: 10px;
   width: var(--Login-w);
   border: 2px black solid;
