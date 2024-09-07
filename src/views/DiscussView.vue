@@ -12,7 +12,7 @@ export default {
       el: '.artalk-comments',
       // pageKey: `233`,
       pageTitle: '爱我超电磁炮',
-      server: 'https://artalk.z2bguoguo.cn:9444',
+      server: 'https://artalk.z2bguoguo.cn:8443',
       site: 'MisakaArtalk',
       // ...
     });
