@@ -90,6 +90,12 @@ import { Icon } from '@iconify/vue';
         </div>
       </template>
       <template #actionBtns>
+
+<!--          @author: Dduo-->
+<!--          @description: 展示当前登录用户的信息-->
+<!--          这边的数据是从localStorage里面去拿的 当然个人还是觉得数据放到vuex的store里面会更好-->
+          <div>当前登录的邮箱: {{ currentUser }} </div>
+
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
         <LoginButton></LoginButton>
@@ -110,7 +116,6 @@ import { Icon } from '@iconify/vue';
 
 <script lang="ts">
 import axios from 'axios';
-import vueDanmaku from 'vue3-danmaku';
 
 export default {
   provide() {
@@ -118,6 +123,7 @@ export default {
       AppThis: this,
     };
   },
+
   computed: {
     navIcon(): string {
       return this.drawerOpened
@@ -165,6 +171,8 @@ export default {
         fontSize: 20,
         toggleDanmu: true,
       },
+        // 当前登录信息
+        currentUser: this.getUserFromLocalStorage(),
     };
   },
   methods: {
@@ -225,6 +233,15 @@ export default {
       this.danmu.toggleLoop =
         localStorage.getItem('danmu.toggleLoop') == '0' ? false : true;
     },
+      /**
+       * @author: Dduo
+       * @description: 获取当前登录信息
+       */
+      getUserFromLocalStorage() {
+          // 假设你从 localStorage 获取的是一个 JSON 字符串
+          const logins = localStorage.getItem('Login');
+          return logins ? JSON.parse(logins).em : "未登录" ;
+      }
   },
 };
 </script>

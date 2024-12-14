@@ -83,6 +83,12 @@
           email="rc@ricecandy.cn">
           主要贡献：网站页面优化、新页面开发、资源提供
         </ContributorCard>
+          <ContributorCard
+                  username="Dddddduo"
+                  name="Dduo"
+                  email="1732446549@qq.com">
+              主要贡献：完善前端登录态的信息展示
+          </ContributorCard>
       </div>
       <hr />
       <h2>六、项目引用</h2>
