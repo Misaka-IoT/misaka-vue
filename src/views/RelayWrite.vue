@@ -79,6 +79,8 @@ export default {
     },
     OnStar(id: string) {
       var logins = localStorage.getItem('Login');
+      // 打印一下目前的登录状态
+        console.log("登录态"+JSON.parse(logins).em);
       if (logins != null) {
         var l = JSON.parse(logins);
         axios
