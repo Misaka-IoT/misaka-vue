@@ -12,7 +12,6 @@ import LinksWrapper from '@/components/LinksWrapper.vue';
 import DanmuSwitcher from './components/DanmuSwitcher.vue';
 import AdvancedDanMu from './components/AdvancedDanMu.vue';
 import ChatMisaka from './components/ChatMisaka.vue';
-import LoginButton from './components/RelayWrite/LoginButton.vue';
 // other components
 import { Icon } from '@iconify/vue';
 </script>
@@ -51,7 +50,9 @@ import { Icon } from '@iconify/vue';
         <a href="/eat-mikoto/index.html" target="_blank">新概念音游</a>
         <RouterLink to="/discuss">留言板</RouterLink>
         <RouterLink to="/resource">动漫资源</RouterLink>
-        <RouterLink to="/RelayWrite">接力写作</RouterLink>
+        <a href="https://misakawrite.z2bguoguo.cn/" target="_blank"
+          >接力写作</a
+        >
         <RouterLink to="/about">关于</RouterLink>
         <RouterLink to="/links">友情链接</RouterLink>
       </LinksWrapper>
@@ -92,7 +93,6 @@ import { Icon } from '@iconify/vue';
       <template #actionBtns>
         <MusicSwitcher></MusicSwitcher>
         <ThemeSwitcher></ThemeSwitcher>
-        <LoginButton></LoginButton>
       </template>
       <RouterView :cdnRootUrl="cdnRootUrl"></RouterView>
       <AppFooter></AppFooter>
