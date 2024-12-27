@@ -67,11 +67,6 @@ const router = createRouter({
       name: 'PutDanmu',
       component: () => import('@/views/PutDanmu.vue'),
     },
-    {
-      path: '/RelayWrite',
-      name: 'RelayWrite',
-      component: () => import('@/views/RelayWrite.vue'),
-    },
   ],
 });
 
