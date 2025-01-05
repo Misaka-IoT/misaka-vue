@@ -1,7 +1,7 @@
 <template>
   <footer class="app-footer">
     <RouterLink to="/donate"><b>捐助此项目</b></RouterLink>
-    <p>&copy; 2022-2024 kanadeCN(misaka-fans)</p>
+    <p>&copy; 2022-2025 kanadeCN(misaka-fans)</p>
     <p>Developed For Each Animate Lovers</p>
     <p>
       <span id="busuanzi_container_site_uv"
