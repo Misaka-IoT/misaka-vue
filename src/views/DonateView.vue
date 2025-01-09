@@ -21,7 +21,7 @@
       >：需要借记卡/银行卡，未成年人请获得监护人批准后操作。
     </p>
     <p>
-      <a href="https://afdian.net/a/misakatomoyo">（推荐)爱发电</a
+      <a href="https://afdian.com/a/misakatomoyo">（推荐)爱发电</a
       >：Alipay/WechatPay，要求同上
     </p>
   </div>
