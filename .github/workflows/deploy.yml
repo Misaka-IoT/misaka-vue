@@ -29,6 +29,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build project
+        env:
+          VUE_APP_BASE_URL : "/ipns/k51qzi5uqu5dh9lcb9jj5valk94d893oni7fa2sc4aph9icli9wns23wvleudm/"
         run: pnpm build
 
       - name: Deploy to IPFS
