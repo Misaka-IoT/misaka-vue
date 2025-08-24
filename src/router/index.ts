@@ -1,7 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
+let basePath = import.meta.env.BASE_URL;
+if (window.location.href.includes('/ipns/')) {
+  // 获取 IPFS/IPNS 路径作为基础路径
+  basePath='/ipns/k51qzi5uqu5dh9lcb9jj5valk94d893oni7fa2sc4aph9icli9wns23wvleudm/';
+}
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(basePath),
   routes: [
     {
       path: '/',
