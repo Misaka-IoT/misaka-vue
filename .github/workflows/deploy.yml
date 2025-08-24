@@ -39,3 +39,6 @@ jobs:
           kubo-api-url: ${{ secrets.KUBO_API_URL }}
           kubo-api-auth: ${{ secrets.KUBO_API_AUTH }}
           github-token: ${{ github.token }}
+
+      - name: Deploy to IPNS
+        run: curl -u ${{ secrets.KUBO_IPNS_AUTH }} -X POST "${{ secrets.KUBO_IPNS_URL }}/api/v0/name/publish?arg=${{ steps.deploy.outputs.cid }}&key=misaka"
