@@ -48,7 +48,7 @@ import { Icon } from '@iconify/vue';
           >世萌投票</a
         >
         <a href="/eat-mikoto/index.html" target="_blank">新概念音游</a>
-        <RouterLink to="/discuss">留言板</RouterLink>
+        <!--<RouterLink to="/discuss">留言板</RouterLink>-->
         <RouterLink to="/resource">动漫资源</RouterLink>
         <a href="https://misakawrite.z2bguoguo.cn/" target="_blank">接力写作</a>
         <RouterLink to="/about">关于</RouterLink>
@@ -181,11 +181,13 @@ export default {
     },
     LinksWrapperClick(e: Event) {
       (this.$refs.danmuku as HTMLFormElement).stop();
-      const currentUrl = new URL(window.location.href);
-      const normalizedPathname = currentUrl.pathname;
-      const lastSlashIndex = normalizedPathname.lastIndexOf('/');
-      const lastPart = normalizedPathname.slice(lastSlashIndex);
-      this.getDanmu2(lastPart);
+      const normalizedPathname = (<HTMLElement>e.target).getAttribute('href');
+      if(normalizedPathname!=null)
+      {
+        const lastSlashIndex = normalizedPathname.lastIndexOf('/');
+        const lastPart = normalizedPathname.slice(lastSlashIndex);
+        this.getDanmu2(lastPart);
+      }
       (this.$refs.danmuku as HTMLFormElement).play();
     },
     getDanmu() {
