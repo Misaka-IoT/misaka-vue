@@ -181,14 +181,22 @@ export default {
     },
     LinksWrapperClick(e: Event) {
       (this.$refs.danmuku as HTMLFormElement).stop();
-      this.getDanmu2((<HTMLElement>e.target).getAttribute('href'));
+      const currentUrl = new URL(window.location.href);
+      const normalizedPathname = currentUrl.pathname;
+      const lastSlashIndex = normalizedPathname.lastIndexOf('/');
+      const lastPart = normalizedPathname.slice(lastSlashIndex);
+      this.getDanmu2(lastPart);
       (this.$refs.danmuku as HTMLFormElement).play();
     },
     getDanmu() {
-      console.log(window.location.pathname);
+      const currentUrl = new URL(window.location.href);
+      const normalizedPathname = currentUrl.pathname;
+      const lastSlashIndex = normalizedPathname.lastIndexOf('/');
+      const lastPart = normalizedPathname.slice(lastSlashIndex);
+      console.log(lastPart)
       axios
         .get('https://danmu.z2bguoguo.cn/', {
-          headers: { page: window.location.pathname },
+          headers: { page: lastPart },
         })
         .then((res) => {
           this.danmu.danmus = res.data.split('/**/');
@@ -205,8 +213,12 @@ export default {
         });
     },
     pushDanmu(str: string) {
+      const currentUrl = new URL(window.location.href);
+      const normalizedPathname = currentUrl.pathname;
+      const lastSlashIndex = normalizedPathname.lastIndexOf('/');
+      const lastPart = normalizedPathname.slice(lastSlashIndex);
       axios.post('https://danmu.z2bguoguo.cn/', str, {
-        headers: { page: window.location.pathname },
+        headers: { page: lastPart },
       });
       this.danmu.danmus.push(str);
     },
