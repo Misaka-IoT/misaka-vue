@@ -2,6 +2,7 @@
 import FriendLink from '@/components/FriendLink.vue';
 
 const data = [
+/*
   {
     name: 'ToaruNet',
     desc: '某系列作品粉丝网站，由星之相位运营',
@@ -17,6 +18,7 @@ const data = [
     desc: '本网站的上一个版本，使用静态页面构建（停止维护）',
     link: 'https://static.misaka-mikoto.jp/',
   },
+*/
   {
     name: "liangburs' blog",
     desc: 'May all the beauty be blessed. —— 《Moon Halo》',
@@ -57,6 +59,12 @@ const data = [
     desc: '龙驭的博客 | 世事无极，谁可穷之？',
     link: 'https://blog.misaka-mikoto.cn',
   },
+  {
+    name: 'Gensokyo Mail',
+    desc: '幻想乡邮箱 | 向你喜欢的幻想乡角色发送邮件吧！',
+    link: 'https://gskmail.lapis-net.top',
+  },
+
 ];
 </script>
 
