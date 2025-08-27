@@ -18,12 +18,12 @@ const data = [
     desc: '本网站的上一个版本，使用静态页面构建（停止维护）',
     link: 'https://static.misaka-mikoto.jp/',
   },
-*/
   {
     name: "liangburs' blog",
     desc: 'May all the beauty be blessed. —— 《Moon Halo》',
     link: 'https://blog.cnmobile.link/',
   },
+*/
   {
     name: '倾丞の小窝',
     desc: '倾丞的小窝，记录生活，分享乐趣',
@@ -49,11 +49,13 @@ const data = [
     desc: '写一些不容易查到的东西',
     link: 'https://blog.jiawei.xin',
   },
+/*
   {
     name: 'MisakaNoの小破站',
     desc: '这只是一个小破站而已！',
     link: 'https://www.misaka.rest',
   },
+*/
   {
     name: '何穷',
     desc: '龙驭的博客 | 世事无极，谁可穷之？',
