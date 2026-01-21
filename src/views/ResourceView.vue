@@ -50,6 +50,15 @@
         <a href="https://www.aliyundrive.com/s/9PZWRyxYbUt">阿里云盘</a>
       </div>
     </div>
+    <!-- 某科学的超电磁炮F-->
+    <div id="card-3" class="card">
+      <div class="content">
+        <h2>03</h2>
+        <h3>某科学的超电磁炮F</h3>
+        <p>Coming Soon…</p>
+        <a>Before Too Long</a>
+      </div>
+    </div>
     <!-- index-X某系列小说汉化版 -->
     <div id="card-4" class="card">
       <div class="content">
