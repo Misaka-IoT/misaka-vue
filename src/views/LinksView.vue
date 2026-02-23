@@ -66,7 +66,11 @@ const data = [
     desc: '幻想乡邮箱 | 向你喜欢的幻想乡角色发送邮件吧！',
     link: 'https://gskmail.lapis-net.top',
   },
-
+  {
+    name: '轻音图网',
+    desc: '轻音图网 | 专注分享收藏级的轻音少女图片',
+    link: 'https://kon.shamiko.site/',
+  },
 ];
 
 </script>
