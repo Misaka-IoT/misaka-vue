@@ -2,7 +2,7 @@
 import FriendLink from '@/components/FriendLink.vue';
 
 const data = [
-  /*无法访问喵
+  /*
     {
       name: 'ToaruNet',
       desc: '某系列作品粉丝网站，由星之相位运营',
