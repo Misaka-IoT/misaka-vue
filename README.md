@@ -38,4 +38,4 @@ _\*贡献者将会展现在 [关于](https://misaka-fans.space/about) 页面。_
 ## 开发
 
 - 图片 CDN - `https://img.moeu.moe/`
-- [插件](https://vue.misaka-fans.space/about) - Pio 看板娘、Artalk 留言系统、vue-danmaku、vis-network、vue3-beautiful-chat
+- [插件](https://vue.misaka-fans.space/about) - Artalk 留言系统、vue-danmaku、vis-network、vue3-beautiful-chat
